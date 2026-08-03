@@ -1,0 +1,45 @@
+body {
+  background-image: url(../IMG/Background4.png);
+}
+
+.box-sobrenos {
+  columns: 2;
+  margin: auto;
+  margin-top: 50px;
+
+  border: 2px solid rgb(47, 47, 47);
+
+  border-radius: 10px;
+  padding: 20px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  font-family: Arial;
+  font-size: 14px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  transition: 0.2s;
+}
+
+.box-sobrenos p {
+  text-indent: 2em;
+}
+
+.corpo {
+  padding-top: 1px;
+}
+
+.Marcos, .Emily, .Kazuya{
+  border-radius: 10px;
+}
+
+.Kazuya {
+  width: 50%;
+}
+
+.Marcos, .Emily {
+  width: 100%;
+}
