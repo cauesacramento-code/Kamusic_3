@@ -54,3 +54,10 @@ b {
     cursor: default;
     user-select: none;
 }
+
+@media screen and (max-width: 570px) {
+  .curiosidade {
+    margin-top: 30px;
+    width: 55px;
+  }
+}
