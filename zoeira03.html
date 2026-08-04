@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamusic // O Epicentro da Cultura Sonora</title>
+    <!-- Tailwind CSS Play CDN para visual moderno, tipografia limpa e responsividade total -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#09090b',
+                        cardDark: '#121216',
+                        accentNeon: '#10b981', // Emerald Moderno
+                        accentNeonGlow: 'rgba(16, 185, 129, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+    </style>
+</head>
+<body class="bg-[#09090b] text-zinc-100 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-black">
+
+    <!-- HEADER FLUTUANTE MODERNO -->
+    <header class="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-xl border-b border-zinc-800/80 px-6 lg:px-12 py-4 flex items-center justify-between transition-colors duration-300">
+        <a href="#" onclick="switchTab('home')" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-black font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                K
+            </div>
+            <span class="font-black tracking-tight text-xl text-white">KAMUSIC<span class="text-emerald-400">.</span></span>
+        </a>
+
+        <!-- MENU DE NAVEGAÇÃO INTERATIVA -->
+        <nav class="hidden md:flex items-center gap-1 bg-zinc-900/60 border border-zinc-800/80 p-1.5 rounded-full">
+            <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-emerald-500 text-black shadow-sm">Início</button>
+            <button onclick="switchTab('stories')" id="nav-stories" class="nav-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-zinc-400 hover:text-white hover:bg-zinc-800/50">Histórias & Artistas</button>
+            <button onclick="switchTab('events')" id="nav-events" class="nav-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-zinc-400 hover:text-white hover:bg-zinc-800/50">Eventos & Shows</button>
+            <button onclick="switchTab('player')" id="nav-player" class="nav-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-zinc-400 hover:text-white hover:bg-zinc-800/50">Ouvir Som</button>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/50 transition-all">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+            <!-- Menu mobile toggle -->
+            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENU MOBILE FLUTUANTE -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-[#09090b]/95 backdrop-blur-2xl hidden flex flex-col justify-center items-center gap-6 p-6">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-2xl text-zinc-400"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="switchTab('home'); toggleMobileMenu();" class="text-xl font-bold uppercase text-white">Início</button>
+        <button onclick="switchTab('stories'); toggleMobileMenu();" class="text-xl font-bold uppercase text-white">Histórias & Artistas</button>
+        <button onclick="switchTab('events'); toggleMobileMenu();" class="text-xl font-bold uppercase text-white">Eventos & Shows</button>
+        <button onclick="switchTab('player'); toggleMobileMenu();" class="text-xl font-bold uppercase text-emerald-400">Ouvir Som</button>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL DINÂMICO -->
+    <main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-12 py-10">
+
+        <!-- ================= ABAS: INÍCIO ================= -->
+        <section id="tab-home" class="tab-content block space-y-12">
+            <!-- Hero Banner Moderno -->
+            <div class="relative rounded-3xl overflow-hidden border border-zinc-800 bg-gradient-to-br from-zinc-900 via-[#121216] to-zinc-950 p-8 lg:p-14 shadow-2xl">
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="max-w-2xl relative z-10 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest font-mono">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Curadoria 2026
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Descubra a <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">anatomia</span> da música.
+                    </h1>
+                    <p class="text-zinc-400 text-base lg:text-lg leading-relaxed">
+                        Esqueça o raso. Explore as origens underground de bandas icônicas, os bastidores de álbuns históricos, a agenda dos maiores shows e experiências sonoras imersivas.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="switchTab('stories')" class="px-7 py-3.5 rounded-xl bg-emerald-500 text-black font-extrabold text-sm uppercase tracking-wider hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+                            Explorar Histórias <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button onclick="switchTab('events')" class="px-7 py-3.5 rounded-xl bg-zinc-800/80 border border-zinc-700 text-white font-bold text-sm uppercase tracking-wider hover:bg-zinc-800 transition-all">
+                            Ver Próximos Shows
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grade de Destaques Rápidos -->
+            <div>
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <h2 class="text-2xl font-black tracking-tight text-white">Destaques da Semana</h2>
+                        <p class="text-zinc-400 text-sm">O que está moldando a cultura agora.</p>
+                    </div>
+                    <button onclick="switchTab('stories')" class="text-emerald-400 font-bold text-sm hover:underline flex items-center gap-1">Ver todos <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div onclick="openStoryModal('daft')" class="group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col">
+                        <div class="h-48 bg-zinc-800 relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-900/40 to-transparent"></div>
+                            <i class="fa-solid fa-robot text-5xl text-emerald-400 group-hover:scale-110 transition-transform duration-500"></i>
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest text-emerald-400 border border-zinc-700">Origens</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-extrabold text-lg text-white group-hover:text-emerald-400 transition-colors">Daft Punk: Os Robôs que Revolucionaram a Dance Music</h3>
+                                <p class="text-zinc-400 text-xs mt-2 line-clamp-2">De um quarto em Paris aos capacetes de titânio: como dois franceses redefiniram a música eletrônica global.</p>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-4 border-t border-zinc-800/80">
+                                <span>Leitura rápida • 5 min</span>
+                                <span class="text-emerald-400 group-hover:translate-x-1 transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div onclick="openStoryModal('arctic')" class="group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col">
+                        <div class="h-48 bg-zinc-800 relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                            <i class="fa-solid fa-compact-disc text-5xl text-blue-400 group-hover:scale-110 transition-transform duration-500"></i>
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest text-blue-400 border border-zinc-700">História de Álbum</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-extrabold text-lg text-white group-hover:text-emerald-400 transition-colors">Arctic Monkeys e a Explosão da Internet em 2006</h3>
+                                <p class="text-zinc-400 text-xs mt-2 line-clamp-2">Como uma banda de Sheffield virou o jogo usando o MySpace antes de qualquer grande gravadora.</p>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-4 border-t border-zinc-800/80">
+                                <span>Leitura rápida • 6 min</span>
+                                <span class="text-emerald-400 group-hover:translate-x-1 transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div onclick="openStoryModal('nirvana')" class="group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col">
+                        <div class="h-48 bg-zinc-800 relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/40 to-transparent"></div>
+                            <i class="fa-solid fa-guitar text-5xl text-purple-400 group-hover:scale-110 transition-transform duration-500"></i>
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest text-purple-400 border border-zinc-700">Cultura Rock</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-extrabold text-lg text-white group-hover:text-emerald-400 transition-colors">O Grunge de Seattle: A Raiva que Conquistou o Planeta</h3>
+                                <p class="text-zinc-400 text-xs mt-2 line-clamp-2">A ascensão e o impacto cultural irrevogável do movimento liderado por Kurt Cobain.</p>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-4 border-t border-zinc-800/80">
+                                <span>Leitura rápida • 7 min</span>
+                                <span class="text-emerald-400 group-hover:translate-x-1 transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABAS: HISTÓRIAS & ARTISTAS ================= -->
+        <section id="tab-stories" class="tab-content hidden space-y-8">
+            <div>
+                <h1 class="text-3xl font-black tracking-tight text-white mb-2">Arquivo de Histórias & Artistas</h1>
+                <p class="text-zinc-400 text-sm">Investigamos a fundo a origem, os conflitos e o legado de quem mudou a história da música.</p>
+            </div>
+
+            <!-- Filtros de Categoria -->
+            <div class="flex flex-wrap gap-2 pb-4 border-b border-zinc-800">
+                <button onclick="filterStories('all')" class="story-filter active px-4 py-2 rounded-xl text-xs font-bold uppercase bg-emerald-500 text-black transition-all">Todos</button>
+                <button onclick="filterStories('origins')" class="story-filter px-4 py-2 rounded-xl text-xs font-bold uppercase bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition-all">Origem de Bandas</button>
+                <button onclick="filterStories('albums')" class="story-filter px-4 py-2 rounded-xl text-xs font-bold uppercase bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition-all">Por Trás dos Álbuns</button>
+                <button onclick="filterStories('legends')" class="story-filter px-4 py-2 rounded-xl text-xs font-bold uppercase bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition-all">Lendas & Mitos</button>
+            </div>
+
+            <!-- Grid Completo de Artigos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="storiesGrid">
+                <!-- Artigo 1 -->
+                <div data-category="origins" onclick="openStoryModal('daft')" class="story-item group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 font-mono">Origem</span>
+                            <span class="text-xs text-zinc-500 font-mono">5 min de leitura</span>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-white group-hover:text-emerald-400 transition-colors mb-2">Daft Punk: Os Robôs de Paris</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">Como Thomas Bangalter e Guy-Manuel transformaram música eletrônica em ficção científica intergaláctica.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-bold text-emerald-400">
+                        <span>Ler artigo completo</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Artigo 2 -->
+                <div data-category="albums" onclick="openStoryModal('arctic')" class="story-item group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20 font-mono">Álbuns</span>
+                            <span class="text-xs text-zinc-500 font-mono">6 min de leitura</span>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-white group-hover:text-emerald-400 transition-colors mb-2">Arctic Monkeys: O Fenômeno MySpace</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">A banda que recusou as regras das grandes gravadoras e lançou o álbum de estreia mais rápido da história britânica.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-bold text-emerald-400">
+                        <span>Ler artigo completo</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Artigo 3 -->
+                <div data-category="legends" onclick="openStoryModal('nirvana')" class="story-item group bg-[#121216] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20 font-mono">Lendas</span>
+                            <span class="text-xs text-zinc-500 font-mono">7 min de leitura</span>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-white group-hover:text-emerald-400 transition-colors mb-2">O Fim da Inocência com o Grunge</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">De Seattle para o mundo: como o descontentamento juvenil virou o som dominante dos anos 90.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-bold text-emerald-400">
+                        <span>Ler artigo completo</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABAS: EVENTOS & SHOWS ================= -->
+        <section id="tab-events" class="tab-content hidden space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl font-black tracking-tight text-white mb-2">Agenda de Shows e Festivais</h1>
+                    <p class="text-zinc-400 text-sm">Fique por dentro das turnês mundiais, festivais independentes e experiências imperdíveis.</p>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-emerald-400"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-zinc-300 font-mono">Brasil & Global</span>
+                </div>
+            </div>
+
+            <!-- Lista de Eventos -->
+            <div class="space-y-4">
+                <!-- Evento 1 -->
+                <div class="bg-[#121216] border border-zinc-800/80 rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-emerald-500/50 transition-all">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-4 py-3 rounded-2xl text-center min-w-[70px]">
+                            <span class="block text-xs font-bold uppercase tracking-wider font-mono">Out</span>
+                            <span class="block text-xl font-extrabold font-mono">18</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">Festival Internacional</span>
+                            <h3 class="text-xl font-extrabold text-white mt-1">Sonar Electronic Experience 2026</h3>
+                            <p class="text-zinc-400 text-xs mt-1 flex items-center gap-2"><i class="fa-solid fa-map-pin text-zinc-500"></i> São Paulo • SP</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-4 border-t md:border-t-0 pt-4 md:pt-0 border-zinc-800">
+                        <div class="text-left md:text-right">
+                            <span class="block text-[10px] text-zinc-500 uppercase font-mono">Ingressos a partir de</span>
+                            <span class="text-sm font-extrabold text-emerald-400 font-mono">R$ 280,00</span>
+                        </div>
+                        <button onclick="alert('Redirecionando para a bilheteria oficial parceira!')" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider hover:bg-emerald-400 transition-all shadow-md shadow-emerald-500/20">
+                            Garantir Vaga
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="bg-[#121216] border border-zinc-800/80 rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-emerald-500/50 transition-all">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-purple-500/10 border border-purple-500/20 text-purple-400 px-4 py-3 rounded-2xl text-center min-w-[70px]">
+                            <span class="block text-xs font-bold uppercase tracking-wider font-mono">Nov</span>
+                            <span class="block text-xl font-extrabold font-mono">04</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 font-mono">Turnê de Arena</span>
+                            <h3 class="text-xl font-extrabold text-white mt-1">Underground Rock Night: Special Reunion</h3>
+                            <p class="text-zinc-400 text-xs mt-1 flex items-center gap-2"><i class="fa-solid fa-map-pin text-zinc-500"></i> Rio de Janeiro • RJ</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-4 border-t md:border-t-0 pt-4 md:pt-0 border-zinc-800">
+                        <div class="text-left md:text-right">
+                            <span class="block text-[10px] text-zinc-500 uppercase font-mono">Ingressos a partir de</span>
+                            <span class="text-sm font-extrabold text-purple-400 font-mono">R$ 150,00</span>
+                        </div>
+                        <button onclick="alert('Redirecionando para a bilheteria oficial parceira!')" class="px-5 py-2.5 rounded-xl bg-zinc-800 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-zinc-700 transition-all border border-zinc-700">
+                            Garantir Vaga
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABAS: OUVIR SOM (WEB AUDIO SYNTH) ================= -->
+        <section id="tab-player" class="tab-content hidden space-y-8">
+            <div>
+                <h1 class="text-3xl font-black tracking-tight text-white mb-2">Laboratório Sonoro Kamusic</h1>
+                <p class="text-zinc-400 text-sm">Gere frequências e ondas sintéticas relaxantes diretamente pelo navegador com nossa Web Audio API.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#121216] border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 font-mono">Sintetizador Ativo</span>
+                        <h2 id="synthTitle" class="text-2xl font-black text-white mt-1">Quantum Ambient Session</h2>
+                        <p class="text-zinc-400 text-xs mt-1">Ondas puras moduladas matematicamente em tempo real.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="playSynth('ambient', this)" class="synth-preset-btn p-4 rounded-xl bg-zinc-900 border border-emerald-500/50 text-emerald-400 font-bold text-xs uppercase tracking-wider text-center transition-all">Ambient Sine</button>
+                        <button onclick="playSynth('lofi', this)" class="synth-preset-btn p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white font-bold text-xs uppercase tracking-wider text-center transition-all">Deep Alpha</button>
+                    </div>
+
+                    <div class="space-y-2 bg-zinc-900/60 p-4 rounded-xl border border-zinc-800">
+                        <div class="flex justify-between text-xs font-mono text-zinc-400">
+                            <span>Frequência (Hz)</span>
+                            <span id="freqDisplay" class="text-emerald-400 font-bold">432Hz</span>
+                        </div>
+                        <input type="range" id="freqSlider" min="150" max="700" value="432" oninput="updateFreq(this.value)" class="w-full accent-emerald-500 cursor-pointer">
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-zinc-900/50 rounded-2xl border border-zinc-800/80 p-8 text-center space-y-6">
+                    <div class="w-24 h-24 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl shadow-lg shadow-emerald-500/10 animate-pulse">
+                        <i class="fa-solid fa-wave-square" id="playerIcon"></i>
+                    </div>
+                    <div>
+                        <span id="playerStatus" class="text-xs font-mono uppercase tracking-widest text-zinc-500">Status: Silencioso</span>
+                    </div>
+                    <button onclick="toggleSynthPlay()" id="mainPlayBtn" class="px-8 py-4 rounded-xl bg-emerald-500 text-black font-extrabold text-sm uppercase tracking-wider hover:bg-emerald-400 transition-all shadow-xl shadow-emerald-500/20 flex items-center gap-3">
+                        <i class="fa-solid fa-play" id="playBtnIcon"></i> Iniciar Imersão Sonora
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DE LEITURA DE ARTIGOS -->
+    <div id="storyModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-[#121216] border border-zinc-800 max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-3xl p-8 relative shadow-2xl">
+            <button onclick="closeStoryModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            <span id="modalCategoryTag" class="text-xs font-bold uppercase tracking-widest text-emerald-400 font-mono">Categoria</span>
+            <h2 id="modalTitleText" class="text-2xl lg:text-3xl font-extrabold text-white mt-2 mb-4">Título do Artigo</h2>
+            <div id="modalBodyContent" class="text-zinc-400 text-sm lg:text-base leading-relaxed space-y-4">
+                <!-- Conteúdo injetado -->
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ MODERNO -->
+    <footer class="border-t border-zinc-800/80 bg-[#09090b] py-8 px-6 lg:px-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4 mt-12 text-xs text-zinc-500 font-mono">
+        <div>© 2026 KAMUSIC // Todos os direitos reservados.</div>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-emerald-400 transition-colors">Instagram</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Spotify Curadoria</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Newsletter</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS DE INTERATIVIDADE -->
+    <script>
+        // Sistema de Abas
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-500', 'text-black', 'shadow-sm');
+                btn.classList.add('text-zinc-400');
+            });
+            const activeNav = document.getElementById('nav-' + tabId);
+            if(activeNav) {
+                activeNav.classList.remove('text-zinc-400');
+                activeNav.classList.add('bg-emerald-500', 'text-black', 'shadow-sm');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Banco de Dados de Conteúdo do Modal
+        const articlesDB = {
+            daft: {
+                category: "Origens de Bandas",
+                title: "Daft Punk: Os Robôs que Revolucionaram a Dance Music",
+                content: "Em 1993, Thomas Bangalter e Guy-Manuel de Homem-Christo formaram em Paris uma dupla que mudaria para sempre a música eletrônica mundial. Misturando house music francesa com influências de disco, funk e rock dos anos 70 e 80, eles criaram álbuns icônicos como *Discovery* e *Random Access Memories*.\n\nA transição para os capacetes robóticos em 1999 não foi apenas um golpe de marketing visual, mas um manifesto contra a idolatria excessiva de celebridades, permitindo que a música falasse estritamente por si mesma antes da aposentadoria definitiva do duo em 2021."
+            },
+            arctic: {
+                category: "História de Álbuns",
+                title: "Arctic Monkeys e a Explosão da Internet em 2006",
+                content: "Muito antes de algoritmos de recomendação dominarem a indústria, o Arctic Monkeys usou a rede social MySpace para distribuir demos gratuitas de forma orgânica em Sheffield. Os fãs gravavam CDs caseiros e compartilhavam nos shows.\n\nQuando lançaram *Whatever People Say I Am, That's What I'm Not*, ele se tornou o álbum de estreia mais rapidamente vendido da história do Reino Unido, provando que o poder da internet havia descentralizado completamente o controle criativo das grandes gravadoras tradicionais."
+            },
+            nirvana: {
+                category: "Cultura & Movimento",
+                title: "O Grunge de Seattle: A Raiva que Conquistou o Planeta",
+                content: "No início dos anos 90, o cenário musical global estava saturado pelo pop corporativo e pelo hair metal excessivo dos anos 80. Em Seattle, isolada climaticamente no noroeste americano, músicos jovens misturaram o peso do heavy metal com a crueza do punk rock.\n\nLiderados por Kurt Cobain, o Nirvana explodiu com *Nevermind*, colocando temas de angústia juvenil, apatia e rebeldia no topo das paradas globais e marcando para sempre a cultura de toda uma geração."
+            }
+        };
+
+        function openStoryModal(id) {
+            const art = articlesDB[id];
+            if(art) {
+                document.getElementById('modalCategoryTag').innerText = art.category;
+                document.getElementById('modalTitleText').innerText = art.title;
+                // Formata quebras de linha com parágrafos
+                const formattedContent = art.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+                document.getElementById('modalBodyContent').innerHTML = formattedContent;
+                document.getElementById('storyModal').classList.remove('hidden');
+            }
+        }
+
+        function closeStoryModal() {
+            document.getElementById('storyModal').classList.add('hidden');
+        }
+
+        // Filtro de Artigos
+        function filterStories(cat) {
+            document.querySelectorAll('.story-filter').forEach(btn => {
+                btn.classList.remove('bg-emerald-500', 'text-black');
+                btn.classList.add('bg-zinc-900', 'text-zinc-400');
+            });
+            event.target.classList.remove('bg-zinc-900', 'text-zinc-400');
+            event.target.classList.add('bg-emerald-500', 'text-black');
+
+            const items = document.querySelectorAll('.story-item');
+            items.forEach(item => {
+                if(cat === 'all' || item.getAttribute('data-category') === cat) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Web Audio API Synth Engine
+        let audioCtx = null;
+        let osc = null;
+        let gainNode = null;
+        let isSynthPlaying = false;
+
+        function toggleSynthPlay() {
+            if(!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            if(isSynthPlaying) {
+                if(osc) {
+                    osc.stop();
+                    osc.disconnect();
+                    osc = null;
+                }
+                isSynthPlaying = false;
+                document.getElementById('playerStatus').innerText = 'Status: Silencioso';
+                document.getElementById('playBtnIcon').className = 'fa-solid fa-play';
+                document.getElementById('mainPlayBtn').classList.remove('bg-rose-500', 'hover:bg-rose-400');
+                document.getElementById('mainPlayBtn').classList.add('bg-emerald-500', 'hover:bg-emerald-400');
+            } else {
+                osc = audioCtx.createOscillator();
+                gainNode = audioCtx.createGain();
+
+                let freq = document.getElementById('freqSlider').value;
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                osc.type = 'sine';
+                gainNode.gain.setValueAtTime(0.12, audioCtx.currentTime);
+
+                osc.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+                osc.start();
+
+                isSynthPlaying = true;
+                document.getElementById('playerStatus').innerText = 'Status: Gerando Frequência Ativa';
+                document.getElementById('playBtnIcon').className = 'fa-solid fa-pause';
+                document.getElementById('mainPlayBtn').classList.remove('bg-emerald-500', 'hover:bg-emerald-400');
+                document.getElementById('mainPlayBtn').classList.add('bg-rose-500', 'hover:bg-rose-400');
+            }
+        }
+
+        function updateFreq(val) {
+            document.getElementById('freqDisplay').innerText = val + 'Hz';
+            if(osc && audioCtx) {
+                osc.frequency.setValueAtTime(val, audioCtx.currentTime);
+            }
+        }
+
+        function playSynth(type, btn) {
+            document.querySelectorAll('.synth-preset-btn').forEach(b => {
+                b.classList.remove('border-emerald-500', 'text-emerald-400');
+                b.classList.add('border-zinc-800', 'text-zinc-400');
+            });
+            btn.classList.remove('border-zinc-800', 'text-zinc-400');
+            btn.classList.add('border-emerald-500', 'text-emerald-400');
+
+            if(type === 'lofi') {
+                document.getElementById('freqSlider').value = 285;
+                updateFreq(285);
+            } else {
+                document.getElementById('freqSlider').value = 432;
+                updateFreq(432);
+            }
+        }
+
+        // Tema Claro / Escuro simples
+        function toggleTheme() {
+            const icon = document.getElementById('themeIcon');
+            if(document.body.classList.contains('bg-[#09090b]')) {
+                document.body.classList.remove('bg-[#09090b]', 'text-zinc-100');
+                document.body.classList.add('bg-[#f4f4f6]', 'text-zinc-900');
+                icon.className = 'fa-solid fa-sun text-emerald-600';
+            } else {
+                document.body.classList.add('bg-[#09090b]', 'text-zinc-100');
+                document.body.classList.remove('bg-[#f4f4f6]', 'text-zinc-900');
+                icon.className = 'fa-solid fa-moon';
+            }
+        }
+    </script>
+</body>
+</html>
