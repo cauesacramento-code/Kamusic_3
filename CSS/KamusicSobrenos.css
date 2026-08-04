@@ -3,7 +3,9 @@ body {
 }
 
 .box-sobrenos {
-  columns: 2;
+  display: flex;
+  gap: 20px;
+  align-items: center;
   margin: auto;
   margin-top: 50px;
 
@@ -32,14 +34,23 @@ body {
   padding-top: 1px;
 }
 
-.Marcos, .Emily, .Kazuya{
-  border-radius: 10px;
-}
-
+.Marcos,
+.Emily,
 .Kazuya {
-  width: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+@media screen and (max-width: 570px) {
+  .box-sobrenos {
+    flex-direction: column;
+  }
 
-.Marcos, .Emily {
-  width: 100%;
+  .Marcos,
+  .Emily,
+  .Kazuya {
+    width: 100%;
+    max-width: 300px;
+  }
 }
