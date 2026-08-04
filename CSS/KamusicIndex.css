@@ -341,7 +341,8 @@ a {
     font-size: 30px;
 }
 
-.mus-titulo, .mus-album{
+.mus-titulo,
+.mus-album {
     /* Justifica o texto */
     text-align: justify;
 }
@@ -467,4 +468,20 @@ a {
     font-size: 40px;
     justify-self: start;
     margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 570px) {
+    .conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .item {
+        width: 45%;
+        height: 220px;
+    }
 }

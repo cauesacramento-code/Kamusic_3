@@ -40,7 +40,7 @@ body {
     /* Muda a cor do texto para branco */
     font-size: 80px;
     /* Define um tamanho de letra muito grande */
-    font-weight: 20;    
+    font-weight: 20;
     /* Define a espessura da letra como muito fina */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /* Define as fontes do texto */
@@ -355,7 +355,7 @@ footer b {
 
 
 .main {
-    margin:40px;
+    margin: 40px;
     margin-top: 0px;
     padding-top: 0px;
     text-align: center;
@@ -410,3 +410,50 @@ Botão de menu:
 }
 
 */
+
+
+
+@media screen and (max-width: 570px) {
+    .menu-abaixo .a {
+        margin-right: 40px;
+        margin-left: 40px;
+
+    }
+
+    .menu-abaixo {
+        height: 60px;
+    }
+
+    .cab-titulo {
+        padding-bottom: 80px;
+        text-align: center;
+        margin-bottom: 0px;
+        /* Cria um espaço vazio logo abaixo do título */
+        margin-left: 0px;
+        /* Empurra o texto 100 pixels para a direita */
+        margin-top: 0px;
+    }
+
+    .cab-titulo h1 {
+        margin: 0;
+    }
+
+    .cab .cab-logo {
+        opacity: 0%;
+        margin-top: 0px;
+        margin-right: 0px;
+        user-select: none;
+        display: none
+    }
+
+    .corpo {
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+
+    .main {
+        margin: 0px;
+    }
+    
+}
