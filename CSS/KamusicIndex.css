@@ -472,7 +472,7 @@ a {
 
 
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 800px) {
     .conteiner {
         display: flex;
         flex-wrap: wrap;
@@ -483,5 +483,25 @@ a {
     .item {
         width: 45%;
         height: 220px;
+    }
+
+    .box-rec{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-eminem{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-centro{
+        display: flex;
+        flex-direction: row;
+        margin-top:20px;
+    }
+
+    .mus-titulo{
+        
     }
 }
