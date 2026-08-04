@@ -429,3 +429,41 @@ main p {
     /* Tamanho do texto */
     font-size: 40px;
 }
+
+@media screen and (max-width: 570px) {
+    .conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .item {
+        width: 45%;
+        height: 220px;
+    }
+
+    .gatilho:checked~.caixa-texto {
+
+        /* Expande a altura máxima */
+        max-height: 4000px;
+
+        /* Torna o elemento visível */
+        opacity: 1;
+
+        /* Adiciona espaçamento interno completo */
+        padding: 15px;
+    }
+
+    .img-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+
+    .img-box img {
+        width: auto;
+        max-width: 210px;
+    }
+}
