@@ -56,22 +56,23 @@ body {
     border-left: 3px solid;
 }
 
-.menu-paginas #home:hover{
+.menu-paginas #home:hover {
     border-left-color: blue;
 }
 
-.menu-paginas #artistasmus:hover{
+.menu-paginas #artistasmus:hover {
     border-left-color: rgb(255, 0, 0);
 }
 
-.menu-paginas #estilosmus:hover{
+.menu-paginas #estilosmus:hover {
     border-left-color: rgb(238, 255, 0);
 }
 
-.menu-paginas #sobrenos:hover{
+.menu-paginas #sobrenos:hover {
     border-left-color: green;
 }
 
+/*
 .menu-paginas #home:hover .i{
     color: rgb(115, 115, 250);
     text-shadow: 1px 1px 10px rgba(62, 62, 254, 0.3);
@@ -91,18 +92,19 @@ body {
     color: rgb(123, 255, 105);
     text-shadow: 1px 1px 10px rgb(123, 255, 105, 0.5);
 }
+*/
 
 /*CONTEÚDO*/
 
-.content{
+.content {
     background-image: url('../IMG/Background5.png');
-    padding:10px;
-    display:flex;
+    padding: 10px;
+    display: flex;
     justify-content: space-between;
 }
 
-.content div{
-    width:380px;
+.content div {
+    width: 380px;
     height: 100%;
     background-image: url('../IMG/Background4.png');
     background-size: cover;
