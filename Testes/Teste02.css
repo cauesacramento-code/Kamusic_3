@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menu {
+    background-color: rgb(42, 42, 42);
+    color: rgb(150, 149, 149);
+    height: 100vh;
+    width: 1fr;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+.menu-logo {
+    max-width: inherit;
+    display: flex;
+    justify-self: center;
+}
+
+.menu-logo img {
+    width: inherit;
+    height: 150px;
+}
+
+.menu-paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-paginas .itens {
+    display: flex;
+    font-family: arial;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 15px;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.menu-paginas .itens:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(250, 250, 250, 0.314);
+    box-shadow: 0px 0px 20px 0px rgba(230, 229, 229, 0.3);
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+    border-left: 3px solid;
+}
+
+.menu-paginas #home:hover{
+    border-left-color: blue;
+}
+
+.menu-paginas #artistasmus:hover{
+    border-left-color: rgb(255, 0, 0);
+}
+
+.menu-paginas #estilosmus:hover{
+    border-left-color: rgb(238, 255, 0);
+}
+
+.menu-paginas #sobrenos:hover{
+    border-left-color: green;
+}
+
+.menu-paginas #home:hover .i{
+    color: rgb(115, 115, 250);
+    text-shadow: 1px 1px 10px rgba(62, 62, 254, 0.3);
+}
+
+.menu-paginas #artistasmus:hover .i{
+    color: rgb(255, 105, 105);
+    text-shadow: 1px 1px 10px rgb(255, 105, 105, 0.5);
+}
+
+.menu-paginas #estilosmus:hover .i{
+    color: rgb(248, 255, 34);
+    text-shadow: 1px 1px 10px rgb(248, 255, 34, 0.5);
+}
+
+.menu-paginas #sobrenos:hover .i{
+    color: rgb(123, 255, 105);
+    text-shadow: 1px 1px 10px rgb(123, 255, 105, 0.5);
+}
+
+/*CONTEÚDO*/
+
+.content{
+    background-image: url('../IMG/Background5.png');
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.content div{
+    width:380px;
+    height: 100%;
+    background-image: url('../IMG/Background4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
