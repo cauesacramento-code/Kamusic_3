@@ -67,50 +67,71 @@
 
             <!-- Cards -->
 
-            <div class="row g-3">
+            <div class="row g-4">
 
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="cor rounded" style="height: 35vh;"></div>
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-robot icone"></i>
+                        <h3>Cyberpunk Odyssey</h3>
+                        <p>Neon Runners</p>
+                    </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="cor rounded" style="height: 35vh;"></div>
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-cloud-moon icone"></i>
+                        <h3>Midnight Sunset</h3>
+                        <p>Aura</p>
+                    </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="cor rounded" style="height: 35vh;"></div>
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-bolt icone"></i>
+                        <h3>Electric Pulse</h3>
+                        <p>Synthetica</p>
+                    </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="cor rounded" style="height: 35vh;"></div>
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-mug-hot icone"></i>
+                        <h3>Coffee & Rain</h3>
+                        <p>Lo-Fi Generator</p>
+                    </div>
                 </div>
+
+                <!-- Rodapé -->
+                <div class="cor rounded" style="height: auto; min-height: 100px;"></div>
 
             </div>
-
-            <!-- Rodapé -->
-            <div class="cor rounded" style="height: auto; min-height: 100px;"></div>
-
         </div>
-    </div>
 
-    <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
-    <script>
-        // --- 1. EXPLICAÇÃO DO MODO CLARO / ESCURO ---
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
+        <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
+        <script>
+            // --- 1. EXPLICAÇÃO DO MODO CLARO / ESCURO ---
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
 
-        themeToggle.addEventListener('click', () => {
-            // Alterna a classe 'light-theme' no elemento raiz <body>
-            document.body.classList.toggle('light-theme');
+            themeToggle.addEventListener('click', () => {
+                // Alterna a classe 'light-theme' no elemento raiz <body>
+                document.body.classList.toggle('light-theme');
 
-            // Troca o ícone do botão (Lua <-> Sol) dependendo se a classe está ativa
-            if (document.body.classList.contains('light-theme')) {
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
-    </script>
+                // Troca o ícone do botão (Lua <-> Sol) dependendo se a classe está ativa
+                if (document.body.classList.contains('light-theme')) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                }
+            });
+            const botaoLogin = document.getElementById('Login');
+            const painelLogin = document.querySelector('.cs');
+
+            botaoLogin.addEventListener('click', function () {
+                // Liga e desliga a classe "ativo" a cada clique
+                painelLogin.classList.toggle('gatilho');
+            });
+        </script>
 </body>
 
 </html>

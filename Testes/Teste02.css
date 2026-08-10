@@ -185,13 +185,57 @@ body.light-theme .content {
     background-color: #ffffff; 
 }
 
+.card-simples {
+    height: 30vh;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Tamanho e cor do ícone */
+.card-simples .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(150, 149, 149);
+}
+
+/* Tamanho do título do card */
+.card-simples h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Tamanho do subtítulo */
+.card-simples p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Efeito quando passa o mouse (o card sobe um pouquinho) */
+.card-simples:hover {
+    transform: translateY(-5px);
+}
+
+/* No modo escuro (normal), os textos e títulos ficam brancos */
+body:not(.light-theme) .card-simples h3 {
+    color: white;
+}
+
+/* No modo claro, os textos e títulos ficam escuros */
+body.light-theme .card-simples h3 {
+    color: #212529;
+}
+
 /* Configuração do quadrado preto */
 
 .cs {
-    display: none;
-}
-.cs-gatilho {
-    position: fixed;
+        position: fixed;
     /* Fixa na tela, ignorando o rolamento da página */
     top: 50%;
     /* Alinha o topo no meio da tela */
@@ -215,7 +259,9 @@ body.light-theme .content {
     /* Espaçamento interno para o texto não colar nas bordas */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     /* Sombra para destacar o quadrado */
-
+    display: none;
+}
+.cs.gatilho {
     display: block !important;
     /* Força o elemento a aparecer, anulando o "none" anterior */
 }
