@@ -167,5 +167,18 @@ body {
 }
 
 .cor-gradient {
-    background-image: linear-gradient(to right, #7C5CFC, #04EDFD);
+    background-image: linear-gradient(to right, #7500E2, #FF00BB);
+}
+
+
+/* Muda o fundo geral do body para claro */
+body.light-theme {
+    background-color: #ffffff; 
+    color: #212529;
+}
+
+/* Remove a imagem de fundo escura do conteúdo para aparecer a cor clara */
+body.light-theme .content {
+    background-image: none; 
+    background-color: #ffffff; 
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Teste02.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
     <div class="menu">
         <div class="menu-logo">
-            <img src="../IMG/WhiteLogo.png">
+            <img src="../IMG/LogoK.png">
         </div>
         <div class="menu-paginas">
             <div id="home" class="itens">
@@ -40,9 +41,13 @@
 
         <!-- Conteúdo -->
         <div class="col-12 col-md-12 d-flex flex-column gap-3">
-            
+
             <!-- Topo -->
-            <div class="cor rounded" style="height: 8vh;"></div>
+            <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;"><button
+                    class="action-btn btn btn-dark btn-sm" id="themeToggle" title="Alternar Modo Escuro/Claro">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
 
             <!-- Banner -->
             <div class="cor-gradient rounded" style="height: 50vh;"></div>
@@ -74,6 +79,25 @@
 
         </div>
     </div>
+
+    <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
+    <script>
+        // --- 1. EXPLICAÇÃO DO MODO CLARO / ESCURO ---
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        themeToggle.addEventListener('click', () => {
+            // Alterna a classe 'light-theme' no elemento raiz <body>
+            document.body.classList.toggle('light-theme');
+
+            // Troca o ícone do botão (Lua <-> Sol) dependendo se a classe está ativa
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
 </body>
 
 </html>
