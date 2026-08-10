@@ -127,7 +127,7 @@ body {
         font-size: 30px;
         color: white;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 11;
         /* Joga para frente de todo o conteúdo */
         background-color: rgb(20, 20, 28);
         /* Fundo para o botão não sumir em imagens */
@@ -143,7 +143,7 @@ body {
         top: 0;
         width: 500px;
         height: 100vh;
-        z-index: 999;
+        z-index: 10;
         /* Um nível abaixo do botão hambúrguer */
         transform: translateX(-100%);
         transition: transform 0.3s ease;
@@ -173,12 +173,47 @@ body {
 
 /* Muda o fundo geral do body para claro */
 body.light-theme {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: #212529;
 }
 
 /* Remove a imagem de fundo escura do conteúdo para aparecer a cor clara */
 body.light-theme .content {
-    background-image: none; 
-    background-color: #ffffff; 
+    background-image: none;
+    background-color: #ffffff;
+}
+
+/* Configuração do quadrado preto */
+
+.cs {
+    display: none;
+}
+.cs-gatilho {
+    position: fixed;
+    /* Fixa na tela, ignorando o rolamento da página */
+    top: 50%;
+    /* Alinha o topo no meio da tela */
+    left: 50%;
+    /* Alinha a esquerda no meio da tela */
+    transform: translate(-50%, -50%);
+    /* Centraliza perfeitamente o quadrado */
+
+    width: 300px;
+    /* Largura do quadrado */
+    height: 300px;
+    /* Altura do quadrado */
+    background-color: #000000;
+    /* Cor preta de fundo */
+    color: #ffffff;
+    /* Cor do texto interna em branco para dar contraste */
+
+    z-index: 99999;
+    /* Garante que fique na frente de todos os elementos */
+    padding: 20px;
+    /* Espaçamento interno para o texto não colar nas bordas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra para destacar o quadrado */
+
+    display: block !important;
+    /* Força o elemento a aparecer, anulando o "none" anterior */
 }
