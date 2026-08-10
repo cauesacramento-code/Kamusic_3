@@ -12,7 +12,7 @@ body {
 .menu {
     background-color: rgb(42, 42, 42);
     color: rgb(150, 149, 149);
-    height: 100vh;
+    height: 100%;
     width: 1fr;
     display: grid;
     grid-template-rows: 1fr 4fr;
@@ -98,15 +98,4 @@ body {
 
 .content {
     background-image: url('../IMG/Background5.png');
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.content div {
-    width: 380px;
-    height: 100%;
-    background-image: url('../IMG/Background4.png');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
