@@ -96,6 +96,6 @@ body {
 
 /*CONTEÚDO*/
 
-.content {
+.container-fluid {
     background-image: url('../IMG/Background5.png');
 }
