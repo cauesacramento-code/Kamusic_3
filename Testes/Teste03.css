@@ -102,3 +102,17 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* --- ESTILO QUANDO O MODO CLARO ESTIVER ATIVO --- */
+
+/* Muda o fundo geral do body para claro */
+body.light-theme {
+    background-color: #ffffff; 
+    color: #212529;
+}
+
+/* Remove a imagem de fundo escura do conteúdo para aparecer a cor clara */
+body.light-theme .content {
+    background-image: none; 
+    background-color: #ffffff; 
+}
