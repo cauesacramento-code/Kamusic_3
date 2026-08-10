@@ -171,14 +171,24 @@ body {
 }
 
 
-/* Muda o fundo geral do body para claro */
+/* --- ESTILO QUANDO O MODO CLARO ESTIVER ATIVO --- */
+
+/* Fundo geral da página um pouco mais suave que o branco puro */
 body.light-theme {
-    background-color: #ffffff; 
-    color: #212529;
+    background-color: #f3f4f6; 
+    color: #1f2937;
 }
 
-/* Remove a imagem de fundo escura do conteúdo para aparecer a cor clara */
+/* Área de conteúdo acompanha o fundo suave */
 body.light-theme .content {
     background-image: none; 
-    background-color: #ffffff; 
+    background-color: #f3f4f6; 
+}
+
+/* Transforma os blocos escuros (.cor) em cards brancos flutuantes com sombra */
+body.light-theme .cor {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb; /* Bordinha bem sutil para dar acabamento */
+}
 }
