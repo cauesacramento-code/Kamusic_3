@@ -198,6 +198,13 @@ body.light-theme .content {
     transition: 0.3s;
 }
 
+/* Transforma os blocos escuros (.cor) em cards brancos flutuantes com sombra */
+body.light-theme .cor {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb; /* Bordinha bem sutil para dar acabamento */
+}
+
 /* Tamanho e cor do ícone */
 .card-simples .icone {
     font-size: 40px;
@@ -262,6 +269,53 @@ body.light-theme .card-simples h3 {
     display: none;
 }
 .cs.gatilho {
-    display: block !important;
+    display: block !important;}
     /* Força o elemento a aparecer, anulando o "none" anterior */
+
+
+.card-simples {
+    height: 30vh;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Tamanho e cor do ícone */
+.card-simples .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(150, 149, 149);
+}
+
+/* Tamanho do título do card */
+.card-simples h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Tamanho do subtítulo */
+.card-simples p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Efeito quando passa o mouse (o card sobe um pouquinho) */
+.card-simples:hover {
+    transform: translateY(-5px);
+}
+
+/* No modo escuro (normal), os textos e títulos ficam brancos */
+body:not(.light-theme) .card-simples h3 {
+    color: white;
+}
+
+/* No modo claro, os textos e títulos ficam escuros */
+body.light-theme .card-simples h3 {
+    color: #212529;
 }
