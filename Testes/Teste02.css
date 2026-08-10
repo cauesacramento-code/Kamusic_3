@@ -171,16 +171,18 @@ body {
 }
 
 
-/* Muda o fundo geral do body para claro */
+/* --- ESTILO QUANDO O MODO CLARO ESTIVER ATIVO --- */
+
+/* Fundo geral da página um pouco mais suave que o branco puro */
 body.light-theme {
-    background-color: #ffffff;
+    background-color: #ffffff; 
     color: #212529;
 }
 
-/* Remove a imagem de fundo escura do conteúdo para aparecer a cor clara */
+/* Área de conteúdo acompanha o fundo suave */
 body.light-theme .content {
-    background-image: none;
-    background-color: #ffffff;
+    background-image: none; 
+    background-color: #ffffff; 
 }
 
 /* Configuração do quadrado preto */
