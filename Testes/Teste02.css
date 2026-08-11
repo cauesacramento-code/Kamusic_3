@@ -160,6 +160,17 @@ body {
     .content {
         padding-top: 80px !important;
     }
+
+  .cs {
+        width: 350px;   /* Ocupa quase toda a largura no celular */
+        height: 60%;  /* Altura proporcional para telas pequenas */
+        font-size: 16px;
+    }
+
+    /* O gatilho original (checkbox invisível do menu) não deve ser zerado se quebrar o clique */
+    .gatilho {
+        display: none; 
+    }
 }
 
 .cor {
@@ -251,13 +262,11 @@ body.light-theme .card-simples h3 {
     transform: translate(-50%, -50%);
     /* Centraliza perfeitamente o quadrado */
 
-    width: 300px;
+    width: 380px;
     /* Largura do quadrado */
-    height: 300px;
+    height: 50%;
     /* Altura do quadrado */
     background-color: white;
-    /* Cor preta de fundo */
-    color: #ffffff;
     /* Cor do texto interna em branco para dar contraste */
 
     z-index: 99999;
