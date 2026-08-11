@@ -328,3 +328,10 @@ body:not(.light-theme) .card-simples h3 {
 body.light-theme .card-simples h3 {
     color: #212529;
 }
+
+/* Estilo para botões com a classe .btn-dark no modo claro */
+body.light-theme button.btn-light {
+    background-color: #343a40; /* exemplo: tom escuro */
+    color: #ffffff;
+    border: none;
+}
