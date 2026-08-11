@@ -45,7 +45,8 @@
             <!-- Topo -->
             <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;">
 
-                <button class="action-btn btn btn-light btn-sm me-3" id="themeToggle" title="Alternar Modo Escuro/Claro">
+                <button class="action-btn btn btn-light btn-sm me-3" id="themeToggle"
+                    title="Alternar Modo Escuro/Claro">
                     <i class="fa-solid fa-moon" id="themeIcon"></i>
                 </button>
 
@@ -55,7 +56,7 @@
 
                 <!--Sistema de login-->
 
-                <div class="cs gap-10">
+                <div class="cs gap-10" id="loginconteiner">
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="text-dark">Email address</label>
@@ -72,7 +73,7 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label text-dark" for="exampleCheck1">Lembre-me</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
                     </form>
                 </div>
 
@@ -154,14 +155,35 @@
                     themeIcon.classList.replace('fa-sun', 'fa-moon');
                     localStorage.setItem('temaPreferido', 'escuro'); // Salva "escuro" no PC
                 }
-            });
-            const botaoLogin = document.getElementById('Login');
-            const painelLogin = document.querySelector('.cs');
+            }); const botaoLogin = document.getElementById('Login');
+            const painelLogin = document.getElementById('loginconteiner');
 
-            botaoLogin.addEventListener('click', function () {
-                // Liga e desliga a classe "ativo" a cada clique
+            // 1. Abre e fecha ao clicar no botão de usuário
+            botaoLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
                 painelLogin.classList.toggle('gatilho');
+
+                // Atualiza o body logo após abrir/fechar o painel
+                if (painelLogin.classList.contains('gatilho')) {
+                    document.body.classList.add('NT');
+                } else {
+                    document.body.classList.remove('NT');
+                }
             });
+
+            // 2. Evita que o painel feche se o usuário clicar dentro do formulário
+            painelLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
+
+            // 3. Fecha o painel se o usuário clicar em qualquer outro lugar da tela
+            document.addEventListener('click', function () {
+                painelLogin.classList.remove('gatilho');
+
+                // Como o painel fechou, remove obrigatoriamente a classe NT do body
+                document.body.classList.remove('NT');
+            });
+
         </script>
 </body>
 

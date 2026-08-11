@@ -335,3 +335,14 @@ body.light-theme button.btn-light {
     color: #ffffff;
     border: none;
 }
+
+.NT {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+body.NT .cs.gatilho{
+    pointer-events: all;
+    user-select: all;
+    -webkit-user-select: all;
+}
