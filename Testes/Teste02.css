@@ -255,7 +255,7 @@ body.light-theme .card-simples h3 {
     /* Largura do quadrado */
     height: 300px;
     /* Altura do quadrado */
-    background-color: #000000;
+    background-color: white;
     /* Cor preta de fundo */
     color: #ffffff;
     /* Cor do texto interna em branco para dar contraste */
@@ -264,7 +264,7 @@ body.light-theme .card-simples h3 {
     /* Garante que fique na frente de todos os elementos */
     padding: 20px;
     /* Espaçamento interno para o texto não colar nas bordas */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px black;
     /* Sombra para destacar o quadrado */
     display: none;
 }
