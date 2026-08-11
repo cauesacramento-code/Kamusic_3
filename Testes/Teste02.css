@@ -161,15 +161,17 @@ body {
         padding-top: 80px !important;
     }
 
-  .cs {
-        width: 350px;   /* Ocupa quase toda a largura no celular */
-        height: 60%;  /* Altura proporcional para telas pequenas */
+    .cs {
+        width: 350px;
+        /* Ocupa quase toda a largura no celular */
+        height: 60%;
+        /* Altura proporcional para telas pequenas */
         font-size: 16px;
     }
 
     /* O gatilho original (checkbox invisível do menu) não deve ser zerado se quebrar o clique */
     .gatilho {
-        display: none; 
+        display: none;
     }
 }
 
@@ -186,14 +188,14 @@ body {
 
 /* Fundo geral da página um pouco mais suave que o branco puro */
 body.light-theme {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: #212529;
 }
 
 /* Área de conteúdo acompanha o fundo suave */
 body.light-theme .content {
-    background-image: none; 
-    background-color: #ffffff; 
+    background-image: none;
+    background-color: #ffffff;
 }
 
 .card-simples {
@@ -213,7 +215,8 @@ body.light-theme .content {
 body.light-theme .cor {
     background-color: #ffffff !important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border: 1px solid #e5e7eb; /* Bordinha bem sutil para dar acabamento */
+    border: 1px solid #e5e7eb;
+    /* Bordinha bem sutil para dar acabamento */
 }
 
 /* Tamanho e cor do ícone */
@@ -253,7 +256,7 @@ body.light-theme .card-simples h3 {
 /* Configuração do quadrado preto */
 
 .cs {
-        position: fixed;
+    position: fixed;
     /* Fixa na tela, ignorando o rolamento da página */
     top: 50%;
     /* Alinha o topo no meio da tela */
@@ -277,9 +280,12 @@ body.light-theme .card-simples h3 {
     /* Sombra para destacar o quadrado */
     display: none;
 }
+
 .cs.gatilho {
-    display: block !important;}
-    /* Força o elemento a aparecer, anulando o "none" anterior */
+    display: block !important;
+}
+
+/* Força o elemento a aparecer, anulando o "none" anterior */
 
 
 .card-simples {
@@ -331,7 +337,8 @@ body.light-theme .card-simples h3 {
 
 /* Estilo para botões com a classe .btn-dark no modo claro */
 body.light-theme button.btn-light {
-    background-color: #343a40; /* exemplo: tom escuro */
+    background-color: #343a40;
+    /* exemplo: tom escuro */
     color: #ffffff;
     border: none;
 }
@@ -341,8 +348,40 @@ body.light-theme button.btn-light {
     user-select: none;
     -webkit-user-select: none;
 }
-body.NT .cs.gatilho{
+
+body.NT .cs.gatilho {
     pointer-events: all;
     user-select: all;
     -webkit-user-select: all;
+}
+
+.search-bar {
+    padding: 10px;
+    position: relative;
+    width: 420px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 48px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--text-main);
+    outline: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.search-bar input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(124, 92, 252, 0.15);
+}
+
+.search-bar i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
 }
