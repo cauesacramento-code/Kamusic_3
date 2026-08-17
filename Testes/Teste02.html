@@ -43,7 +43,7 @@
         <div class="col-12 col-md-12 d-flex flex-column gap-3">
 
             <!-- Topo -->
-            <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;">
+            <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;" id="topo">
 
                 <p id="Email" class="bs-light"></p>
 
@@ -169,9 +169,9 @@
 
                 // Atualiza o body logo após abrir/fechar o painel
                 if (painelLogin.classList.contains('gatilho')) {
-                    document.body.classList.add('NT');
+                    document.body.classList.add('dontouch');
                 } else {
-                    document.body.classList.remove('NT');
+                    document.body.classList.remove('dontouch');
                 }
             });
 
@@ -184,8 +184,8 @@
             document.addEventListener('click', function () {
                 painelLogin.classList.remove('gatilho');
 
-                // Como o painel fechou, remove obrigatoriamente a classe NT do body
-                document.body.classList.remove('NT');
+                // Como o painel fechou, remove obrigatoriamente a classe dontouch do body
+                document.body.classList.remove('dontouch');
             });
 
         </script>
