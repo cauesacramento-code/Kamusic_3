@@ -1,503 +1,458 @@
-body {
-
-    /* Define uma imagem como fundo da página */
-    background-image: url(../IMG/Background1.png);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-a {
+.menu-hamburguer {
+    display: none;
+    /* Esconde o botão na versão Desktop */
+}
 
-    /* Remove o sublinhado padrão dos links */
-    text-decoration: none;
+/* Ajuste na propriedade inválida width: 1fr do seu código antigo */
+.menu {
+    background-color: rgb(20, 20, 28);
+    color: rgb(150, 149, 149);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    padding-left: 20px;
+    padding-right: 25px;
+}
 
-    /* Define a cor preta para os links */
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menu-logo {
+    max-width: inherit;
+    display: flex;
+    justify-self: center;
+}
+
+.menu-logo img {
+    width: inherit;
+    height: 150px;
+}
+
+.menu-paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-paginas .itens {
+    display: flex;
+    font-family: arial;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 15px;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.menu-paginas .itens:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(124, 92, 252);
+    box-shadow: 0px 0px 20px 0px rgb(124, 92, 252);
+    text-shadow: 1px 1px 10px rgb(124, 92, 252);
+    border-left: 3px solid;
+}
+
+.menu-paginas #home:hover {
+    border-left-color: blue;
+}
+
+.menu-paginas #artistasmus:hover {
+    border-left-color: rgb(255, 0, 0);
+}
+
+.menu-paginas #estilosmus:hover {
+    border-left-color: rgb(238, 255, 0);
+}
+
+.menu-paginas #sobrenos:hover {
+    border-left-color: green;
+}
+
+/*
+.menu-paginas #home:hover .i{
+    color: rgb(115, 115, 250);
+    text-shadow: 1px 1px 10px rgba(62, 62, 254, 0.3);
+}
+
+.menu-paginas #artistasmus:hover .i{
+    color: rgb(255, 105, 105);
+    text-shadow: 1px 1px 10px rgb(255, 105, 105, 0.5);
+}
+
+.menu-paginas #estilosmus:hover .i{
+    color: rgb(248, 255, 34);
+    text-shadow: 1px 1px 10px rgb(248, 255, 34, 0.5);
+}
+
+.menu-paginas #sobrenos:hover .i{
+    color: rgb(123, 255, 105);
+    text-shadow: 1px 1px 10px rgb(123, 255, 105, 0.5);
+}
+*/
+
+/*CONTEÚDO*/
+
+.content {
+    background-color: rgb(11, 11, 15);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.gatilho {
+    display: none;
+    /* Esconde o quadradinho do checkbox */
+}
+
+.cor {
+    background-color: rgb(28, 28, 40);
+}
+
+.cor-gradient {
+    background-image: linear-gradient(to right, #7500E2, #FF00BB);
+}
+
+
+/* --- ESTILO QUANDO O MODO CLARO ESTIVER ATIVO --- */
+
+/* Fundo geral da página um pouco mais suave que o branco puro */
+body.light-theme {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Área de conteúdo acompanha o fundo suave */
+body.light-theme .content {
+    background-image: none;
+    background-color: #ffffff;
+}
+
+.card-simples {
+    height: 30vh;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Transforma os blocos escuros (.cor) em cards brancos flutuantes com sombra */
+body.light-theme .cor {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    /* Bordinha bem sutil para dar acabamento */
+}
+
+/* Tamanho e cor do ícone */
+.card-simples .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(150, 149, 149);
+}
+
+/* Tamanho do título do card */
+.card-simples h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Tamanho do subtítulo */
+.card-simples p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Efeito quando passa o mouse (o card sobe um pouquinho) */
+.card-simples:hover {
+    transform: translateY(-5px);
+}
+
+/* No modo escuro (normal), os textos e títulos ficam brancos */
+body:not(.light-theme) .card-simples h3 {
+    color: white;
+}
+
+/* No modo claro, os textos e títulos ficam escuros */
+body.light-theme .card-simples h3 {
+    color: #212529;
+}
+
+/* Configuração do quadrado preto */
+
+.cs {
+    position: fixed;
+    /* Fixa na tela, ignorando o rolamento da página */
+    top: 50%;
+    /* Alinha o topo no meio da tela */
+    left: 50%;
+    /* Alinha a esquerda no meio da tela */
+    transform: translate(-50%, -50%);
+    /* Centraliza perfeitamente o quadrado */
+
+    width: 380px;
+    /* Largura do quadrado */
+    height: 50%;
+    /* Altura do quadrado */
+    background-color: white;
+    /* Cor do texto interna em branco para dar contraste */
+
+    z-index: 99999;
+    /* Garante que fique na frente de todos os elementos */
+    padding: 20px;
+    /* Espaçamento interno para o texto não colar nas bordas */
+    box-shadow: 0 0 20px black;
+    /* Sombra para destacar o quadrado */
+    display: none;
+}
+
+.cs.gatilho {
+    display: block !important;
+}
+
+/* Força o elemento a aparecer, anulando o "none" anterior */
+
+
+.card-simples {
+    height: 30vh;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Tamanho e cor do ícone */
+.card-simples .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(150, 149, 149);
+}
+
+/* Tamanho do título do card */
+.card-simples h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Tamanho do subtítulo */
+.card-simples p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Efeito quando passa o mouse (o card sobe um pouquinho) */
+.card-simples:hover {
+    transform: translateY(-5px);
+}
+
+/* No modo escuro (normal), os textos e títulos ficam brancos */
+body:not(.light-theme) .card-simples h3 {
+    color: white;
+}
+
+/* No modo claro, os textos e títulos ficam escuros */
+body.light-theme .card-simples h3 {
+    color: #212529;
+}
+
+/* Estilo para botões com a classe .btn-dark no modo claro */
+body.light-theme button.btn-light {
+    background-color: #343a40;
+    /* exemplo: tom escuro */
+    color: #ffffff;
+    border: none;
+}
+
+body.light-theme div.search-bar input {
     color: black;
 }
 
-.titulo-card {
-
-    /* Fonte do título */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    /* Posicionamento livre */
+body.light-theme div.search-bar i {
     position: absolute;
-
-    /* Distância da esquerda */
-    left: 10px;
-
-    /* Distância da parte inferior */
-    bottom: 10px;
-
-    /* Tamanho da letra */
-    font-size: 18px;
-
-    /* Cor branca */
-    color: white;
-
-    /* Impede quebra de linha */
-    white-space: nowrap;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
 }
 
-.conteiner-geral {
-
-    /* Adiciona espaço acima do container */
-    margin-top: 50px;
+body.light-theme div.search-bar input::placeholder {
+    color: black;
 }
 
-.conteiner {
-    padding: 20px 20px 20px 10px;
-    /* Espaçamento interno em todos os lados */
-    /* Espaçamento interno apenas na esquerda */
-
-    margin: 50px 0;
-    /* Espaço abaixo */
-    /* Espaço acima */
-
-    /* Altura fixa */
-    height: 220px;
-
-    /* Ativa o Flexbox */
-    display: flex;
-
-    /* Espaço entre os elementos */
-    gap: 5px;
-
-    /* Organiza os itens em linha */
-    flex-direction: row;
-
-    /* Impede quebra de linha */
-    flex-wrap: nowrap;
-
-    /* Distribui os itens horizontalmente */
-    justify-content: space-between;
-
-    /* Centraliza os itens verticalmente */
-    align-items: center;
+.dontouch {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.item {
+body.dontouch .cs.gatilho {
+    pointer-events: all;
+    user-select: all;
+    -webkit-user-select: all;
+}
 
-    /* Cor de fundo */
-    background-color: rgb(25, 25, 25);
-    /* Herda altura do pai */
-    height: inherit;
-
-    /* Bordas arredondadas */
-    border-radius: 25px;
-
-    /* Transições suaves */
-    transition: 0.2s;
-
-    /* Necessário para usar absolute dentro */
+.search-bar {
     position: relative;
-
-    /* Esconde conteúdo excedente */
-    overflow: hidden;
-}
-
-.item img {
-
-    /* Faz a imagem ocupar toda largura */
-    width: 100%;
-
-    /* Faz a imagem ocupar toda altura */
-    height: 100%;
-}
-
-.item:hover {
-    /* Aumenta o tamanho do card */
-    transform: scale(1.05);
-}
-
-.overlay {
-    /*
-       Faz a camada ficar posicionada
-       em relação ao .item
-    */
-    position: absolute;
-    /* Cola no topo */
-    top: 0;
-    /* Cola na esquerda */
-    left: 0;
-    /* Ocupa toda largura */
-    width: 100%;
-    /* Ocupa toda altura */
-    height: 100%;
-    /* Fundo preto transparente */
-    background: rgba(0, 0, 0, 0.4);
-    /* Ativa flexbox */
-    display: flex;
-    /* Centraliza horizontalmente */
-    justify-content: center;
-    /* Centraliza verticalmente */
-    align-items: center;
-    /* Tamanho do texto */
-    font-size: 40px;
-    /* Cor do texto */
-    color: white;
-    /* Começa invisível */
-    opacity: 0;
-    /* Anima a transparência */
-    transition: 0.3s;
-    /* Cursor vira mãozinha */
-    cursor: pointer;
-}
-
-.item:hover .overlay {
-
-    /* Faz o overlay aparecer */
-    opacity: 1;
-}
-
-.titulo {
-
-    /* Fonte chamativa */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    /* Permite mover usando left */
-    position: relative;
-
-    /* Move 10px para a direita */
-    left: 10px;
-
-    /* Tamanho do texto */
-    font-size: 40px;
-
-    /* Centraliza dentro do flexbox */
-    align-self: center;
-
-    /* Impede quebra de linha */
-    white-space: nowrap;
-}
-
-/* Predefinições gerais dos estilos */
-
-.estilo,
-.estilo2,
-.estilo3,
-.estilo4 {
-
-    /* Largura inicial */
-    width: 100px;
-
-    /* Altura */
-    height: 50px;
-
-    /* Espaço acima */
-    margin-top: 30px;
-
-    /* Espaço à esquerda */
-    margin-left: 10px;
-
-    /*
-       Valor negativo aproxima
-       o elemento de cima
-    */
-    margin-bottom: -50px;
-
-    /* Espaço à direita */
-    margin-right: 200px;
-
-    /* Faz animações suaves */
-    transition: 0.5s;
-}
-
-/* Cores individuais */
-
-.estilo {
-
-    /* Cor azul esverdeada */
-    background-color: rgb(0, 255, 208);
-}
-
-.estilo2 {
-
-    /* Cor vermelha */
-    background-color: rgb(255, 72, 72);
-}
-
-.estilo3 {
-
-    /* Cor verde clara */
-    background-color: rgb(160, 255, 72);
-}
-
-.estilo4 {
-
-    /* Cor amarela */
-    background-color: rgb(255, 209, 72);
-
-    /* Transição um pouco mais lenta */
-    transition: 0.6s;
-}
-
-/* Hover geral */
-
-.estilo:hover,
-.estilo2:hover,
-.estilo3:hover,
-.estilo4:hover {
-
-    /* Cursor vira mãozinha */
-    cursor: pointer;
-
-    /* Expande largura */
-    width: 500px;
-}
-
-/* Ajustes específicos */
-
-.estilo3:hover {
-
-    /* Expande menos */
-    width: 300px;
-}
-
-.estilo4:hover {
-
-    /* Expande mais */
-    width: 700px;
-}
-
-.box-rec {
-
-    /* Espaço interno à esquerda */
-    padding-left: 10px;
-
-    /* Centraliza verticalmente */
-    align-items: center;
-
-    /* Ativa flexbox */
-    display: flex;
-
-    /* Espaça os elementos */
-    justify-content: space-between;
-}
-
-.imagem img {
-
-    /* Define largura fixa */
-    width: 400px;
-
-    /* Arredonda bordas */
-    border-radius: 20px;
-}
-
-.box-eminem {
-
-    /* Ativa Grid Layout */
-    display: grid;
-
-    /* Divide em 2 colunas iguais */
-    grid-template-columns: 1fr 1fr;
-}
-
-.box-centro {
-
-    /* Ativa flexbox */
-    display: flex;
-
-    /* Organiza em coluna */
-    flex-direction: column;
-
-    /* Centraliza verticalmente */
-    align-self: center;
-}
-
-.musica {
-
-    /* Ativa flexbox */
-    display: flex;
-
-    /* Margem geral */
-    margin: 20px;
-
-    /* Remove margem de cima */
-    margin-top: 0;
-
-    /* Espaço interno */
-    padding: 5px;
-
-    /* Centraliza verticalmente */
-    align-items: center;
-
-    /* Animações suaves */
-    transition: 0.2s;
-
-    /* Bordas arredondadas */
-    border-radius: 10px;
-}
-
-.musica:hover {
-
-    /* Fundo cinza transparente */
-    background-color: rgba(80, 80, 80, 0.374);
-
-    /* Cursor vira mãozinha */
-    cursor: pointer;
-}
-
-.mus-titulo {
-    /* Tamanho da fonte */
-    font-size: 30px;
-}
-
-.mus-titulo,
-.mus-album {
-    /* Justifica o texto */
-    text-align: justify;
-}
-
-.mus-album {
-    /* Cor cinza */
-    color: gray;
-
-    /* Tamanho da fonte */
-    font-size: 20px;
-}
-
-.numero {
-
-    /* Tamanho do número */
-    font-size: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-.box-dir {
-
-    /* Ativa flexbox */
-    display: flex;
-
-    /* Organiza em coluna */
-    flex-direction: column;
-
-    /* Espaço à direita */
-    margin-right: 10px;
-}
-
-.album {
-
-    /* Ativa flexbox */
-    display: flex;
-
-    /* Centraliza verticalmente */
-    align-items: center;
-
-    /* Espaço interno */
+    width: 420px;
+    max-width: 420px;
+    min-width: 0;
+    flex: 1 1 auto;
     padding: 10px;
-
-    /* Transição suave */
-    transition: 0.2s;
-
-    /* Bordas arredondadas */
-    border-radius: 20px;
-
-    /* Espaço externo */
-    margin: 5px;
-
-    width: 400px;
 }
 
-.album:hover {
-
-    /* Cursor vira mãozinha */
-    cursor: pointer;
-
-    /* Fundo transparente ao passar o mouse */
-    background-color: rgba(80, 80, 80, 0.374);
+.search-bar input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px 12px 48px;
+    background-color: var(--bg-surface);
+    border: 1px solid rgb(82, 1, 106);
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: var(--transition);
 }
 
-.numero2 {
-
-    /* Tamanho do texto */
-    font-size: 40px;
-
-    /* Espaço à direita */
-    margin-right: 20px;
+.search-bar input::placeholder {
+    color: white;
 }
 
-.album img {
-
-    /* Define largura */
-    width: 80px;
-
-    /* Arredonda bordas */
-    border-radius: 10px;
+.search-bar i {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
 }
 
-.album-tit {
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 800;
-
-    /* Espaço à esquerda */
-    margin-left: 20px;
-
-    /* Tamanho da fonte */
-    font-size: 20px;
-
-    /* Justifica o texto */
-    text-align: justify;
+.menu-paginas a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-.box-titulos {
+@media screen and (max-width: 570px) {
+    body {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
 
-    /* Espaço acima */
-    margin-top: 80px;
+    /* ALTERADO: Mudou de absolute para fixed para acompanhar o scroll */
+    .menu-hamburguer {
+        display: block;
+        position: fixed;
+        /* Fixa o botão na tela */
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 11;
+        /* Joga para frente de todo o conteúdo */
+        background-color: rgb(20, 20, 28);
+        /* Fundo para o botão não sumir em imagens */
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
 
-    /* Ativa grid */
-    display: grid;
+    /* O menu já acompanha o scroll por ser position: fixed */
+    .menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 500px;
+        height: 100vh;
+        z-index: 10;
+        /* Um nível abaixo do botão hambúrguer */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        /* Permite rolar os itens do menu caso falte espaço */
+    }
 
-    /* Cria 3 colunas iguais */
-    grid-template-columns: 1fr 1fr 1fr;
+    /* Quando clicar no botão, move o menu para dentro da tela */
+    .gatilho:checked~.menu {
+        transform: translateX(0);
+    }
 
-    /* Tamanho da fonte */
-    font-size: 30px;
+    /* Afasta o conteúdo do topo para o botão fixo não cobrir o primeiro card */
+    .content {
+        padding-top: 80px !important;
+    }
 
-    /* Centraliza verticalmente */
-    align-items: center;
+    .cs {
+        width: 350px;
+        /* Ocupa quase toda a largura no celular */
+        height: 60%;
+        /* Altura proporcional para telas pequenas */
+        font-size: 16px;
+    }
 
-    justify-items: center;
+    /* O gatilho original (checkbox invisível do menu) não deve ser zerado se quebrar o clique */
+    .gatilho {
+        display: none;
+    }
 
-    /* Fonte dos títulos */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+    .search-bar {
+        width: auto;
+        max-width: none;
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 8px 4px;
+    }
 
-.tit-box-esq {
+    .search-bar input {
+        width: 100%;
+        min-width: 0;
+        font-size: 13px;
+    }
 
-    /* Tamanho maior */
-    font-size: 40px;
-    justify-self: start;
-    margin-left: 10px;
-}
-
-
-
-@media screen and (max-width: 800px) {
-    .conteiner {
-        display: flex;
+    .cor.rounded.d-flex {
         flex-wrap: wrap;
-        justify-content: space-around;
-        height: auto;
+        height: auto !important;
+        min-height: 8vh;
     }
 
-    .item {
-        width: 45%;
-        height: 220px;
+    .search-bar {
+        order: 1;
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .box-rec{
-        display: flex;
-        flex-direction: column;
+    #Email {
+        order: 2;
+        margin: 0;
     }
-    
-    .box-eminem{
-        display: flex;
-        flex-direction: column;
+
+    #themeToggle {
+        order: 3;
     }
-    
-    .box-centro{
-        display: flex;
-        flex-direction: row;
-        margin-top:20px;
+
+    #Login {
+        order: 4;
+    }
+
+    #topo {
+        padding: 10px;
     }
 }
