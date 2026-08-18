@@ -1,111 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KaMusic - Sobre Nós</title>
-    <link rel="shortcut icon" size="16x16" href="IMG/LogoIcon.png">
-    <link rel="stylesheet" href="CSS/KamusicMenu.css">
-    <link rel="stylesheet" href="CSS/KamusicSobrenos.css">
+    <title>Home - KaMusic</title>
+    <link rel="stylesheet" href="CSS/KamusicIndex.css">
+    <link rel="shortcut icon" size="32x32" href="IMG/LogoKaBIcon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="menu-abaixo">
-        <a id="home" class="a" href="KamusicIndex.html">Home</a>
-        <a id="artistas" class="a" href="KamusicArtistas.html">Artistas e músicas</a>
-        <a class="h1" href="KamusicIndex.html">KaMusic</a>
-        <a id="estilos" class="a" href="KamusicGeneros.html">Estilos Musicais</a>
-        <a id="sobre" class="a" href="KamusicSobrenos.html">Sobre Nós</a>
-    </div>
-    <div class="cab">
-        <div class="cab-titulo">
-            <h1>KaMusic</h1>
-        </div>
-        <div class="cab-logo">
-            <img src="IMG/WhiteLogo.png" width="280">
-        </div>
-        <div class="menu">
-            <a id="home" href="KamusicIndex.html">Home</a>
-            <a id="artistas" href="KamusicArtistas.html">Artistas e músicas</a>
-            <a id="estilos" href="KamusicGeneros.html">Estilos Musicais</a>
-            <a id="sobre" href="KamusicSobrenos.html">Sobre Nós</a>
-        </div>
-    </div>
-    <div class="main">
-        <div class="corpo">
-            <h1 style="margin-bottom:-30px; font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Os pilares de KaMusic</h1>
-            <div class="box-sobrenos">
-                <a href="https://www.canva.com/design/DAHDjRg90QE/w2xmOb5bKqS4C46Tn0-Biw/edit" target="_blank"><img
-                        src="IMG/Kazuya.png" class="Kazuya"> </a>
-                <h1> Kazuya Ninomiya</h1>
+    <!-- GATILHO COMPLETO AQUI -->
+    <input type="checkbox" id="btn-menu" class="gatilho">
+    <label for="btn-menu" class="menu-hamburguer">
+        <i class="bi bi-list"></i>
+    </label>
 
-                <p style="font-size: 145%; text-align: justify;">Kazuya Ninomiya é o fundador do KaMusic, criado em Belo
-                    Horizonte com o objetivo de tornar a música mais acessível. Filho de imigrantes japoneses,
-                    desenvolveu desde jovem uma forte paixão pela arte sonora. Mesmo trabalhando como caixa de
-                    supermercado, manteve o projeto ativo por muitos anos. Sua ideia era unir educação musical, história
-                    e cultura em um único espaço. Hoje, o KaMusic conecta diferentes gerações através da música e do
-                    conhecimento musical.
-                </p>
-            </div>
-            <!-- Vou tentar usar coiso de columns e border outside pra criar sombra-->
-            <div class="box-sobrenos">
-                <h1>Marcos da Silva Gomes</h1>
-                <p style="font-size: 145%; text-align: justify;">
-                    Marcos da Silva Gomes entrou para o KaMusic em 2022 após perceber o potencial do projeto criado por
-                    Kazuya. Estudante de Sistemas de Informação e apaixonado por jazz e bossa nova, decidiu ajudar
-                    voluntariamente na modernização do site. Ele reformulou o visual da plataforma, criou a arquitetura
-                    tecnológica e aproximou o portal do público jovem. Também desenvolveu recursos interativos que se
-                    tornaram destaque entre os estudantes. Atualmente, é reconhecido como cofundador tecnológico do
-                    KaMusic.
-                </p>
-                <div>
-                    <img src="IMG/CaueCastanheiroCostaCastroSemFundo.png" class="Marcos">
+    <div class="menu">
+        <div class="menu-logo">
+            <img src="./IMG/LogoKA1.png">
+        </div>
+        <div class="menu-paginas">
+            <a href="index.html">
+                <div id="home" class="itens">
+                    <div class="i"><i class="bi bi-house-door-fill"></i></div>Home
+                </div>
+            </a>
+
+            <a href="KamusicArtistas.html">
+                <div id="artistasmus" class="itens">
+                    <div class="i"><i class="bi bi-compass-fill"></i></div>Artistas e músicas
+                </div>
+            </a>
+
+            <a href="KamusicGeneros.html">
+                <div id="estilosmus" class="itens">
+                    <div class="i"><i class="bi bi-graph-up"></i></div>Estilos musicais
+                </div>
+            </a>
+
+            <a href="KamusicSobrenos.html">
+                <div id="sobrenos" class="itens">
+                    <div class="i"><i class="bi bi-clipboard-fill"></i></div>Sobre Nós
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+    <div class="content container-fluid p-3">
+
+        <!-- Conteúdo -->
+        <div class="col-12 col-md-12 d-flex flex-column gap-3">
+
+            <!-- Topo -->
+            <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;" id="topo">
+
+                <p id="Email" class="bs-light"></p>
+
+                <div class="search-bar justify-content-left bs-light"> <i class="fa-solid fa-search"></i> <input
+                        type="text" id="searchInput" placeholder="Pesquise músicas, álbuns ou artistas..."> </div>
+
+                <button class="action-btn btn btn-light btn-sm me-3" id="themeToggle"
+                    title="Alternar Modo Escuro/Claro">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!--
+                Sistema de login
+                -->
+
+                <!--Botão de Login-->
+                <button type="button" class="action-btn btn btn-light btn-sm me-3q" id="Login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa fa-user-circle"></i>
+                </button>
+
+                <!-- Modal q aparece ao apertar no login -->
+                <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <h1 class="modal-header fs-5" id="exampleModalToggleLabel">
+                                Login
+                            </h1>
+                            <form>
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" class="text-dark">Endereço de Email</label>
+                                        <input type="email" id="email" class="form-control bs-primary"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                        <small id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail
+                                            com alguém.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1" class="text-dark">Senha</label>
+                                        <input type="password" class="form-control mb-3" id="exampleInputPassword1" required>
+                                    </div>
+                                    <div class="form-group form-check mb-3">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label text-dark" for="exampleCheck1">Lembre-me</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box-sobrenos">
-                <img src="IMG/EmilyMarianeDaSilvaCunhaSemFundo.png" class="Emily">
-                <h1>Emily Mariane da Silva</h1>
-                <p style="font-size: 145%; text-align: justify;">
-                    Emily Mariane da Silva contribuiu para o KaMusic trazendo seu conhecimento em preservação histórica
-                    e organização de arquivos culturais. Especialista em Ciência da Informação, dedicava-se à
-                    restauração de documentos e manuscritos antigos em Minas Gerais. Apaixonada por jazz e música
-                    eletrônica, passou a reunir raridades musicais e materiais históricos para o projeto. Sua
-                    participação ajudou a fortalecer a identidade cultural e artística do KaMusic. Emily tornou-se
-                    responsável por enriquecer o acervo e valorizar a memória musical.
-                </p>
+
+            <!-- Banner -->
+            <div class="cor-gradient rounded" style="height: 50vh;"></div>
+
+            <!-- Cards -->
+
+            <div class="row g-4">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-robot icone"></i>
+                        <h3>Cyberpunk Odyssey</h3>
+                        <p>Neon Runners</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-cloud-moon icone"></i>
+                        <h3>Midnight Sunset</h3>
+                        <p>Aura</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-bolt icone"></i>
+                        <h3>Electric Pulse</h3>
+                        <p>Synthetica</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-mug-hot icone"></i>
+                        <h3>Coffee & Rain</h3>
+                        <p>Lo-Fi Generator</p>
+                    </div>
+                </div>
+
+                <!-- Rodapé -->
+                <div class="cor rounded" style="height: auto; min-height: 100px;"></div>
+
             </div>
         </div>
-    </div>
-        <footer class="clear">
 
-        <div class="Menon">
+        <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
-            <!-- Linha horizontal -->
-            <hr>
+        <script>
 
-            <div class="divulg">
-                <a href="https://www.instagram.com/">
-                    <img src="IMG/Inst.png">
-                </a>
-                <a href="https://web.whatsapp.com/">
-                    <img src="IMG/what.png">
-                </a>
-                <a href="https://www.facebook.com/?locale=pt_BR">
-                    <img src="IMG/Face.png">
-                </a>
-            </div>
-            <b> Entre em contato conosco!</b>
-            <!-- Texto do rodapé -->
-            <p>
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
 
-                &copy Todos os direitos reservados. KaMusic.
+            // 1. ASSIM QUE A PÁGINA CARREGA: Verifica se existe um tema salvo no computador
+            const temaSalvo = localStorage.getItem('temaPreferido');
 
-            </p>
+            if (temaSalvo === 'claro') {
+                document.body.classList.add('light-theme');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                // Se não tiver nada salvo ou estiver como 'escuro', garante o padrão escuro
+                document.body.classList.remove('light-theme');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
 
-        </div>
+            // 2. AO CLICAR NO BOTÃO: Alterna o tema e salva a nova escolha
+            themeToggle.addEventListener('click', () => {
+                // Alterna a classe no <body>
+                document.body.classList.toggle('light-theme');
 
-    </footer>
+                // Troca o ícone e grava a informação no localStorage baseado na mudança
+                if (document.body.classList.contains('light-theme')) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('temaPreferido', 'claro'); // Salva "claro" no PC
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('temaPreferido', 'escuro'); // Salva "escuro" no PC
+                }
+            }); const botaoLogin = document.getElementById('Login');
+            const painelLogin = document.getElementById('loginconteiner');
+
+            // 1. Abre e fecha ao clicar no botão de usuário
+            botaoLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
+                painelLogin.classList.toggle('gatilho');
+
+                // Atualiza o body logo após abrir/fechar o painel
+                if (painelLogin.classList.contains('gatilho')) {
+                    document.body.classList.add('dontouch');
+                } else {
+                    document.body.classList.remove('dontouch');
+                }
+            });
+
+            // 2. Evita que o painel feche se o usuário clicar dentro do formulário
+            painelLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
+
+            // 3. Fecha o painel se o usuário clicar em qualquer outro lugar da tela
+            document.addEventListener('click', function () {
+                painelLogin.classList.remove('gatilho');
+
+                // Como o painel fechou, remove obrigatoriamente a classe dontouch do body
+                document.body.classList.remove('dontouch');
+            });
+
+        </script>
 </body>
 
-</html> 
+</html>

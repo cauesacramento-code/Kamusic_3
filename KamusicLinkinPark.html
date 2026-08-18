@@ -1,353 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KaMusic - Linkin Park</title>
-    <link rel="shortcut icon" size="16x16" href="IMG/LogoIcon.png">
-    <link rel="stylesheet" href="CSS/KamusicMenu.css">
-    <link rel="stylesheet" href="CSS/KamusicTupac.css">
-
-
-    <!--Para possíveis ícones: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">-->
+    <title>Home - KaMusic</title>
+    <link rel="stylesheet" href="CSS/KamusicIndex.css">
+    <link rel="shortcut icon" size="32x32" href="IMG/LogoKaBIcon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="menu-abaixo">
-        <a id="home" class="a" href="KamusicIndex.html">Home</a>
-        <a id="artistas" class="a" href="KamusicArtistas.html">Artistas e músicas</a>
-        <a class="h1" href="KamusicIndex.html">KaMusic</a>
-        <a id="estilos" class="a" href="KamusicGeneros.html">Estilos Musicais</a>
-        <a id="sobre" class="a" href="KamusicSobrenos.html">Sobre Nós</a>
+    <!-- GATILHO COMPLETO AQUI -->
+    <input type="checkbox" id="btn-menu" class="gatilho">
+    <label for="btn-menu" class="menu-hamburguer">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <div class="menu">
+        <div class="menu-logo">
+            <img src="./IMG/LogoKA1.png">
+        </div>
+        <div class="menu-paginas">
+            <a href="index.html">
+                <div id="home" class="itens">
+                    <div class="i"><i class="bi bi-house-door-fill"></i></div>Home
+                </div>
+            </a>
+
+            <a href="KamusicArtistas.html">
+                <div id="artistasmus" class="itens">
+                    <div class="i"><i class="bi bi-compass-fill"></i></div>Artistas e músicas
+                </div>
+            </a>
+
+            <a href="KamusicGeneros.html">
+                <div id="estilosmus" class="itens">
+                    <div class="i"><i class="bi bi-graph-up"></i></div>Estilos musicais
+                </div>
+            </a>
+
+            <a href="KamusicSobrenos.html">
+                <div id="sobrenos" class="itens">
+                    <div class="i"><i class="bi bi-clipboard-fill"></i></div>Sobre Nós
+                </div>
+            </a>
+
+
+        </div>
     </div>
-    <div class="cab">
-        <div class="cab-titulo">
-            <h1>KaMusic</h1>
-        </div>
-        <div class="cab-logo">
-            <img src="IMG/WhiteLogo.png" width="280">
-        </div>
-        <div class="menu">
-            <a id="home" href="KamusicIndex.html">Home</a>
-            <a id="artistas" href="KamusicArtistas.html">Artistas e músicas</a>
-            <a id="estilos" href="KamusicGeneros.html">Estilos Musicais</a>
-            <a id="sobre" href="KamusicSobrenos.html">Sobre Nós</a>
-        </div>
-    </div>
-    <div class="main">
-        <div class="corpo">
-            <img src="IMG/BannerLinkinPark.png" class="BannerPrincipal">
-            <div class="titulos">
-                <a href="https://music.youtube.com/playlist?list=OLAK5uy_k7mmOSpP63ccIRmgod4PkMPARvWuYw6dA"
-                    target="_blank">Top músicas </a>
-            </div>
-            <div class="mus-album">
-                <div class="mus-box">
-                    <div class="musica-col">
-                        <div class="mus-esp">
-                            <div class="numero-musica">1</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Battle Symphony</div>
-                                <div class="album-musica"> One More Light (2017)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">2</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">What I've Done</div>
-                                <div class="album-musica">Minutes to Midnight (2007)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">3</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Leave Out All the Rest</div>
-                                <div class="album-musica">Minutes to Midnight (2007)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">4</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Papercut</div>
-                                <div class="album-musica">Hybrid Theory (2000)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">5</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">In the End</div>
-                                <div class="album-musica">Hybrid Theory (2000)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="musica-col">
-                        <div class="mus-esp">
-                            <div class="numero-musica">6</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">One Step Closer</div>
-                                <div class="album-musica">Hybrid Theory (2000)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">7</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Somewhere I Belong</div>
-                                <div class="album-musica">Meteora (2003)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">8</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">From The Inside</div>
-                                <div class="album-musica">Meteora (2003)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">9</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica"> Faint</div>
-                                <div class="album-musica">Meteora (2003)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">10</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Numb</div>
-                                <div class="album-musica">Meteora (2003)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="musica-col">
-                        <div class="mus-esp">
-                            <div class="numero-musica">11</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">The Emptiness Machine</div>
-                                <div class="album-musica">From Zero (2024)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">12</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Over Each Other</div>
-                                <div class="album-musica">From Zero (2024)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">13</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Heavy Is the Crown</div>
-                                <div class="album-musica">From Zero (2024)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">14</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">One More Light</div>
-                                <div class="album-musica">One More Light (2017)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">15</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Lost In The Echo</div>
-                                <div class="album-musica"> Living Things (2012) </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="musica-col">
-                        <div class="mus-esp">
-                            <div class="numero-musica">16</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica"> Burn It Down </div>
-                                <div class="album-musica">Living Things (2012)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">17</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Castle of Glass</div>
-                                <div class="album-musica">Living Things (2012)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">18</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Iridescent</div>
-                                <div class="album-musica">A Thousand Suns (2010)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">19</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">The Catalyst</div>
-                                <div class="album-musica">A Thousand Suns (2010)</div>
-                            </div>
-                        </div>
-                        <div class="mus-esp">
-                            <div class="numero-musica">20</div>
-                            <div class="mus-info-box">
-                                <div class="nome-musica">Figure.09</div>
-                                <div class="album-musica">Meteora (2003)</div>
-                            </div>
+    <div class="content container-fluid p-3">
+
+        <!-- Conteúdo -->
+        <div class="col-12 col-md-12 d-flex flex-column gap-3">
+
+            <!-- Topo -->
+            <div class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;" id="topo">
+
+                <p id="Email" class="bs-light"></p>
+
+                <div class="search-bar justify-content-left bs-light"> <i class="fa-solid fa-search"></i> <input
+                        type="text" id="searchInput" placeholder="Pesquise músicas, álbuns ou artistas..."> </div>
+
+                <button class="action-btn btn btn-light btn-sm me-3" id="themeToggle"
+                    title="Alternar Modo Escuro/Claro">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!--
+                Sistema de login
+                -->
+
+                <!--Botão de Login-->
+                <button type="button" class="action-btn btn btn-light btn-sm me-3q" id="Login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa fa-user-circle"></i>
+                </button>
+
+                <!-- Modal q aparece ao apertar no login -->
+                <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <h1 class="modal-header fs-5" id="exampleModalToggleLabel">
+                                Login
+                            </h1>
+                            <form>
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" class="text-dark">Endereço de Email</label>
+                                        <input type="email" id="email" class="form-control bs-primary"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                        <small id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail
+                                            com alguém.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1" class="text-dark">Senha</label>
+                                        <input type="password" class="form-control mb-3" id="exampleInputPassword1" required>
+                                    </div>
+                                    <div class="form-group form-check mb-3">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label text-dark" for="exampleCheck1">Lembre-me</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="titulos">
-                <a href="https://music.youtube.com/browse/MPADUCxgN32UVVztKAQd2HkXzBtw" target="_blank">
-                    Top álbuns </a>
-            </div>
-            <div class="album-box">
-                <div class="album-esp">
-                    <div class="album">
-                        <div class="contagem">1</div>
-                        <img src="IMG/AlbumLinkinPark4.jpg">
-                        <div class="texto-album">
-                            <h1>From Zero</h1>
-                            <p>2024</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">3</div>
-                        <img src="IMG/AlbumLinkinPark6.jpg">
-                        <div class="texto-album">
-                            <h1>One More Light</h1>
-                            <p>2017</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">5</div>
-                        <img src="IMG/AlbumLinkinPark7.jpg">
-                        <div class="texto-album">
-                            <h1>Living Things</h1>
-                            <p>2012</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">7</div>
-                        <img src="IMG/AlbumLinkinPark2.jpg">
-                        <div class="texto-album">
-                            <h1>Meteora</h1>
-                            <p>2003</p>
-                        </div>
+
+            <!-- Banner -->
+            <div class="cor-gradient rounded" style="height: 50vh;"></div>
+
+            <!-- Cards -->
+
+            <div class="row g-4">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-robot icone"></i>
+                        <h3>Cyberpunk Odyssey</h3>
+                        <p>Neon Runners</p>
                     </div>
                 </div>
-                <div class="album-esp">
-                    <div class="album">
-                        <div class="contagem">2</div>
-                        <img src="IMG/AlbumLinkinPark5.jpg">
-                        <div class="texto-album">
-                            <h1>A Thousand Suns</h1>
-                            <p>2010</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">4</div>
-                        <img src="IMG/AlbumLinkinPark3.jpg">
-                        <div class="texto-album">
-                            <h1>Minutes to Midnight</h1>
-                            <p>2007</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">6</div>
-                        <img src="IMG/AlbumLinkinPark1.jpg">
-                        <div class="texto-album">
-                            <h1>Hybrid Theory</h1>
-                            <p>2000</p>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <div class="contagem">8</div>
-                        <img src="IMG/AlbumLinkinPark8.jpg">
-                        <div class="texto-album">
-                            <h1>Papercuts</h1>
-                            <p>2024</p>
-                        </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-cloud-moon icone"></i>
+                        <h3>Midnight Sunset</h3>
+                        <p>Aura</p>
                     </div>
                 </div>
-            </div>
-            <div class="artista-info">
-                <h2>Linkin Park</h2>
 
-                <p>
-                    Linkin Park foi uma das bandas mais influentes do rock dos anos 2000,
-                    conhecida por misturar rock, rap e música eletrônica em um estilo único.
-                    Formada na Califórnia em 1996, a banda conquistou uma geração com letras
-                    emocionais e sonoridade intensa.
-                </p>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-bolt icone"></i>
+                        <h3>Electric Pulse</h3>
+                        <p>Synthetica</p>
+                    </div>
+                </div>
 
-                <p>
-                    O grupo ganhou destaque mundial com o álbum "Hybrid Theory", que se tornou
-                    um dos discos de estreia mais vendidos da história do rock moderno.
-                </p>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+                        <i class="fa-solid fa-mug-hot icone"></i>
+                        <h3>Coffee & Rain</h3>
+                        <p>Lo-Fi Generator</p>
+                    </div>
+                </div>
 
-                <h3>Ascensão</h3>
+                <!-- Rodapé -->
+                <div class="cor rounded" style="height: auto; min-height: 100px;"></div>
 
-                <p>
-                    A combinação entre os vocais melódicos de Chester Bennington e os versos
-                    de rap de Mike Shinoda criou a identidade marcante da banda.
-                </p>
-
-                <p>
-                    Suas músicas abordavam temas como ansiedade, solidão, raiva, pressão
-                    emocional e conflitos internos, criando uma forte conexão com o público.
-                </p>
-
-                <p>
-                    Álbuns como "Meteora" e "Minutes to Midnight" consolidaram o Linkin Park
-                    como uma das maiores bandas do século XXI.
-                </p>
-
-                <h3>Impacto</h3>
-
-                <p>
-                    Linkin Park ajudou a popularizar o nu metal e influenciou diversas bandas
-                    ao redor do mundo com sua mistura de estilos e produção moderna.
-                </p>
-
-                <p>
-                    Entre seus maiores sucessos estão "Numb", "In the End",
-                    "Somewhere I Belong" e "Faint".
-                </p>
-
-                <p>
-                    Mesmo após a morte de Chester Bennington em 2017, a banda continua sendo
-                    lembrada como uma das maiores e mais importantes da história do rock moderno.
-                </p>
             </div>
         </div>
-    </div>
-    <footer class="clear">
 
-        <div class="Menon">
+        <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
-            <!-- Linha horizontal -->
-            <hr>
+        <script>
 
-            <div class="divulg">
-                <a href="https://www.instagram.com/">
-                    <img src="IMG/Inst.png">
-                </a>
-                <a href="https://web.whatsapp.com/">
-                    <img src="IMG/what.png">
-                </a>
-                <a href="https://www.facebook.com/?locale=pt_BR">
-                    <img src="IMG/Face.png">
-                </a>
-            </div>
-            <b> Entre em contato conosco!</b>
-            <!-- Texto do rodapé -->
-            <p>
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
 
-                &copy Todos os direitos reservados. KaMusic.
+            // 1. ASSIM QUE A PÁGINA CARREGA: Verifica se existe um tema salvo no computador
+            const temaSalvo = localStorage.getItem('temaPreferido');
 
-            </p>
+            if (temaSalvo === 'claro') {
+                document.body.classList.add('light-theme');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                // Se não tiver nada salvo ou estiver como 'escuro', garante o padrão escuro
+                document.body.classList.remove('light-theme');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
 
-        </div>
+            // 2. AO CLICAR NO BOTÃO: Alterna o tema e salva a nova escolha
+            themeToggle.addEventListener('click', () => {
+                // Alterna a classe no <body>
+                document.body.classList.toggle('light-theme');
 
-    </footer>
+                // Troca o ícone e grava a informação no localStorage baseado na mudança
+                if (document.body.classList.contains('light-theme')) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('temaPreferido', 'claro'); // Salva "claro" no PC
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('temaPreferido', 'escuro'); // Salva "escuro" no PC
+                }
+            }); const botaoLogin = document.getElementById('Login');
+            const painelLogin = document.getElementById('loginconteiner');
+
+            // 1. Abre e fecha ao clicar no botão de usuário
+            botaoLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
+                painelLogin.classList.toggle('gatilho');
+
+                // Atualiza o body logo após abrir/fechar o painel
+                if (painelLogin.classList.contains('gatilho')) {
+                    document.body.classList.add('dontouch');
+                } else {
+                    document.body.classList.remove('dontouch');
+                }
+            });
+
+            // 2. Evita que o painel feche se o usuário clicar dentro do formulário
+            painelLogin.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
+
+            // 3. Fecha o painel se o usuário clicar em qualquer outro lugar da tela
+            document.addEventListener('click', function () {
+                painelLogin.classList.remove('gatilho');
+
+                // Como o painel fechou, remove obrigatoriamente a classe dontouch do body
+                document.body.classList.remove('dontouch');
+            });
+
+        </script>
 </body>
 
 </html>
