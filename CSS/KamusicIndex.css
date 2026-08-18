@@ -104,8 +104,8 @@ body {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    min-width: 0;
-    max-width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
 }
 
 .gatilho {
@@ -115,6 +115,7 @@ body {
 
 .cor {
     background-color: rgb(28, 28, 40);
+    height: 100vh;
 }
 
 .cor-gradient {
