@@ -69,33 +69,50 @@
                     <i class="fa-solid fa-moon" id="themeIcon"></i>
                 </button>
 
-                <button class="action-btn btn btn-light btn-sm me-3" id="Login" title="Sistema de login">
+                <!--
+                Sistema de login
+                -->
+
+                <!--Botão de Login-->
+                <button type="button" class="action-btn btn btn-light btn-sm me-3q" id="Login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fa fa-user-circle"></i>
                 </button>
 
-                <!--Sistema de login-->
-
-                <div class="cs gap-10" id="loginconteiner">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1" class="text-dark">Email address</label>
-                            <input type="email" id="email" class="form-control bs-primary" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com ninguém.
-                                else.</small>
+                <!-- Modal q aparece ao apertar no login -->
+                <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <h1 class="modal-header fs-5" id="exampleModalToggleLabel">
+                                Login
+                            </h1>
+                            <form>
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" class="text-dark">Endereço de Email</label>
+                                        <input type="email" id="email" class="form-control bs-primary"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                        <small id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail
+                                            com alguém.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1" class="text-dark">Senha</label>
+                                        <input type="password" class="form-control mb-3" id="exampleInputPassword1" required>
+                                    </div>
+                                    <div class="form-group form-check mb-3">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label text-dark" for="exampleCheck1">Lembre-me</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1" class="text-dark">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-dark" for="exampleCheck1">Lembre-me</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Confirmar</button>
-                    </form>
+                    </div>
                 </div>
-
             </div>
 
             <!-- Banner -->
@@ -144,6 +161,10 @@
         </div>
 
         <!-- JAVASCRIPT DE NAVEGAÇÃO E TEMA -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
         <script>
 
             const themeToggle = document.getElementById('themeToggle');
