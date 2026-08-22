@@ -6,149 +6,274 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 75px 1fr;
     min-height: 100vh;
+    transition: 0.3s;
+    transition-delay: 0.2s;
 }
 
-/* ==================== MENU ==================== */
+body:has(#btn-menu:checked){
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
 
+/* MENU */
+
+/* BARRA LATERAL DO MENU COMPLETO */
 .menu {
+    display:flex;
     background-color: rgb(20, 20, 28);
     color: rgb(150, 149, 149);
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    padding: 0 20px;
+    padding: 20px;
     min-height: 100vh;
 }
 
+/* RODAPÉ DO MENU */
+.menu .footer{
+    display:flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: end;
+    left: -500px;
+    width:200px;
+    bottom:0px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+body:has(#btn-menu:checked) .menu .footer{
+    left: 20px;
+}
+
+/* LINHA DIVISÓRIA DO RODAPÉ */
+.menu .linha-separar{
+    width:100%;
+    height: 1px;
+    margin-top:50px;
+    background-color: gray;
+}
+
+/* TEXTO DE CRÉDITOS DO PROJETO */
+.menu .creditos{
+    display:flex;
+    flex-direction: column;
+    justify-self: end;
+    font-size: 10px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CAIXA FIXA DOS ITENS INTERNOS DO MENU */
+.menu-box{
+    position: fixed;
+}
+
+/* BLOCO DA LOGOMARCA */
 .menu-logo {
-    display: flex;
-    justify-self: center;
+    margin-left: 50px;
+    margin-bottom: 0px;
 }
 
+/* IMAGEM DO LOGOTIPO */
 .menu-logo img {
-    height: 150px;
+    width: 100px;
 }
 
+/* CONTAINER DOS LINKS DE NAVEGAÇÃO DO MENU */
 .menu-paginas {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* LINKS DAS PÁGINAS DO MENU */
 .menu-paginas a {
     text-decoration: none;
     color: inherit;
 }
 
-.menu-paginas .itens {
+/*MENU ABERTO*/
+
+/* MENU EXPANDIDO COM TEXTOS */
+.menu-aberto{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    position:absolute;
+    width: 200px;
+    left: -500px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+body:has(#btn-menu:checked) .menu-aberto{
+    left: 10px;
+}
+
+/* BOTÕES DE ITENS COM TEXTO DO MENU ABERTO */
+.menu-aberto .itens {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 15px;
-    font-family: Arial, sans-serif;
-    font-size: 17px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.menu-paginas .itens:hover {
+.menu-aberto .itens:hover {
     color: white;
-    border-radius: 10px;
     background-color: rgb(124, 92, 252);
     box-shadow: 0 0 20px rgb(124, 92, 252);
-    text-shadow: 1px 1px 10px rgb(124, 92, 252);
-    border-left: 3px solid;
 }
 
-#home:hover {
-    border-left-color: blue;
+/*MENU FECHADO*/
+
+/* MENU RETRAÍDO APENAS COM ÍCONES */
+.menu-fechado{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+    margin-left:-7px; 
+    position: absolute;
+    top:30px;
+    gap:10px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
 }
 
-#artistasmus:hover {
-    border-left-color: red;
+body:has(#btn-menu:checked) .menu-fechado{
+    display: flex;
+    flex-direction: column;
+    top:-500px;
 }
 
-#estilosmus:hover {
-    border-left-color: yellow;
+/* BOTÕES DE ÍCONES DO MENU FECHADO */
+.menu-fechado .itens{
+    color:gray;
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 10%;
+    transition: 0.2s;
 }
 
-#sobrenos:hover {
-    border-left-color: green;
+.menu-fechado .itens:hover{
+    color: white;
+    background-color: rgb(124, 92, 252);
+    box-shadow: 0 0 20px rgb(124, 92, 252);
 }
 
-/* ==================== MENU MOBILE ==================== */
-
-.gatilho {
-    display: none;
+/* IMAGENS E ÍCONES DO MENU FECHADO */
+.menu-fechado img{
+    max-width: 50px;
+    margin: 10px 0px;
 }
 
+/* MENU HAMBURGUER */
+
+/* BOTÃO DE DISPARO DO MENU */
 .menu-hamburguer {
-    display: none;
+    display: flex;
+
+    top: 25px;
+    left: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    color: white;
+
+    background-color: rgb(20, 20, 28);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    z-index: 1100;
+
+    transition: 0.3s;
 }
 
-/* ==================== CONTEÚDO ==================== */
+.menu-hamburguer:hover {
+    color:white;
+    background-color: rgb(124, 92, 252);
+    box-shadow: 0 0 20px rgb(124, 92, 252);
+}
 
+/* CONTEÚDO */
+
+/* CONTAINER DA ÁREA PRINCIPAL DA PÁGINA */
 .content {
-    background-color: rgb(11, 11, 15);
     min-width: 0;
     min-height: 100vh;
+    background-color: rgb(11, 11, 15);
 }
 
+/* CLASSE DE COR DE FUNDO SÓLIDA ESCURA */
 .cor {
     background-color: rgb(28, 28, 40);
 }
 
+/* CLASSE DE GRADIENTE EM DEGRADÊ COLORIDO */
 .cor-gradient {
     background-image: linear-gradient(to right, #7500E2, #FF00BB);
 }
 
-/* ==================== PESQUISA ==================== */
+/* PESQUISA */
 
+/* BARRA DE PESQUISA */
 .search-bar {
     position: relative;
     width: 420px;
-    max-width: 100%;
-    padding: 10px;
     margin-right: auto;
 }
 
+/* CAMPO DE ENTRADA DE TEXTO DA PESQUISA */
 .search-bar input {
     width: 100%;
-    min-width: 0;
     padding: 12px 16px 12px 48px;
     background-color: rgb(28, 28, 40);
     border: 1px solid rgb(82, 1, 106);
     border-radius: 30px;
     color: white;
     outline: none;
-    font-size: 14px;
 }
 
 .search-bar input::placeholder {
     color: white;
 }
 
+/* ÍCONE DE LUPA INTERNO DA PESQUISA */
 .search-bar i {
     position: absolute;
-    left: 28px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
     color: white;
 }
 
-/* ==================== CARDS ==================== */
+/* CARDS */
 
+/* CONTAINER INDIVIDUAL DE CARTÃO */
 .card-simples {
     height: 30vh;
-    border-radius: 10px;
     padding: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -156,31 +281,34 @@ body {
     transform: translateY(-5px);
 }
 
+/* ÍCONE INTERNO DO CARD */
 .card-simples .icone {
     font-size: 40px;
     margin-bottom: 15px;
     color: rgb(150, 149, 149);
 }
 
+/* TÍTULO PRINCIPAL DO CARD */
 .card-simples h3 {
     font-size: 18px;
     margin-bottom: 5px;
+    color: white;
 }
 
+/* PARÁGRAFO DE TEXTO DO CARD */
 .card-simples p {
     font-size: 14px;
     color: gray;
 }
 
-body:not(.light-theme) .card-simples h3 {
-    color: white;
+/* CHECKBOX DO MENU */
+
+/* INPUT CHECKBOX OCULTO QUE CONTROLA O MENU */
+.gatilho {
+    display: none;
 }
 
-body.light-theme .card-simples h3 {
-    color: #212529;
-}
-
-/* ==================== MODO CLARO ==================== */
+/* MODO CLARO */
 
 body.light-theme {
     background-color: white;
@@ -193,8 +321,12 @@ body.light-theme .content {
 
 body.light-theme .cor {
     background-color: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .card-simples h3 {
+    color: #212529;
 }
 
 body.light-theme .search-bar input {
@@ -202,32 +334,17 @@ body.light-theme .search-bar input {
     color: black;
 }
 
-body.light-theme .search-bar input::placeholder {
-    color: black;
-}
-
+body.light-theme .search-bar input::placeholder,
 body.light-theme .search-bar i {
     color: black;
 }
 
-body.light-theme button.btn-light {
-    background-color: #343a40;
-    color: white;
-    border: none;
-}
-
-/* ==================== LOGIN ==================== */
-
-.modal-content {
-    color: #212529;
-}
-
-/* ==================== MOBILE ==================== */
+/* CELULAR */
 
 @media screen and (max-width: 570px) {
 
     body {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     .menu-hamburguer {
@@ -236,13 +353,11 @@ body.light-theme button.btn-light {
         top: 20px;
         left: 20px;
         z-index: 1001;
-
-        font-size: 30px;
-        color: white;
-        background-color: rgb(20, 20, 28);
-
         padding: 5px 10px;
         border-radius: 5px;
+        background-color: rgb(20, 20, 28);
+        color: white;
+        font-size: 30px;
         cursor: pointer;
     }
 
@@ -250,15 +365,11 @@ body.light-theme button.btn-light {
         position: fixed;
         top: 0;
         left: 0;
-
         width: 280px;
         height: 100vh;
-
         z-index: 1000;
-
         transform: translateX(-100%);
         transition: transform 0.3s ease;
-
         overflow-y: auto;
     }
 
@@ -268,40 +379,30 @@ body.light-theme button.btn-light {
 
     .content {
         width: 100%;
-        min-width: 0;
         padding-top: 80px !important;
     }
 
+    /* CABEÇALHO SUPERIOR DA PÁGINA */
     #topo {
-        flex-wrap: wrap;
         height: auto !important;
-        gap: 5px;
+        min-height: 80px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .search-bar {
         order: 1;
         width: 100%;
-        max-width: 100%;
         margin-right: 0;
     }
 
-    #Email {
+    /* BOTÃO INTERRUPTOR DO TEMA CLARO/ESCURO */
+    #themeToggle {
         order: 2;
     }
 
-    #themeToggle {
-        order: 3;
-    }
-
+    /* BOTÃO OU BLOCO DE LOGIN */
     #Login {
-        order: 4;
-    }
-
-    .search-bar input {
-        font-size: 13px;
-    }
-
-    .cs {
-        width: 90%;
+        order: 3;
     }
 }
