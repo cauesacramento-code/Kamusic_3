@@ -6,27 +6,27 @@
 
 body {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 1fr 4fr;
     min-height: 100vh;
 }
 
-/* MENU */
+/* ==================== MENU ==================== */
 
 .menu {
     background-color: rgb(20, 20, 28);
     color: rgb(150, 149, 149);
-    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    padding: 0 20px;
     min-height: 100vh;
 }
 
 .menu-logo {
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    justify-self: center;
 }
 
 .menu-logo img {
-    width: 150px;
     height: 150px;
 }
 
@@ -41,30 +41,58 @@ body {
     color: inherit;
 }
 
-.itens {
+.menu-paginas .itens {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 15px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-size: 17px;
-    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.itens:hover {
+.menu-paginas .itens:hover {
     color: white;
+    border-radius: 10px;
     background-color: rgb(124, 92, 252);
     box-shadow: 0 0 20px rgb(124, 92, 252);
+    text-shadow: 1px 1px 10px rgb(124, 92, 252);
+    border-left: 3px solid;
 }
 
-/* CONTEÚDO */
+#home:hover {
+    border-left-color: blue;
+}
+
+#artistasmus:hover {
+    border-left-color: red;
+}
+
+#estilosmus:hover {
+    border-left-color: yellow;
+}
+
+#sobrenos:hover {
+    border-left-color: green;
+}
+
+/* ==================== MENU MOBILE ==================== */
+
+.gatilho {
+    display: none;
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+/* ==================== CONTEÚDO ==================== */
 
 .content {
+    background-color: rgb(11, 11, 15);
     min-width: 0;
     min-height: 100vh;
-    background-color: rgb(11, 11, 15);
 }
 
 .cor {
@@ -75,22 +103,26 @@ body {
     background-image: linear-gradient(to right, #7500E2, #FF00BB);
 }
 
-/* PESQUISA */
+/* ==================== PESQUISA ==================== */
 
 .search-bar {
     position: relative;
     width: 420px;
+    max-width: 100%;
+    padding: 10px;
     margin-right: auto;
 }
 
 .search-bar input {
     width: 100%;
+    min-width: 0;
     padding: 12px 16px 12px 48px;
     background-color: rgb(28, 28, 40);
     border: 1px solid rgb(82, 1, 106);
     border-radius: 30px;
     color: white;
     outline: none;
+    font-size: 14px;
 }
 
 .search-bar input::placeholder {
@@ -99,23 +131,24 @@ body {
 
 .search-bar i {
     position: absolute;
-    left: 18px;
+    left: 28px;
     top: 50%;
     transform: translateY(-50%);
     color: white;
 }
 
-/* CARDS */
+/* ==================== CARDS ==================== */
 
 .card-simples {
     height: 30vh;
-    padding: 20px;
     border-radius: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -132,7 +165,6 @@ body {
 .card-simples h3 {
     font-size: 18px;
     margin-bottom: 5px;
-    color: white;
 }
 
 .card-simples p {
@@ -140,17 +172,15 @@ body {
     color: gray;
 }
 
-/* CHECKBOX DO MENU */
-
-.gatilho {
-    display: none;
+body:not(.light-theme) .card-simples h3 {
+    color: white;
 }
 
-.menu-hamburguer {
-    display: none;
+body.light-theme .card-simples h3 {
+    color: #212529;
 }
 
-/* MODO CLARO */
+/* ==================== MODO CLARO ==================== */
 
 body.light-theme {
     background-color: white;
@@ -163,12 +193,8 @@ body.light-theme .content {
 
 body.light-theme .cor {
     background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-body.light-theme .card-simples h3 {
-    color: #212529;
 }
 
 body.light-theme .search-bar input {
@@ -176,17 +202,32 @@ body.light-theme .search-bar input {
     color: black;
 }
 
-body.light-theme .search-bar input::placeholder,
+body.light-theme .search-bar input::placeholder {
+    color: black;
+}
+
 body.light-theme .search-bar i {
     color: black;
 }
 
-/* CELULAR */
+body.light-theme button.btn-light {
+    background-color: #343a40;
+    color: white;
+    border: none;
+}
+
+/* ==================== LOGIN ==================== */
+
+.modal-content {
+    color: #212529;
+}
+
+/* ==================== MOBILE ==================== */
 
 @media screen and (max-width: 570px) {
 
     body {
-        display: block;
+        grid-template-columns: 1fr;
     }
 
     .menu-hamburguer {
@@ -195,11 +236,13 @@ body.light-theme .search-bar i {
         top: 20px;
         left: 20px;
         z-index: 1001;
+
+        font-size: 30px;
+        color: white;
+        background-color: rgb(20, 20, 28);
+
         padding: 5px 10px;
         border-radius: 5px;
-        background-color: rgb(20, 20, 28);
-        color: white;
-        font-size: 30px;
         cursor: pointer;
     }
 
@@ -207,11 +250,15 @@ body.light-theme .search-bar i {
         position: fixed;
         top: 0;
         left: 0;
+
         width: 280px;
         height: 100vh;
+
         z-index: 1000;
+
         transform: translateX(-100%);
         transition: transform 0.3s ease;
+
         overflow-y: auto;
     }
 
@@ -221,27 +268,40 @@ body.light-theme .search-bar i {
 
     .content {
         width: 100%;
+        min-width: 0;
         padding-top: 80px !important;
     }
 
     #topo {
-        height: auto !important;
-        min-height: 80px;
         flex-wrap: wrap;
-        gap: 10px;
+        height: auto !important;
+        gap: 5px;
     }
 
     .search-bar {
         order: 1;
         width: 100%;
+        max-width: 100%;
         margin-right: 0;
     }
 
-    #themeToggle {
+    #Email {
         order: 2;
     }
 
-    #Login {
+    #themeToggle {
         order: 3;
+    }
+
+    #Login {
+        order: 4;
+    }
+
+    .search-bar input {
+        font-size: 13px;
+    }
+
+    .cs {
+        width: 90%;
     }
 }
