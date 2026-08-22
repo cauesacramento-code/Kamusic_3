@@ -7,31 +7,23 @@
 
     <title>Home - KaMusic</title>
 
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="CSS/KamusicIndex.css">
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="IMG/LogoKaBIcon.png">
 
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
 
+    <link rel="stylesheet" href="CSS/KamusicIndex.css">
+</head>
 
 <body>
 
-    <!-- =====================================================
-         BOTÃO DO MENU LATERAL
-         ===================================================== -->
+    <!-- MENU -->
 
     <input type="checkbox" id="btn-menu" class="gatilho">
 
@@ -39,83 +31,40 @@
         <i class="bi bi-list"></i>
     </label>
 
-
-    <!-- =====================================================
-         MENU LATERAL
-         ===================================================== -->
-
     <div class="menu">
 
-        <!-- LOGO -->
-
         <div class="menu-logo">
-
-            <img src="./IMG/LogoKA1.png" alt="Logo KaMusic">
-
+            <img src="IMG/LogoKA1.png">
         </div>
-
-
-        <!-- PÁGINAS -->
 
         <div class="menu-paginas">
 
             <a href="index.html">
-
-                <div id="home" class="itens">
-
-                    <div class="i">
-                        <i class="bi bi-house-door-fill"></i>
-                    </div>
-
+                <div class="itens">
+                    <i class="bi bi-house-door-fill"></i>
                     Home
-
                 </div>
-
             </a>
-
 
             <a href="KamusicArtistas.html">
-
-                <div id="artistasmus" class="itens">
-
-                    <div class="i">
-                        <i class="bi bi-compass-fill"></i>
-                    </div>
-
+                <div class="itens">
+                    <i class="bi bi-compass-fill"></i>
                     Artistas e músicas
-
                 </div>
-
             </a>
-
 
             <a href="KamusicGeneros.html">
-
-                <div id="estilosmus" class="itens">
-
-                    <div class="i">
-                        <i class="bi bi-graph-up"></i>
-                    </div>
-
+                <div class="itens">
+                    <i class="bi bi-graph-up"></i>
                     Estilos musicais
-
                 </div>
-
             </a>
 
-
             <a href="KamusicSobrenos.html">
-
-                <div id="sobrenos" class="itens">
-
-                    <div class="i">
-                        <i class="bi bi-clipboard-fill"></i>
-                    </div>
-
+                <div class="itens">
+                    <i class="bi bi-clipboard-fill"></i>
                     Sobre Nós
-
                 </div>
-
             </a>
 
         </div>
@@ -123,203 +72,102 @@
     </div>
 
 
-    <!-- =====================================================
-         CONTEÚDO PRINCIPAL
-         ===================================================== -->
+    <!-- CONTEÚDO -->
 
     <div class="content container-fluid p-3">
 
+        <div class="d-flex flex-column gap-3">
 
-        <!-- Coluna principal -->
+            <!-- TOPO -->
 
-        <div class="col-12 d-flex flex-column gap-3">
-
-
-            <!-- =================================================
-                 TOPO
-                 ================================================= -->
-
-            <div class="cor rounded d-flex align-items-center justify-content-end px-3"
-                id="topo"
+            <div id="topo"
+                class="cor rounded d-flex align-items-center justify-content-end px-3"
                 style="height: 8vh;">
 
-
-                <!-- Email -->
-
-                <p id="Email" class="bs-light"></p>
-
-
-                <!-- =================================================
-                     BARRA DE PESQUISA
-                     ================================================= -->
+                <!-- PESQUISA -->
 
                 <div class="search-bar">
 
                     <i class="fa-solid fa-search"></i>
 
-                    <input
-                        type="text"
+                    <input type="text"
                         id="searchInput"
                         placeholder="Pesquise músicas, álbuns ou artistas...">
 
                 </div>
 
 
-                <!-- =================================================
-                     BOTÃO MODO CLARO / ESCURO
-                     ================================================= -->
+                <!-- TEMA -->
 
-                <button
-                    class="action-btn btn btn-light btn-sm me-3"
-                    id="themeToggle"
-                    title="Alternar Modo Escuro/Claro">
+                <button class="btn btn-light btn-sm me-3"
+                    id="themeToggle">
 
-                    <i
-                        class="fa-solid fa-moon"
-                        id="themeIcon">
-                    </i>
+                    <i class="fa-solid fa-moon"
+                        id="themeIcon"></i>
 
                 </button>
 
 
-                <!-- =================================================
-                     BOTÃO LOGIN
-                     ================================================= -->
+                <!-- LOGIN -->
 
-                <button
-                    type="button"
-                    class="action-btn btn btn-light btn-sm me-3"
+                <button type="button"
+                    class="btn btn-light btn-sm"
                     id="Login"
                     data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    title="Sistema de login">
+                    data-bs-target="#staticBackdrop">
 
                     <i class="fa fa-user-circle"></i>
 
                 </button>
 
 
-                <!-- =================================================
-                     MODAL DE LOGIN
-                     ================================================= -->
+                <!-- MODAL -->
 
-                <div
-                    class="modal fade"
+                <div class="modal fade"
                     id="staticBackdrop"
-                    data-bs-backdrop="static"
-                    data-bs-keyboard="false"
                     tabindex="-1"
-                    aria-labelledby="staticBackdropLabel"
                     aria-hidden="true">
-
 
                     <div class="modal-dialog modal-dialog-centered">
 
-
                         <div class="modal-content p-4">
 
+                            <h1 class="modal-header fs-5">
+                                Login
+                            </h1>
 
-                            <!-- Cabeçalho -->
-
-                            <div class="modal-header">
-
-                                <h1
-                                    class="modal-title fs-5 text-dark"
-                                    id="staticBackdropLabel">
-
-                                    Login
-
-                                </h1>
-
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                    aria-label="Fechar">
-                                </button>
-
-                            </div>
-
-
-                            <!-- Formulário -->
-
-                            <form id="loginForm">
-
+                            <form>
 
                                 <div class="p-3">
 
+                                    <label class="text-dark">
+                                        Endereço de Email
+                                    </label>
 
-                                    <!-- Email -->
-
-                                    <div class="form-group mb-3">
-
-                                        <label
-                                            for="email"
-                                            class="text-dark">
-
-                                            Endereço de Email
-
-                                        </label>
+                                    <input type="email"
+                                        id="email"
+                                        class="form-control mb-3"
+                                        required>
 
 
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            class="form-control"
-                                            aria-describedby="emailHelp"
-                                            required>
+                                    <label class="text-dark">
+                                        Senha
+                                    </label>
+
+                                    <input type="password"
+                                        id="exampleInputPassword1"
+                                        class="form-control mb-3"
+                                        required>
 
 
-                                        <small
-                                            id="emailHelp"
-                                            class="form-text">
+                                    <div class="form-check">
 
-                                            Nós nunca compartilharemos seu
-                                            e-mail com alguém.
-
-                                        </small>
-
-                                    </div>
-
-
-                                    <!-- Senha -->
-
-                                    <div class="form-group mb-3">
-
-                                        <label
-                                            for="exampleInputPassword1"
-                                            class="text-dark">
-
-                                            Senha
-
-                                        </label>
-
-
-                                        <input
-                                            type="password"
-                                            class="form-control"
-                                            id="exampleInputPassword1"
-                                            required>
-
-                                    </div>
-
-
-                                    <!-- Lembre-me -->
-
-                                    <div class="form-group form-check mb-3">
-
-                                        <input
-                                            type="checkbox"
+                                        <input type="checkbox"
                                             class="form-check-input"
                                             id="exampleCheck1">
 
-
-                                        <label
-                                            class="form-check-label text-dark"
-                                            for="exampleCheck1">
-
+                                        <label class="form-check-label text-dark">
                                             Lembre-me
-
                                         </label>
 
                                     </div>
@@ -327,21 +175,16 @@
                                 </div>
 
 
-                                <!-- Rodapé do modal -->
-
                                 <div class="modal-footer">
 
-                                    <button
-                                        type="submit"
+                                    <button type="submit"
                                         class="btn btn-primary">
 
                                         Confirmar
 
                                     </button>
 
-
-                                    <button
-                                        type="button"
+                                    <button type="button"
                                         class="btn btn-secondary"
                                         data-bs-dismiss="modal">
 
@@ -350,7 +193,6 @@
                                     </button>
 
                                 </div>
-
 
                             </form>
 
@@ -363,127 +205,75 @@
             </div>
 
 
-            <!-- =================================================
-                 BANNER
-                 ================================================= -->
+            <!-- BANNER -->
 
-            <div
-                class="cor-gradient rounded"
+            <div class="cor-gradient rounded"
                 style="height: 50vh;">
+            </div>
+
+
+            <!-- CARDS -->
+
+            <div class="row g-4">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+
+                        <i class="fa-solid fa-robot icone"></i>
+
+                        <h3>Cyberpunk Odyssey</h3>
+
+                        <p>Neon Runners</p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+
+                        <i class="fa-solid fa-cloud-moon icone"></i>
+
+                        <h3>Midnight Sunset</h3>
+
+                        <p>Aura</p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+
+                        <i class="fa-solid fa-bolt icone"></i>
+
+                        <h3>Electric Pulse</h3>
+
+                        <p>Synthetica</p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cor card-simples">
+
+                        <i class="fa-solid fa-mug-hot icone"></i>
+
+                        <h3>Coffee & Rain</h3>
+
+                        <p>Lo-Fi Generator</p>
+
+                    </div>
+                </div>
 
             </div>
 
 
-            <!-- =================================================
-                 CARDS
-                 ================================================= -->
+            <!-- RODAPÉ -->
 
-            <div class="row g-4">
-
-
-                <!-- CARD 1 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples">
-
-                        <i
-                            class="fa-solid fa-robot icone">
-                        </i>
-
-                        <h3>
-                            Cyberpunk Odyssey
-                        </h3>
-
-                        <p>
-                            Neon Runners
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 2 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples">
-
-                        <i
-                            class="fa-solid fa-cloud-moon icone">
-                        </i>
-
-                        <h3>
-                            Midnight Sunset
-                        </h3>
-
-                        <p>
-                            Aura
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples">
-
-                        <i
-                            class="fa-solid fa-bolt icone">
-                        </i>
-
-                        <h3>
-                            Electric Pulse
-                        </h3>
-
-                        <p>
-                            Synthetica
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples">
-
-                        <i
-                            class="fa-solid fa-mug-hot icone">
-                        </i>
-
-                        <h3>
-                            Coffee & Rain
-                        </h3>
-
-                        <p>
-                            Lo-Fi Generator
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
-                     RODAPÉ
-                     ================================================= -->
-
-                <div
-                    class="cor rounded"
-                    style="height: auto; min-height: 100px;">
-
-                </div>
-
-
+            <div class="cor rounded"
+                style="min-height: 100px;">
             </div>
 
         </div>
@@ -491,259 +281,43 @@
     </div>
 
 
-    <!-- =====================================================
-         BOOTSTRAP JAVASCRIPT
-         ===================================================== -->
+    <!-- BOOTSTRAP -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
+    <!-- TEMA -->
 
     <script>
 
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
 
-        /* =====================================================
-           MODO CLARO / ESCURO
-           ===================================================== */
+        if (localStorage.getItem("temaPreferido") === "claro") {
 
-        const themeToggle =
-            document.getElementById('themeToggle');
+            document.body.classList.add("light-theme");
 
-        const themeIcon =
-            document.getElementById('themeIcon');
-
-
-        // Recupera o tema salvo anteriormente
-
-        const temaSalvo =
-            localStorage.getItem('temaPreferido');
-
-
-        // Se o tema salvo for claro
-
-        if (temaSalvo === 'claro') {
-
-            document.body.classList.add('light-theme');
-
-            themeIcon.classList.replace(
-                'fa-moon',
-                'fa-sun'
-            );
-
+            themeIcon.classList.replace("fa-moon", "fa-sun");
         }
 
-        else {
+        themeToggle.addEventListener("click", () => {
 
-            document.body.classList.remove('light-theme');
+            document.body.classList.toggle("light-theme");
+
+            const claro = document.body.classList.contains("light-theme");
+
+            localStorage.setItem(
+                "temaPreferido",
+                claro ? "claro" : "escuro"
+            );
 
             themeIcon.classList.replace(
-                'fa-sun',
-                'fa-moon'
+                claro ? "fa-moon" : "fa-sun",
+                claro ? "fa-sun" : "fa-moon"
             );
-
-        }
-
-
-        // Quando clicar no botão
-
-        themeToggle.addEventListener('click', () => {
-
-
-            // Alterna a classe do body
-
-            document.body.classList.toggle(
-                'light-theme'
-            );
-
-
-            // Verifica qual tema está ativo
-
-            if (
-                document.body.classList.contains(
-                    'light-theme'
-                )
-            ) {
-
-                // Ícone de sol
-
-                themeIcon.classList.replace(
-                    'fa-moon',
-                    'fa-sun'
-                );
-
-
-                // Salva o tema
-
-                localStorage.setItem(
-                    'temaPreferido',
-                    'claro'
-                );
-
-            }
-
-            else {
-
-                // Ícone de lua
-
-                themeIcon.classList.replace(
-                    'fa-sun',
-                    'fa-moon'
-                );
-
-
-                // Salva o tema
-
-                localStorage.setItem(
-                    'temaPreferido',
-                    'escuro'
-                );
-
-            }
 
         });
-
-
-        /* =====================================================
-           LOGIN
-           ===================================================== */
-
-        const formulario =
-            document.getElementById('loginForm');
-
-        const modalElement =
-            document.getElementById('staticBackdrop');
-
-
-        formulario.addEventListener(
-            'submit',
-            function (event) {
-
-
-                // Impede o formulário de recarregar a página
-
-                event.preventDefault();
-
-
-                // Pega o email digitado
-
-                const email =
-                    document.getElementById('email').value;
-
-
-                // Verifica se "Lembre-me" está marcado
-
-                const lembreme =
-                    document.getElementById(
-                        'exampleCheck1'
-                    ).checked;
-
-
-                // Se "Lembre-me" estiver marcado
-
-                if (lembreme) {
-
-
-                    // Salva o email
-
-                    localStorage.setItem(
-                        'emailSalvo',
-                        email
-                    );
-
-
-                    // Salva que o usuário marcou
-                    // "Lembre-me"
-
-                    localStorage.setItem(
-                        'lembreme',
-                        'true'
-                    );
-
-                    console.log(
-                        email + ' foi salvo com sucesso!'
-                    );
-
-                }
-
-                else {
-
-
-                    // Remove o email salvo
-
-                    localStorage.removeItem(
-                        'emailSalvo'
-                    );
-
-
-                    // Remove a preferência
-
-                    localStorage.removeItem(
-                        'lembreme'
-                    );
-
-                }
-
-
-                // Remove o foco do botão Confirmar
-
-                document.activeElement.blur();
-
-
-                // Pega a instância atual do modal
-
-                const modal =
-                    bootstrap.Modal.getInstance(
-                        modalElement
-                    );
-
-
-                // Fecha o modal
-
-                if (modal) {
-
-                    modal.hide();
-
-                }
-
-            }
-        );
-
-
-        /* =====================================================
-           RECUPERAR EMAIL SALVO
-           ===================================================== */
-
-
-        // Procura um email que foi salvo anteriormente
-
-        const emailSalvo =
-            localStorage.getItem('emailSalvo');
-
-
-        // Se existir um email salvo
-
-        if (emailSalvo) {
-
-
-            // Coloca o email novamente no campo
-
-            document.getElementById('email').value =
-                emailSalvo;
-
-
-            // Marca automaticamente "Lembre-me"
-
-            document.getElementById(
-                'exampleCheck1'
-            ).checked = true;
-
-        }
-
 
     </script>
 
