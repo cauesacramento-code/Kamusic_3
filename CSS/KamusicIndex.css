@@ -13,7 +13,7 @@
 
     position: fixed;
 
-    top: 20px;
+    top: 25px;
     left: 20px;
 
     width: 40px;
@@ -55,11 +55,13 @@
    ========================================================= */
 
 body {
-    min-height: 100vh;
-
     background-color: rgb(11, 11, 15);
 
+    height: 100vh;
+    /*
+    Muda nada
     overflow-x: hidden;
+    */
 }
 
 
@@ -119,19 +121,19 @@ body:has(#btn-menu:checked) .menu {
 
 /* =========================================================
    BOTÃO HAMBÚRGUER
-   ========================================================= */
+   =========================================================
 
-/*
+
 O botão permanece visível mesmo quando
 o menu está escondido.
-*/
 
+
+Isso ñ muda nada:
 body:has(#btn-menu:checked) .menu-hamburguer {
     left: 20px;
 }
-
-
-/* =========================================================
+    
+=========================================================
    LOGO DO MENU
    ========================================================= */
 
@@ -270,9 +272,14 @@ body:has(#btn-menu:checked) .menu-hamburguer {
 
     justify-content: space-between;
 
+    /*
+    N muda nada:
     min-width: 0;
 
+    Por enquanto, muda nada tbm:
     overflow-x: hidden;
+    
+    */
 }
 
 
@@ -483,6 +490,8 @@ body.dontouch .cs.gatilho {
 
     max-width: 100%;
 
+    margin-left: 20px;
+
     min-width: 0;
 
     padding: 10px;
@@ -573,7 +582,7 @@ body.light-theme div.search-bar input::placeholder {
 
 
     /* -----------------------------------------------------
-       BOTÃO HAMBÚRGUER
+       BOTÃO HAMBÚRGUER MOBILE
        ----------------------------------------------------- */
 
     .menu-hamburguer {
