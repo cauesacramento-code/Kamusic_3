@@ -4,14 +4,182 @@
     box-sizing: border-box;
 }
 
-/* =========================================================
-   MENU HAMBÚRGUER
-   ========================================================= */
+body {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    min-height: 100vh;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
 
+body:has(#btn-menu:checked){
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+/* MENU */
+
+/* BARRA LATERAL DO MENU COMPLETO */
+.menu {
+    display:flex;
+    background-color: rgb(20, 20, 28);
+    color: rgb(150, 149, 149);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* RODAPÉ DO MENU */
+.menu .footer{
+    display:flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: end;
+    left: -500px;
+    width:200px;
+    bottom:0px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+body:has(#btn-menu:checked) .menu .footer{
+    left: 20px;
+}
+
+/* LINHA DIVISÓRIA DO RODAPÉ */
+.menu .linha-separar{
+    width:100%;
+    height: 1px;
+    margin-top:50px;
+    background-color: gray;
+}
+
+/* TEXTO DE CRÉDITOS DO PROJETO */
+.menu .creditos{
+    display:flex;
+    flex-direction: column;
+    justify-self: end;
+    font-size: 10px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CAIXA FIXA DOS ITENS INTERNOS DO MENU */
+.menu-box{
+    position: fixed;
+}
+
+/* BLOCO DA LOGOMARCA */
+.menu-logo {
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+
+/* IMAGEM DO LOGOTIPO */
+.menu-logo img {
+    width: 100px;
+}
+
+/* CONTAINER DOS LINKS DE NAVEGAÇÃO DO MENU */
+.menu-paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* LINKS DAS PÁGINAS DO MENU */
+.menu-paginas a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*MENU ABERTO*/
+
+/* MENU EXPANDIDO COM TEXTOS */
+.menu-aberto{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    position:absolute;
+    width: 200px;
+    left: -500px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+body:has(#btn-menu:checked) .menu-aberto{
+    left: 10px;
+}
+
+/* BOTÕES DE ITENS COM TEXTO DO MENU ABERTO */
+.menu-aberto .itens {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-aberto .itens:hover {
+    color: white;
+    background-color: rgb(124, 92, 252);
+    box-shadow: 0 0 20px rgb(124, 92, 252);
+}
+
+/*MENU FECHADO*/
+
+/* MENU RETRAÍDO APENAS COM ÍCONES */
+.menu-fechado{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+    margin-left:-7px; 
+    position: absolute;
+    top:30px;
+    gap:10px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+body:has(#btn-menu:checked) .menu-fechado{
+    display: flex;
+    flex-direction: column;
+    top:-500px;
+}
+
+/* BOTÕES DE ÍCONES DO MENU FECHADO */
+.menu-fechado .itens{
+    color:gray;
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 10%;
+    transition: 0.2s;
+}
+
+.menu-fechado .itens:hover{
+    color: white;
+    background-color: rgb(124, 92, 252);
+    box-shadow: 0 0 20px rgb(124, 92, 252);
+}
+
+/* IMAGENS E ÍCONES DO MENU FECHADO */
+.menu-fechado img{
+    max-width: 50px;
+    margin: 10px 0px;
+}
+
+/* MENU HAMBURGUER */
+
+/* BOTÃO DE DISPARO DO MENU */
 .menu-hamburguer {
     display: flex;
-
-    position: fixed;
 
     top: 25px;
     left: 20px;
@@ -37,839 +205,204 @@
 }
 
 .menu-hamburguer:hover {
+    color:white;
     background-color: rgb(124, 92, 252);
+    box-shadow: 0 0 20px rgb(124, 92, 252);
 }
 
-body:has(#btn-menu:checked) .menu-hamburguer {
-    left: 230px;
-}
+/* CONTEÚDO */
 
-
-/* =========================================================
-   CHECKBOX DO MENU
-   ========================================================= */
-
-.gatilho {
-    display: none;
-}
-
-
-/* =========================================================
-   BODY / ESTRUTURA PRINCIPAL
-   ========================================================= */
-
-body {
-    background-color: rgb(11, 11, 15);
-    padding-left: 80px;
-
-    height: 100vh;
-    /*
-    Muda nada
-    overflow-x: hidden;
-    */
-}
-
-
-/* =========================================================
-   MENU LATERAL
-   ========================================================= */
-
-.menu {
-    position: fixed;
-
-    left: 0;
-    top: 0;
-
-    width: 280px;
-    height: 100vh;
-
-    background-color: rgb(20, 20, 28);
-
-    color: rgb(150, 149, 149);
-
-    display: grid;
-
-    grid-template-rows: 1fr 4fr;
-
-    padding-left: 20px;
-    padding-right: 25px;
-
-    min-width: 0;
-
-    z-index: 1000;
-
-    transform: translateX(-70%);
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-
-    overflow-y: auto;
-}
-
-
-/* =========================================================
-   MENU RECOLHIDO
-   ========================================================= */
-
-/*
-Quando o checkbox é marcado:
-
-O MENU INTEIRO desliza para a esquerda.
-Logo + textos + links acompanham o movimento.
-*/
-
-body:has(#btn-menu:checked) .menu {
-    transform: translateX(0);
-}
-
-/* =========================================================
-   BOTÃO HAMBÚRGUER
-   =========================================================
-
-
-O botão permanece visível mesmo quando
-o menu está escondido.
-
-
-Isso ñ muda nada:
-body:has(#btn-menu:checked) .menu-hamburguer {
-    left: 20px;
-}
-*/
-
-/* =========================================================
-   ÍCONES DO MENU RECOLHIDO
-   ========================================================= */
-
-.menu-icones {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: end;
-
-    margin-left: 15px;
-    margin-top: 60px;
-
-    width: 100%;
-
-    cursor: pointer;
-
-    font-size: 18px;
-
-    padding: 15px;
-
-    gap: 15px;
-
-    transition: 0.5s;
-
-}
-
-.icone-logo {
-    display:flex;
-    align-self: end;
-    margin-right:-22px;
-    margin-bottom: -20px;
-    cursor: default;
-}
-
-.menu-icones img {
-    max-width: 80px;
-}
-
-.menu-icones .itens {
-    padding: 10px;
-}
-
-.menu-icones .itens:hover {
-    color: white;
-
-    border-radius: 10px;
-
-    background-color: rgb(124, 92, 252);
-
-    box-shadow:
-        0px 0px 20px 0px rgb(124, 92, 252);
-
-    text-shadow:
-        1px 1px 10px rgb(124, 92, 252);
-
-    border-left: 3px solid;
-}
-
-
-/* =========================================================
-   LINK ÍCONES DO MENU RECOLHIDO
-   ========================================================= */
-
-.menu-icones a {
-    text-decoration: none;
-
-    color: inherit;
-}
-
-body:has(#btn-menu:checked) .menu-icones {
-    display: none;
-}
-
-/*
-=========================================================
-   LOGO DO MENU
-   ========================================================= */
-
-.menu-logo {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    min-width: 0;
-}
-
-.menu-logo img {
-    width: 100%;
-    max-width: 220px;
-
-    height: 150px;
-
-    object-fit: contain;
-
-    display: none;
-    /*N APARECER ATÉ ABRIR MENU*/
-}
-
-body:has(#btn-menu:checked) .menu-logo img {
-    display: flex;
-}
-
-/* =========================================================
-   PÁGINAS DO MENU
-   ========================================================= */
-
-.menu-paginas {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-    min-width: 0;
-
-    display: none;
-    /*N APARECER ATÉ ABRIR MENU*/
-}
-
-body:has(#btn-menu:checked) .menu-paginas {
-    display: flex;
-}
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-.menu-paginas a {
-    display: block;
-
-    width: 100%;
-
-    text-decoration: none;
-
-    color: inherit;
-}
-
-
-/* =========================================================
-   ITENS
-   ========================================================= */
-
-.menu-paginas .itens {
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    font-family: Arial, sans-serif;
-
-    cursor: pointer;
-
-    font-size: 17px;
-
-    padding: 15px;
-
-    gap: 10px;
-
-    transition: 0.3s;
-}
-
-
-/* =========================================================
-   HOVER
-   ========================================================= */
-
-.menu-paginas .itens:hover {
-    color: white;
-
-    border-radius: 10px;
-
-    background-color: rgb(124, 92, 252);
-
-    box-shadow:
-        0px 0px 20px 0px rgb(124, 92, 252);
-
-    text-shadow:
-        1px 1px 10px rgb(124, 92, 252);
-
-    border-left: 3px solid;
-}
-
-
-/* =========================================================
-   CORES INDIVIDUAIS
-   ========================================================= */
-
-.menu-paginas #home:hover {
-    border-left-color: blue;
-}
-
-.menu-paginas #artistasmus:hover {
-    border-left-color: rgb(255, 0, 0);
-}
-
-.menu-paginas #estilosmus:hover {
-    border-left-color: rgb(238, 255, 0);
-}
-
-.menu-paginas #sobrenos:hover {
-    border-left-color: green;
-}
-
-
-/* =========================================================
-   CONTEÚDO
-   ========================================================= */
-
+/* CONTAINER DA ÁREA PRINCIPAL DA PÁGINA */
 .content {
-    min-height: 100vh;
-
-    background-color: rgb(11, 11, 15);
-
-    /*
-    N faz nada:
-    padding: 10px;
-    */
-
-    display: flex;
-
-    justify-content: space-between;
-
-    /*
-    N muda nada:
     min-width: 0;
-
-    Por enquanto, muda nada tbm:
-    overflow-x: hidden;
-    
-    */
+    min-height: 100vh;
+    background-color: rgb(11, 11, 15);
 }
 
-
-/* =========================================================
-   CORES
-   ========================================================= */
-
+/* CLASSE DE COR DE FUNDO SÓLIDA ESCURA */
 .cor {
     background-color: rgb(28, 28, 40);
 }
 
+/* CLASSE DE GRADIENTE EM DEGRADÊ COLORIDO */
 .cor-gradient {
-    background-image:
-        linear-gradient(to right,
-            #7500E2,
-            #FF00BB);
+    background-image: linear-gradient(to right, #7500E2, #FF00BB);
 }
 
+/* PESQUISA */
 
-/* =========================================================
-   CARDS
-   ========================================================= */
-
-.card-simples {
-    height: 30vh;
-
-    border-radius: 10px;
-
-    padding: 20px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-/* =========================================================
-   ÍCONE
-   ========================================================= */
-
-.card-simples .icone {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-
-    color: rgb(150, 149, 149);
-}
-
-
-/* =========================================================
-   TÍTULO
-   ========================================================= */
-
-.card-simples h3 {
-    font-size: 18px;
-
-    margin-bottom: 5px;
-}
-
-
-/* =========================================================
-   SUBTÍTULO
-   ========================================================= */
-
-.card-simples p {
-    font-size: 14px;
-
-    color: gray;
-}
-
-
-/* =========================================================
-   HOVER
-   ========================================================= */
-
-.card-simples:hover {
-    transform: translateY(-5px);
-}
-
-
-/* =========================================================
-   MODO ESCURO
-   ========================================================= */
-
-body:not(.light-theme) .card-simples h3 {
-    color: white;
-}
-
-
-/* =========================================================
-   MODO CLARO
-   ========================================================= */
-
-body.light-theme {
-    background-color: #ffffff;
-
-    color: #212529;
-}
-
-body.light-theme .content {
-    background-image: none;
-
-    background-color: #ffffff;
-}
-
-body.light-theme .cor {
-    background-color: #ffffff !important;
-
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-    border: 1px solid #e5e7eb;
-}
-
-body.light-theme .card-simples h3 {
-    color: #212529;
-}
-
-
-/* =========================================================
-   BOTÕES DO MODO CLARO
-   ========================================================= */
-
-body.light-theme button.btn-light {
-    background-color: #343a40;
-
-    color: #ffffff;
-
-    border: none;
-}
-
-
-/* =========================================================
-   PAINEL DE LOGIN / MODAL ANTIGO
-   ========================================================= */
-
-.cs {
-    position: fixed;
-
-    top: 50%;
-    left: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    width: 380px;
-
-    height: 50%;
-
-    background-color: white;
-
-    z-index: 99999;
-
-    padding: 20px;
-
-    box-shadow: 0 0 20px black;
-
-    display: none;
-}
-
-.cs.gatilho {
-    display: block !important;
-}
-
-
-/* =========================================================
-   PROTEÇÃO DA TELA
-   ========================================================= */
-
-.dontouch {
-    pointer-events: none;
-
-    user-select: none;
-
-    -webkit-user-select: none;
-}
-
-body.dontouch .cs.gatilho {
-    pointer-events: all;
-
-    user-select: all;
-
-    -webkit-user-select: all;
-}
-
-
-/* =========================================================
-   PAINEL DE PESQUISA
-   ========================================================= */
-
+/* BARRA DE PESQUISA */
 .search-bar {
     position: relative;
-
     width: 420px;
-
-    max-width: 100%;
-
-    margin-left: 20px;
-
-    min-width: 0;
-
-    padding: 10px;
-
     margin-right: auto;
 }
 
+/* CAMPO DE ENTRADA DE TEXTO DA PESQUISA */
 .search-bar input {
     width: 100%;
-
-    min-width: 0;
-
-    padding:
-        12px 16px 12px 48px;
-
-    background-color: var(--bg-surface);
-
-    border:
-        1px solid rgb(82, 1, 106);
-
+    padding: 12px 16px 12px 48px;
+    background-color: rgb(28, 28, 40);
+    border: 1px solid rgb(82, 1, 106);
     border-radius: 30px;
-
     color: white;
-
     outline: none;
-
-    font-size: 14px;
-
-    transition: var(--transition);
 }
 
 .search-bar input::placeholder {
     color: white;
 }
 
+/* ÍCONE DE LUPA INTERNO DA PESQUISA */
 .search-bar i {
     position: absolute;
-
-    left: 28px;
-
+    left: 18px;
     top: 50%;
-
-    transform:
-        translateY(-50%);
-
+    transform: translateY(-50%);
     color: white;
 }
 
+/* CARDS */
 
-/* =========================================================
-   PESQUISA NO MODO CLARO
-   ========================================================= */
+/* CONTAINER INDIVIDUAL DE CARTÃO */
+.card-simples {
+    height: 30vh;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+}
 
-body.light-theme div.search-bar input {
+.card-simples:hover {
+    transform: translateY(-5px);
+}
+
+/* ÍCONE INTERNO DO CARD */
+.card-simples .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(150, 149, 149);
+}
+
+/* TÍTULO PRINCIPAL DO CARD */
+.card-simples h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* PARÁGRAFO DE TEXTO DO CARD */
+.card-simples p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* CHECKBOX DO MENU */
+
+/* INPUT CHECKBOX OCULTO QUE CONTROLA O MENU */
+.gatilho {
+    display: none;
+}
+
+/* MODO CLARO */
+
+body.light-theme {
+    background-color: white;
+    color: #212529;
+}
+
+body.light-theme .content {
+    background-color: white;
+}
+
+body.light-theme .cor {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .card-simples h3 {
+    color: #212529;
+}
+
+body.light-theme .search-bar input {
+    background-color: white;
     color: black;
 }
 
-body.light-theme div.search-bar i {
+body.light-theme .search-bar input::placeholder,
+body.light-theme .search-bar i {
     color: black;
 }
 
-body.light-theme div.search-bar input::placeholder {
-    color: black;
-}
-
-
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
+/* CELULAR */
 
 @media screen and (max-width: 570px) {
 
-    /* -----------------------------------------------------
-       BODY
-       ----------------------------------------------------- */
-
     body {
-        position: relative;
-
-        min-height: 100vh;
-
-        overflow-x: hidden;
+        display: block;
     }
-
-
-    /* -----------------------------------------------------
-       BOTÃO HAMBÚRGUER MOBILE
-       ----------------------------------------------------- */
 
     .menu-hamburguer {
-        display: flex;
-
+        display: block;
         position: fixed;
-
         top: 20px;
         left: 20px;
-
-        width: 40px;
-        height: 40px;
-
-        font-size: 30px;
-
-        color: white;
-
-        background-color: rgb(20, 20, 28);
-
+        z-index: 1001;
         padding: 5px 10px;
-
         border-radius: 5px;
-
-        box-shadow:
-            0 2px 10px rgba(0, 0, 0, 0.5);
-
-        z-index: 1101;
+        background-color: rgb(20, 20, 28);
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
     }
-
-
-    /* -----------------------------------------------------
-       MENU HAMBURGUER MOBILE - MENU ABERTO
-       ----------------------------------------------------- */
-
-    body:has(#btn-menu:checked) .menu-hamburguer {
-        left: 20px;
-    }
-
-
-    /* -----------------------------------------------------
-       MENU MOBILE
-       ----------------------------------------------------- */
 
     .menu {
         position: fixed;
-
-        left: 0;
         top: 0;
-
-        width: 100%;
-
+        left: 0;
+        width: 280px;
         height: 100vh;
-
-        z-index: 1100;
-
-        transform:
-            translateX(-100%);
-
-        transition:
-            transform 0.3s ease;
-
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
         overflow-y: auto;
     }
 
-
-    /* -----------------------------------------------------
-       MENU ABERTO
-       ----------------------------------------------------- */
-
-    body:has(#btn-menu:checked) .menu {
-        transform:
-            translateX(0%);
+    .gatilho:checked ~ .menu {
+        transform: translateX(0);
     }
-
-
-    /* -----------------------------------------------------
-       CONTEÚDO MOBILE
-       ----------------------------------------------------- */
 
     .content {
         width: 100%;
-
-        min-width: 0;
-
-        min-height: 100vh;
-
         padding-top: 80px !important;
-
-        overflow-x: hidden;
     }
 
-
-    /* -----------------------------------------------------
-       TOPO
-       ----------------------------------------------------- */
-
-    .cor.rounded.d-flex {
-        flex-wrap: wrap;
-
+    /* CABEÇALHO SUPERIOR DA PÁGINA */
+    #topo {
         height: auto !important;
-
-        min-height: 8vh;
-
-        padding: 10px !important;
+        min-height: 80px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
-
-
-    /* -----------------------------------------------------
-       PESQUISA MOBILE
-       ----------------------------------------------------- */
 
     .search-bar {
         order: 1;
-
-        flex: 1 1 100%;
-
         width: 100%;
-
-        max-width: 100%;
-
-        min-width: 0;
-
-        padding: 8px 4px;
-
         margin-right: 0;
     }
 
-    .search-bar input {
-        width: 100%;
-
-        min-width: 0;
-
-        font-size: 13px;
-    }
-
-
-    /* -----------------------------------------------------
-       EMAIL
-       ----------------------------------------------------- */
-
-    #Email {
-        order: 2;
-
-        margin: 0;
-    }
-
-
-    /* -----------------------------------------------------
-       BOTÃO DE TEMA
-       ----------------------------------------------------- */
-
+    /* BOTÃO INTERRUPTOR DO TEMA CLARO/ESCURO */
     #themeToggle {
-        order: 3;
+        order: 2;
     }
 
-
-    /* -----------------------------------------------------
-       BOTÃO DE LOGIN
-       ----------------------------------------------------- */
-
+    /* BOTÃO OU BLOCO DE LOGIN */
     #Login {
-        order: 4;
-    }
-
-
-    /* -----------------------------------------------------
-       TOPO
-       ----------------------------------------------------- */
-
-    #topo {
-        padding: 10px !important;
-    }
-
-
-    /* -----------------------------------------------------
-       LOGIN
-       ----------------------------------------------------- */
-
-    .cs {
-        width: 90%;
-
-        max-width: 350px;
-
-        height: auto;
-
-        max-height: 90vh;
-
-        overflow-y: auto;
-    }
-
-
-    /* -----------------------------------------------------
-       CARDS
-       ----------------------------------------------------- */
-
-    .card-simples {
-        height: 30vh;
-
-        min-height: 180px;
+        order: 3;
     }
 }
