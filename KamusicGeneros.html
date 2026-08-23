@@ -15,49 +15,66 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="CSS/KamusicIndex.css">
+    <link rel="stylesheet" href="CSS/KamusicEstilos.css">
+    <link rel="stylesheet" href="CSS/KamusicGeneros.css">
 </head>
 
 <body>
 
     <!-- CABEÇALHO PARA CELULAR -->
+
     <div class="cab-cell">
+
         <div class="logo-cell">
             <img src="IMG/LogoKA2.png" id="LogoCell" alt="Logo KaMusic">
         </div>
 
         <div class="botoes-cell">
+
             <!-- LOGIN -->
+
             <div class="info-login">
-                <button type="button" class="btn btn-light btn-sm" id="Login" data-bs-toggle="modal"
+
+                <button type="button" class="btn btn-light btn-sm" id="LoginMobile" data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop">
 
                     <i class="fa fa-user-circle"></i>
 
                 </button>
-                <p class="nome-login">Faça o Login.</p>
+
+                <p class="nome-login">
+                    Faça o Login.
+                </p>
+
             </div>
-            
+
             <!-- TEMA -->
 
-            <button class="btn btn-light" id="themeToggle">
+            <button class="btn btn-light btn-sm theme-mobile" id="themeToggleMobile" type="button">
 
-                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <i class="fa-solid fa-moon" id="themeIconMobile"></i>
 
             </button>
 
         </div>
+
     </div>
+
 
     <!-- BOTÃO PARA ABRIR MENU -->
 
     <input type="checkbox" id="btn-menu" class="gatilho">
 
     <div class="botao-menu">
+
         <label for="btn-menu" class="menu-hamburguer">
+
             <i class="bi bi-list"></i>
+
         </label>
+
     </div>
+
 
     <!-- MENU -->
 
@@ -70,31 +87,51 @@
             ===================-->
 
             <div class="menu-fechado">
+
                 <img src="IMG/LogoK.png" alt="Logo K">
+
                 <a href="index.html">
+
                     <div class="itens">
+
                         <i class="bi bi-house-door-fill"></i>
+
                     </div>
+
                 </a>
 
                 <a href="KamusicArtistas.html">
+
                     <div class="itens">
+
                         <i class="bi bi-compass-fill"></i>
+
                     </div>
+
                 </a>
 
                 <a href="KamusicGeneros.html">
+
                     <div class="itens">
+
                         <i class="bi bi-graph-up"></i>
+
                     </div>
+
                 </a>
 
                 <a href="KamusicSobrenos.html">
+
                     <div class="itens">
+
                         <i class="bi bi-clipboard-fill"></i>
+
                     </div>
+
                 </a>
+
             </div>
+
 
             <!--==================
             MENU ABERTO
@@ -103,66 +140,99 @@
             <div class="menu-aberto">
 
                 <div class="menu-logo">
-                    <img src="IMG/LogoKA1.png">
+
+                    <img src="IMG/LogoKA1.png" alt="Logo KaMusic">
+
                 </div>
 
                 <div class="menu-paginas">
 
                     <a href="index.html">
+
                         <div class="itens">
+
                             <i class="bi bi-house-door-fill"></i>
-                            Home
+
+                            <span>Home</span>
+
                         </div>
+
                     </a>
 
                     <a href="KamusicArtistas.html">
+
                         <div class="itens">
+
                             <i class="bi bi-compass-fill"></i>
-                            Artistas e músicas
+
+                            <span>Artistas e músicas</span>
+
                         </div>
+
                     </a>
 
                     <a href="KamusicGeneros.html">
+
                         <div class="itens">
+
                             <i class="bi bi-graph-up"></i>
-                            Estilos musicais
+
+                            <span>Estilos musicais</span>
+
                         </div>
+
                     </a>
 
                     <a href="KamusicSobrenos.html">
+
                         <div class="itens">
+
                             <i class="bi bi-clipboard-fill"></i>
-                            Sobre Nós
+
+                            <span>Sobre Nós</span>
+
                         </div>
+
                     </a>
 
                 </div>
+
             </div>
+
         </div>
+
 
         <!-- RODAPÉ MENU-ABERTO -->
 
         <div class="footer">
+
             <div class="linha-separar"></div>
 
             <div class="creditos">
-                <p>Projeto KaMusic &#169</p>
+
+                <p>Projeto KaMusic &#169;</p>
+
                 <p>SENAI - Multimídia</p>
+
                 <p>Uso educacional - Nenhum lucro obtido</p>
+
             </div>
+
         </div>
 
     </div>
 
+
     <!-- CONTEÚDO -->
 
-    <div class="content container-fluid p-3">
+    <main class="content container-fluid p-3">
 
-        <div class="d-flex flex-column gap-3">
+        <div class="conteudo-interno d-flex flex-column gap-3">
+
 
             <!-- TOPO -->
 
-            <div id="topo" class="cor rounded d-flex align-items-center justify-content-end px-3" style="height: 8vh;">
+            <div id="topo" class="cor rounded d-flex align-items-center px-3 py-2 justify-content-between gap-2">
 
                 <!-- PESQUISA -->
 
@@ -177,86 +247,93 @@
 
                 <!-- TEMA -->
 
-                <button class="btn btn-light btn-sm me-3" id="themeToggle">
+                <button class="btn btn-light btn-sm theme-desktop" id="themeToggleDesktop" type="button">
 
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    <i class="fa-solid fa-moon" id="themeIconDesktop"></i>
 
                 </button>
 
 
                 <!-- LOGIN -->
 
-                <button type="button" class="btn btn-light btn-sm" id="Login" data-bs-toggle="modal"
+                <button type="button" class="btn btn-light btn-sm" id="LoginDesktop" data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop">
 
                     <i class="fa fa-user-circle"></i>
 
                 </button>
 
+            </div>
 
-                <!-- MODAL -->
 
-                <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
+            <!-- MODAL -->
 
-                    <div class="modal-dialog modal-dialog-centered">
+            <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
 
-                        <div class="modal-content p-4">
+                <div class="modal-dialog modal-dialog-centered">
 
-                            <h1 class="modal-header fs-5">
-                                Login
-                            </h1>
+                    <div class="modal-content p-4">
 
-                            <form>
+                        <h1 class="modal-header fs-5">
 
-                                <div class="p-3">
+                            Login
 
-                                    <label class="text-dark">
-                                        Endereço de Email
+                        </h1>
+
+                        <form>
+
+                            <div class="p-3">
+
+                                <label for="email" class="form-label text-dark">
+
+                                    Endereço de Email
+
+                                </label>
+
+                                <input type="email" id="email" class="form-control mb-3" required>
+
+
+                                <label for="password" class="form-label text-dark">
+
+                                    Senha
+
+                                </label>
+
+                                <input type="password" id="password" class="form-control mb-3" required>
+
+
+                                <div class="form-check">
+
+                                    <input type="checkbox" class="form-check-input" id="remember">
+
+                                    <label for="remember" class="form-check-label text-dark">
+
+                                        Lembre-me
+
                                     </label>
-
-                                    <input type="email" id="email" class="form-control mb-3" required>
-
-
-                                    <label class="text-dark">
-                                        Senha
-                                    </label>
-
-                                    <input type="password" id="exampleInputPassword1" class="form-control mb-3"
-                                        required>
-
-
-                                    <div class="form-check">
-
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-
-                                        <label class="form-check-label text-dark">
-                                            Lembre-me
-                                        </label>
-
-                                    </div>
 
                                 </div>
 
+                            </div>
 
-                                <div class="modal-footer">
 
-                                    <button type="submit" class="btn btn-primary">
+                            <div class="modal-footer">
 
-                                        Confirmar
+                                <button type="submit" class="btn btn-primary">
 
-                                    </button>
+                                    Confirmar
 
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                </button>
 
-                                        Fechar
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
 
-                                    </button>
+                                    Fechar
 
-                                </div>
+                                </button>
 
-                            </form>
+                            </div>
 
-                        </div>
+                        </form>
 
                     </div>
 
@@ -265,76 +342,252 @@
             </div>
 
 
-         <!-- BANNER DA PÁGINA DE GÊNEROS -->
-            <div class="cor-gradient rounded d-flex flex-column justify-content-center p-4 text-white" style="height: 35vh;">
-                <h1 class="fw-bold display-5">Estilos Musicais</h1>
-                <p class="lead">Navegue por todos os gêneros e descubra novas batidas.</p>
+            <!-- BANNER -->
+
+            <div class="cor-gradient rounded banner"></div>
+
+
+            <!-- SEÇÃO DE DESTAQUES (PADRÃO GÊNEROS E ARTISTAS) -->
+
+            <div class="d-flex justify-content-between align-items-center px-2">
+
+                <h3 class="titulo-secao m-0">
+
+                    Estilos e Artistas em Destaque
+
+                </h3>
+
             </div>
 
-            <!-- SEÇÃO GÊNERO: RAP / HIP-HOP -->
-            <div class="d-flex flex-column gap-2">
-                <h2 class="text-white fw-bold"><i class="fa-solid fa-microphone me-2"></i>Rap & Hip-Hop</h2>
-                <div class="row g-4">
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-compact-disc icone"></i>
-                            <h3>Golden Age</h3>
-                            <p>Estilo Clássico • Anos 90</p>
+
+            <div class="row g-4">
+
+
+                <!-- Card 1: Gênero / Artista -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/2pac.jpg" class="w-100 h-100" alt="Rock">
+
                         </div>
+
+                        <h4 class="fs-5 mb-1">
+
+                            Rock Clássico
+
+                        </h4>
+
+                        <p class="small mb-3">
+
+                            Explore os maiores acordes e bandas lendárias.
+
+                        </p>
+
+                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
+
+                            Ver Estilo
+
+                        </a>
+
                     </div>
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-fire icone"></i>
-                            <h3>Trap Moderno</h3>
-                            <p>Batidas Pesadas • Atual</p>
+
+                </div>
+
+
+                <!-- Card 2: Gênero / Artista -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/artista2.jpg" class="w-100 h-100" alt="Pop">
+
                         </div>
+
+                        <h4 class="fs-5 mb-1">
+
+                            Pop Hits
+
+                        </h4>
+
+                        <p class="small mb-3">
+
+                            As vozes e batidas que dominam o mundo.
+
+                        </p>
+
+                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
+
+                            Ver Estilo
+
+                        </a>
+
                     </div>
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-music icone"></i>
-                            <h3>Lo-Fi Rap</h3>
-                            <p>Calmo • Ritmo Suave</p>
+
+                </div>
+
+
+                <!-- Card 3: Gênero / Artista -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/artista3.jpg" class="w-100 h-100" alt="Lo-Fi">
+
                         </div>
+
+                        <h4 class="fs-5 mb-1">
+
+                            Lo-Fi Beats
+
+                        </h4>
+
+                        <p class="small mb-3">
+
+                            Batidas suaves para estudar e relaxar.
+
+                        </p>
+
+                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
+
+                            Ver Estilo
+
+                        </a>
+
                     </div>
+
+                </div>
+
+
+                <!-- Card 4: Gênero / Artista -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/artista4.jpg" class="w-100 h-100" alt="Eletrônica">
+
+                        </div>
+
+                        <h4 class="fs-5 mb-1">
+
+                            Eletrônica
+
+                        </h4>
+
+                        <p class="small mb-3">
+
+                            Sinta a energia dos festivais e pistas.
+
+                        </p>
+
+                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
+
+                            Ver Estilo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RODAPÉ -->
+
+        <div class="cor rounded" style="min-height: 100px;">
+            <div class="cor card-simples p-4 text-center mt-3">
+                <h3 class="mb-3">Fale Conosco</h3>
+                <p class="text-muted mb-3">Tem alguma dúvida ou sugestão sobre o projeto KaMusic? Entre em
+                    contato conosco através dos canais educacionais.</p>
+                <div class="d-flex justify-content-center gap-3 fs-4">
+                    <a href="#" class="text-light"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
+        </div>
 
-            <!-- SEÇÃO GÊNERO: ROCK -->
-            <div class="d-flex flex-column gap-2 mt-3">
-                <h2 class="text-white fw-bold"><i class="fa-solid fa-guitar me-2"></i>Rock & Metal</h2>
-                <div class="row g-4">
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-bolt icone"></i>
-                            <h3>Alternative Rock</h3>
-                            <p>Guitarras Distorcidas • Anos 2000</p>
+    </main>
+
+    <!-- MODAL (FORA DO .CONTENT PARA EVITAR ERROS COM Z-INDEX DESSA CLASSE, QUE É NECESSÁRIO PQ O .MENU OCUPA TODA A TELA)-->
+
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content p-4">
+
+                <h1 class="modal-header fs-5">
+                    Login
+                </h1>
+
+                <form>
+
+                    <div class="p-3">
+
+                        <label class="text-dark">
+                            Endereço de Email
+                        </label>
+
+                        <input type="email" id="email" class="form-control mb-3" required>
+
+
+                        <label class="text-dark">
+                            Senha
+                        </label>
+
+                        <input type="password" id="exampleInputPassword1" class="form-control mb-3" required>
+
+
+                        <div class="form-check">
+
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                            <label class="form-check-label text-dark">
+                                Lembre-me
+                            </label>
+
                         </div>
+
                     </div>
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-compact-disc icone"></i>
-                            <h3>Classic Rock</h3>
-                            <p>Os Maiores Hinos da História</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="cor card-simples">
-                            <i class="fa-solid fa-headphones icone"></i>
-                            <h3>Heavy Metal</h3>
-                            <p>Pressão e Velocidade</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
-            <!-- RODAPÉ -->
+                    <div class="modal-footer">
 
-            <div class="cor rounded" style="min-height: 100px;">
+                        <button type="submit" class="btn btn-primary">
+
+                            Confirmar
+
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                            Fechar
+
+                        </button>
+
+                    </div>
+
+                </form>
+
             </div>
 
         </div>
 
+    <!-- FIM DO MODAL -->
     </div>
 
 
@@ -348,31 +601,72 @@
 
     <script>
 
-        const themeToggle = document.getElementById("themeToggle");
-        const themeIcon = document.getElementById("themeIcon");
+        const botoesTema = [
+            document.getElementById("themeToggleDesktop"),
+            document.getElementById("themeToggleMobile")
+        ];
 
-        if (localStorage.getItem("temaPreferido") === "claro") {
+        const iconesTema = [
+            document.getElementById("themeIconDesktop"),
+            document.getElementById("themeIconMobile")
+        ];
+
+
+        function atualizarTema() {
+
+            const temaClaro =
+                document.body.classList.contains("light-theme");
+
+
+            iconesTema.forEach((icone) => {
+
+                if (!icone) return;
+
+                icone.classList.toggle("fa-sun", temaClaro);
+                icone.classList.toggle("fa-moon", !temaClaro);
+
+            });
+
+        }
+
+
+        const temaSalvo =
+            localStorage.getItem("temaPreferido");
+
+
+        if (temaSalvo === "claro") {
 
             document.body.classList.add("light-theme");
 
-            themeIcon.classList.replace("fa-moon", "fa-sun");
         }
 
-        themeToggle.addEventListener("click", () => {
 
-            document.body.classList.toggle("light-theme");
+        atualizarTema();
 
-            const claro = document.body.classList.contains("light-theme");
 
-            localStorage.setItem(
-                "temaPreferido",
-                claro ? "claro" : "escuro"
-            );
+        botoesTema.forEach((botao) => {
 
-            themeIcon.classList.replace(
-                claro ? "fa-moon" : "fa-sun",
-                claro ? "fa-sun" : "fa-moon"
-            );
+            if (!botao) return;
+
+
+            botao.addEventListener("click", () => {
+
+                document.body.classList.toggle("light-theme");
+
+
+                const claro =
+                    document.body.classList.contains("light-theme");
+
+
+                localStorage.setItem(
+                    "temaPreferido",
+                    claro ? "claro" : "escuro"
+                );
+
+
+                atualizarTema();
+
+            });
 
         });
 
