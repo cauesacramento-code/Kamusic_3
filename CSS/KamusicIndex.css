@@ -876,34 +876,3 @@ body.light-theme .search-bar i {
     }
 
 }
-
-
-/* CELULARES MUITO PEQUENOS */
-
-@media screen and (max-width: 400px) {
-
-    .cab-cell {
-        padding: 15px;
-    }
-
-
-    .cab-cell img {
-        width: 120px;
-    }
-
-
-    .nome-login {
-        font-size: 14px;
-    }
-
-
-    .card-simples {
-        min-height: 330px;
-    }
-
-
-    .banner {
-        min-height: 180px;
-    }
-
-}
