@@ -37,12 +37,12 @@
                 </button>
                 <p class="nome-login">Faça o Login.</p>
             </div>
-            
+
             <!-- TEMA -->
 
-            <button class="btn btn-light" id="themeToggle">
+            <button class="btn btn-light themeToggle">
 
-                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <i class="fa-solid fa-moon themeIcon"></i>
 
             </button>
 
@@ -173,9 +173,9 @@
 
                 <!-- TEMA -->
 
-                <button class="btn btn-light btn-sm me-3" id="themeToggle">
+                <button class="btn btn-light btn-sm me-3 themeToggle">
 
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    <i class="fa-solid fa-moon themeIcon"></i>
 
                 </button>
 
@@ -189,79 +189,11 @@
 
                 </button>
 
-
-                <!-- MODAL -->
-
-                <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
-
-                    <div class="modal-dialog modal-dialog-centered">
-
-                        <div class="modal-content p-4">
-
-                            <h1 class="modal-header fs-5">
-                                Login
-                            </h1>
-
-                            <form>
-
-                                <div class="p-3">
-
-                                    <label class="text-dark">
-                                        Endereço de Email
-                                    </label>
-
-                                    <input type="email" id="email" class="form-control mb-3" required>
-
-
-                                    <label class="text-dark">
-                                        Senha
-                                    </label>
-
-                                    <input type="password" id="exampleInputPassword1" class="form-control mb-3"
-                                        required>
-
-
-                                    <div class="form-check">
-
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-
-                                        <label class="form-check-label text-dark">
-                                            Lembre-me
-                                        </label>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="modal-footer">
-
-                                    <button type="submit" class="btn btn-primary">
-
-                                        Confirmar
-
-                                    </button>
-
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-
-                                        Fechar
-
-                                    </button>
-
-                                </div>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
-<!-- BANNER DA PÁGINA SOBRE NÓS -->
-            <div class="cor-gradient rounded d-flex flex-column justify-content-center p-4 text-white" style="height: 35vh;">
+            <!-- BANNER DA PÁGINA SOBRE NÓS -->
+            <div class="cor-gradient rounded d-flex flex-column justify-content-center p-4 text-white"
+                style="height: 35vh;">
                 <h1 class="fw-bold display-5">Sobre o KaMusic</h1>
                 <p class="lead">Conheça mais sobre a nossa proposta e a origem do projeto.</p>
             </div>
@@ -273,7 +205,8 @@
                     <div class="cor card-simples">
                         <i class="fa-solid fa-bullseye icone"></i>
                         <h3>Nossa Missão</h3>
-                        <p>Proporcionar uma experiência moderna, limpa e imersiva de exploração musical através de um design web de alta qualidade.</p>
+                        <p>Proporcionar uma experiência moderna, limpa e imersiva de exploração musical através de um
+                            design web de alta qualidade.</p>
                     </div>
                 </div>
 
@@ -281,7 +214,8 @@
                     <div class="cor card-simples">
                         <i class="fa-solid fa-graduation-cap icone"></i>
                         <h3>Contexto Escolar</h3>
-                        <p>Desenvolvido como parte das atividades do curso de Multimídia do SENAI, focado em desenvolvimento web e interfaces responsivas.</p>
+                        <p>Desenvolvido como parte das atividades do curso de Multimídia do SENAI, focado em
+                            desenvolvimento web e interfaces responsivas.</p>
                     </div>
                 </div>
 
@@ -289,13 +223,82 @@
                     <div class="cor card-simples">
                         <i class="fa-solid fa-shield-halved icone"></i>
                         <h3>Uso Educacional</h3>
-                        <p>Este site possui caráter estritamente acadêmico e sem fins lucrativos, criado para prática e aprimoramento de front-end.</p>
+                        <p>Este site possui caráter estritamente acadêmico e sem fins lucrativos, criado para prática e
+                            aprimoramento de front-end.</p>
                     </div>
                 </div>
 
-            <!-- RODAPÉ -->
+                <!-- RODAPÉ -->
 
-            <div class="cor rounded" style="min-height: 100px;">
+                <div class="cor rounded" style="min-height: 100px;">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL (FORA DO .CONTENT PARA EVITAR ERROS COM Z-INDEX DESSA CLASSE, QUE É NECESSÁRIO PQ O .MENU OCUPA TODA A TELA)-->
+
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content p-4">
+
+                <h1 class="modal-header fs-5">
+                    Login
+                </h1>
+
+                <form>
+
+                    <div class="p-3">
+
+                        <label class="text-dark">
+                            Endereço de Email
+                        </label>
+
+                        <input type="email" id="email" class="form-control mb-3" required>
+
+
+                        <label class="text-dark">
+                            Senha
+                        </label>
+
+                        <input type="password" id="exampleInputPassword1" class="form-control mb-3" required>
+
+
+                        <div class="form-check">
+
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                            <label class="form-check-label text-dark">
+                                Lembre-me
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">
+
+                            Confirmar
+
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                            Fechar
+
+                        </button>
+
+                    </div>
+
+                </form>
+
             </div>
 
         </div>
@@ -312,35 +315,55 @@
     <!-- TEMA -->
 
     <script>
+        // .querySelectorAll(".XXXXX") seleciona todas as classes .XXXXX do html.
+        const themeToggles = document.querySelectorAll(".themeToggle");
+        const themeIcons = document.querySelectorAll(".themeIcon");
 
-        const themeToggle = document.getElementById("themeToggle");
-        const themeIcon = document.getElementById("themeIcon");
+        // Vê no local storage do usuário qual o valor do "temaPreferido" deixado na última vez que ele entrou no site
+        const temaSalvo = localStorage.getItem("temaPreferido");
 
-        if (localStorage.getItem("temaPreferido") === "claro") {
+        if (temaSalvo === "claro") {
 
             document.body.classList.add("light-theme");
 
-            themeIcon.classList.replace("fa-moon", "fa-sun");
+            themeIcons.forEach(icon => {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+            });
+
         }
 
-        themeToggle.addEventListener("click", () => {
+        // Estabelece que, para cada botão da constante "themeToggles", ocorrerá...
+        themeToggles.forEach(button => {
 
-            document.body.classList.toggle("light-theme");
+            // Adiciona um evento ao clicar no botão da constante "themeToggles"
+            button.addEventListener("click", () => {
 
-            const claro = document.body.classList.contains("light-theme");
+                document.body.classList.toggle("light-theme");
 
-            localStorage.setItem(
-                "temaPreferido",
-                claro ? "claro" : "escuro"
-            );
+                const claro =
+                    document.body.classList.contains("light-theme");
 
-            themeIcon.classList.replace(
-                claro ? "fa-moon" : "fa-sun",
-                claro ? "fa-sun" : "fa-moon"
-            );
+                localStorage.setItem(
+                    "temaPreferido",
+                    claro ? "claro" : "escuro"
+                );
+
+                themeIcons.forEach(icon => {
+
+                    if (claro) {
+                        icon.classList.remove("fa-moon");
+                        icon.classList.add("fa-sun");
+                    } else {
+                        icon.classList.remove("fa-sun");
+                        icon.classList.add("fa-moon");
+                    }
+
+                });
+
+            });
 
         });
-
     </script>
 
 </body>
