@@ -389,11 +389,9 @@ body:has(#btn-menu:checked) .menu-fechado {
 /* CLASSE DE GRADIENTE EM DEGRADÊ COLORIDO */
 
 .cor-gradient {
-    background-image: linear-gradient(
-        to right,
-        #7500E2,
-        #FF00BB
-    );
+    background-image: linear-gradient(to right,
+            #7500E2,
+            #FF00BB);
 }
 
 /* BANNER */
@@ -668,6 +666,12 @@ body.light-theme .search-bar i {
         box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
     }
 
+    /* MENU-HAMBURGUER COM TAMANHO DIFERENTE NO CELULAR */
+    .menu-hamburguer {
+        width: 50px;
+        height: 50px;
+    }
+
 
     /* ABRE O MENU NO CELULAR */
 
@@ -741,12 +745,24 @@ body.light-theme .search-bar i {
 
     .botoes-cell {
         display: flex;
+        flex-direction: column;
 
-        width: 100%;
+        position: fixed;
 
-        justify-content: space-between;
+        top: 25px;
+        right: 20px;
+        gap: 15px;
 
-        align-items: center;
+        align-items: end;
+        justify-content: center;
+
+        border-radius: 8px;
+
+        cursor: pointer;
+
+        z-index: 1100;
+
+        transition: 0.3s;
     }
 
 
@@ -758,6 +774,7 @@ body.light-theme .search-bar i {
         align-items: center;
 
         color: white;
+        border-radius: 10px;
 
         gap: 10px;
 
@@ -771,6 +788,11 @@ body.light-theme .search-bar i {
         align-self: center;
 
         margin: 0;
+    }
+
+    .info-login #LoginMobile {
+        width: 40px;
+        height: 40px;
     }
 
 
@@ -802,7 +824,7 @@ body.light-theme .search-bar i {
 
         grid-column: auto;
 
-        margin-top: 0;
+        margin-top: -30px;
 
         padding: 10px !important;
     }
