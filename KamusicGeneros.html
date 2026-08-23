@@ -20,18 +20,50 @@
 
 <body>
 
-    <!-- MENU -->
+    <!-- CABEÇALHO PARA CELULAR -->
+    <div class="cab-cell">
+        <div class="logo-cell">
+            <img src="IMG/LogoKA2.png" id="LogoCell" alt="Logo KaMusic">
+        </div>
+
+        <div class="botoes-cell">
+            <!-- LOGIN -->
+            <div class="info-login">
+                <button type="button" class="btn btn-light btn-sm" id="Login" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+
+                    <i class="fa fa-user-circle"></i>
+
+                </button>
+                <p class="nome-login">Faça o Login.</p>
+            </div>
+            
+            <!-- TEMA -->
+
+            <button class="btn btn-light" id="themeToggle">
+
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+
+            </button>
+
+        </div>
+    </div>
+
+    <!-- BOTÃO PARA ABRIR MENU -->
 
     <input type="checkbox" id="btn-menu" class="gatilho">
 
+    <div class="botao-menu">
+        <label for="btn-menu" class="menu-hamburguer">
+            <i class="bi bi-list"></i>
+        </label>
+    </div>
+
+    <!-- MENU -->
 
     <div class="menu">
 
         <div class="menu-box">
-
-            <label for="btn-menu" class="menu-hamburguer">
-                <i class="bi bi-list"></i>
-            </label>
 
             <div class="menu-fechado">
                 <img src="IMG/LogoK.png" alt="Logo K">
@@ -104,6 +136,8 @@
             </div>
         </div>
 
+        <!-- RODAPÉ MENU-ABERTO -->
+
         <div class="footer">
             <div class="linha-separar"></div>
 
@@ -115,7 +149,6 @@
         </div>
 
     </div>
-
 
     <!-- CONTEÚDO -->
 
@@ -238,7 +271,7 @@
 
             <div class="row g-4">
 
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-lg-3">
                     <div class="cor card-simples">
 
                         <i class="fa-solid fa-robot icone"></i>
@@ -251,7 +284,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-lg-3">
                     <div class="cor card-simples">
 
                         <i class="fa-solid fa-cloud-moon icone"></i>
@@ -264,7 +297,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-lg-3">
                     <div class="cor card-simples">
 
                         <i class="fa-solid fa-bolt icone"></i>
@@ -277,7 +310,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-lg-3">
                     <div class="cor card-simples">
 
                         <i class="fa-solid fa-mug-hot icone"></i>
