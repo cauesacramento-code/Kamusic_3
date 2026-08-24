@@ -34,7 +34,7 @@ body {
 }
 
 .botoes-cell{
-    display: none !important;
+    display: none;
 }
 
 
@@ -764,6 +764,7 @@ body.light-theme .search-bar i {
         z-index: 1100;
 
         transition: 0.3s;
+        cursor:default;
     }
 
 
@@ -789,6 +790,22 @@ body.light-theme .search-bar i {
         align-self: center;
 
         margin: 0;
+    }
+
+    .grifar-nome-login{
+        transition: 0.3s ease-in-out;
+        display:flex;
+        position: fixed;
+        justify-self: end;
+        z-index: -1;
+        width:10px;
+    }
+
+    .info-login:hover>.grifar-nome-login{
+        background-color: #36258d;
+        width:140px;
+        right:30px;
+        height: 40px;
     }
 
     .info-login #LoginMobile {

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="CSS/KamusicEstilos.css">
-    <link rel="stylesheet" href="CSS/KamusicTupac.css">
+    <link rel="stylesheet" href="CSS/KamusicIndex.css">
 </head>
 
 <body>
@@ -29,37 +29,37 @@
             <img src="IMG/LogoKA2.png" id="LogoCell" alt="Logo KaMusic">
         </div>
 
-        <div class="botoes-cell">
+    </div>
 
-            <!-- LOGIN -->
+    <div class="botoes-cell">
 
-            <div class="info-login">
+        <!-- LOGIN -->
 
-                <button type="button" class="btn btn-light btn-sm" id="LoginMobile" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
+        <div class="info-login">
 
-                    <i class="fa fa-user-circle"></i>
+            <div class="grifar-nome-login"></div>
+            <p class="nome-login">
+                Faça o Login.
+            </p>
 
-                </button>
+            <button type="button" class="btn btn-light btn-sm" id="LoginMobile" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
 
-                <p class="nome-login">
-                    Faça o Login.
-                </p>
-
-            </div>
-
-            <!-- TEMA -->
-
-            <button class="btn btn-light btn-sm theme-mobile" id="themeToggleMobile" type="button">
-
-                <i class="fa-solid fa-moon" id="themeIconMobile"></i>
+                <i class="fa fa-user-circle"></i>
 
             </button>
 
         </div>
 
-    </div>
+        <!-- TEMA -->
 
+        <button class="btn btn-light btn-sm theme-mobile" id="themeToggleMobile" type="button">
+
+            <i class="fa-solid fa-moon" id="themeIconMobile"></i>
+
+        </button>
+
+    </div>
 
     <!-- BOTÃO PARA ABRIR MENU -->
 
@@ -266,86 +266,34 @@
             </div>
 
 
-            <!-- MODAL -->
+            <!-- BANNERS (CAROUSEL BOOTSTRAP) -->
 
-            <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
-
-                <div class="modal-dialog modal-dialog-centered">
-
-                    <div class="modal-content p-4">
-
-                        <h1 class="modal-header fs-5">
-
-                            Login
-
-                        </h1>
-
-                        <form>
-
-                            <div class="p-3">
-
-                                <label for="email" class="form-label text-dark">
-
-                                    Endereço de Email
-
-                                </label>
-
-                                <input type="email" id="email" class="form-control mb-3" required>
-
-
-                                <label for="password" class="form-label text-dark">
-
-                                    Senha
-
-                                </label>
-
-                                <input type="password" id="password" class="form-control mb-3" required>
-
-
-                                <div class="form-check">
-
-                                    <input type="checkbox" class="form-check-input" id="remember">
-
-                                    <label for="remember" class="form-check-label text-dark">
-
-                                        Lembre-me
-
-                                    </label>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="modal-footer">
-
-                                <button type="submit" class="btn btn-primary">
-
-                                    Confirmar
-
-                                </button>
-
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-
-                                    Fechar
-
-                                </button>
-
-                            </div>
-
-                        </form>
-
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="IMG/BannerK.png" class="d-block w-100" alt="...">
                     </div>
-
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <img src="IMG/BannerK2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <img src="IMG/BannerK3.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <img src="IMG/BannerK4.png" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-
-            <!-- BANNER -->
-
-            <div class="cor-gradient rounded banner"></div>
-
 
             <!-- SEÇÃO DE DESTAQUES (PADRÃO GÊNEROS E ARTISTAS) -->
 
@@ -510,7 +458,7 @@
         <div class="cor rounded" style="min-height: 100px;">
             <div class="cor card-simples p-4 text-center mt-3">
                 <h3 class="mb-3">Fale Conosco</h3>
-                <p class="text-muted mb-3">Tem alguma dúvida ou sugestão sobre o projeto KaMusic? Entre em
+                <p class="mb-3">Tem alguma dúvida ou sugestão sobre o projeto KaMusic? Entre em
                     contato conosco através dos canais educacionais.</p>
                 <div class="d-flex justify-content-center gap-3 fs-4">
                     <a href="#" class="text-light"><i class="fa-brands fa-github"></i></a>
@@ -587,7 +535,7 @@
 
         </div>
 
-    <!-- FIM DO MODAL -->
+        <!-- FIM DO MODAL -->
     </div>
 
 
@@ -599,77 +547,7 @@
 
     <!-- TEMA -->
 
-    <script>
-
-        const botoesTema = [
-            document.getElementById("themeToggleDesktop"),
-            document.getElementById("themeToggleMobile")
-        ];
-
-        const iconesTema = [
-            document.getElementById("themeIconDesktop"),
-            document.getElementById("themeIconMobile")
-        ];
-
-
-        function atualizarTema() {
-
-            const temaClaro =
-                document.body.classList.contains("light-theme");
-
-
-            iconesTema.forEach((icone) => {
-
-                if (!icone) return;
-
-                icone.classList.toggle("fa-sun", temaClaro);
-                icone.classList.toggle("fa-moon", !temaClaro);
-
-            });
-
-        }
-
-
-        const temaSalvo =
-            localStorage.getItem("temaPreferido");
-
-
-        if (temaSalvo === "claro") {
-
-            document.body.classList.add("light-theme");
-
-        }
-
-
-        atualizarTema();
-
-
-        botoesTema.forEach((botao) => {
-
-            if (!botao) return;
-
-
-            botao.addEventListener("click", () => {
-
-                document.body.classList.toggle("light-theme");
-
-
-                const claro =
-                    document.body.classList.contains("light-theme");
-
-
-                localStorage.setItem(
-                    "temaPreferido",
-                    claro ? "claro" : "escuro"
-                );
-
-
-                atualizarTema();
-
-            });
-
-        });
-
+    <script src="JS/Kamusic.js">
     </script>
 
 </body>
