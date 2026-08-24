@@ -474,9 +474,11 @@ body:has(#btn-menu:checked) .menu-fechado {
 
 /* CONTAINER INDIVIDUAL DE CARTÃO */
 
-.card-simples {
+.card-simples{
     min-height: 350px;
+}
 
+.card-simples /*.card-footer*/ {
     border-radius: 10px;
 
     display: flex;
@@ -493,7 +495,7 @@ body:has(#btn-menu:checked) .menu-fechado {
 }
 
 
-.card-simples:hover {
+.card-simples:hover /* .card-footer:hover */ {
     transform: translateY(-5px);
 }
 

@@ -1,0 +1,36 @@
+.bloco-mais-acessados .bloco-mus-acessada {
+    transition: 0.2s;
+    color:rgb(157, 157, 157);
+}
+
+.bloco-mais-acessados .bloco-mus-acessada:hover {
+    cursor: pointer;
+    background-color: rgb(75, 74, 74);
+    box-shadow: 0 4px 10px rgba(228, 227, 227, 0.212);
+    color:white;
+
+    transform: translateY(-5px);
+}
+
+/* TEMA CLARO */
+body.light-theme .bloco-mais-acessados .bloco-mus-acessada {
+    box-shadow: 0 4px 6px rgba(78, 78, 78, 0.164)
+}
+
+.numero-mus{
+    font-size: 25px;
+    transition:0.2s;
+}
+
+.bloco-mus-acessada:hover .numero-mus{
+    color:rgb(250, 168, 250);
+}
+
+.titulo-mus{
+    font-size: 17px;
+    color:rgb(250, 168, 250);
+}
+
+.artista-mus{
+    font-size: 14px;
+}
