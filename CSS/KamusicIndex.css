@@ -1,0 +1,26 @@
+.carousel-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 3fr) !important;
+}
+
+.carousel-container img {
+    width: 200px;
+}
+
+#carouselB {
+    display: contents;
+}
+
+#carouselC {
+    display: none;
+}
+
+@media screen and (max-width: 570px) {
+    #carouselB {
+        display: none;
+    }
+
+    #carouselC {
+        display: contents;
+    }
+}
