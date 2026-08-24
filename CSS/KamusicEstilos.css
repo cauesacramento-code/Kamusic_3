@@ -26,6 +26,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Define a sombra dos botões */
+
+.btn, .botao-menu {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
 /* ESCONDE ELEMENTOS DE CELULAR NO DESKTOP */
 
@@ -33,7 +38,7 @@ body {
     display: none !important;
 }
 
-.botoes-cell{
+.botoes-cell {
     display: none;
 }
 
@@ -242,7 +247,7 @@ body:has(#btn-menu:checked) .menu-aberto {
 .menu-fechado {
     position: absolute;
 
-    top: 30px;
+    top: 50px;
     left: -7px;
 
     display: flex;
@@ -299,7 +304,8 @@ body:has(#btn-menu:checked) .menu-fechado {
     width: 50px;
     max-width: 50px;
 
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: -8px;
 }
 
 
@@ -398,7 +404,7 @@ body:has(#btn-menu:checked) .menu-fechado {
 
 /* BANNER */
 
-.banner img{
+.banner img {
     width: 100%;
     min-height: 300px;
 }
@@ -558,7 +564,7 @@ body:has(#btn-menu:checked) .menu-fechado {
 /* MODO CLARO */
 
 body.light-theme {
-    background-color: #f5f5f5;
+    background-color: #cac9c9;
     color: #212529;
 }
 
@@ -764,7 +770,7 @@ body.light-theme .search-bar i {
         z-index: 1100;
 
         transition: 0.3s;
-        cursor:default;
+        cursor: default;
     }
 
 
@@ -784,29 +790,41 @@ body.light-theme .search-bar i {
     }
 
 
-    .info-login .nome-login {
+    .info-login #nome-login {
         display: flex;
 
         align-self: center;
 
         margin: 0;
+
+        opacity: 0;
+
+        transition: 0.2s;
     }
 
-    .grifar-nome-login{
+    #grifar-nome-login {
+        background-color: rgb(83, 21, 121);
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
         transition: 0.3s ease-in-out;
-        display:flex;
+        display: flex;
         position: fixed;
         justify-self: end;
+        right: 30px;
+        height: 40px;
         z-index: -1;
-        width:10px;
+        width: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
-    .info-login:hover>.grifar-nome-login{
+    /*
+    .info-login:hover>#grifar-nome-login{
         background-color: #36258d;
         width:140px;
         right:30px;
         height: 40px;
     }
+    */
 
     .info-login #LoginMobile {
         width: 40px;
