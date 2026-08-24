@@ -419,7 +419,7 @@
                         <div class="p-4">
 
                             <h1 class="text-center">
-                               Emily Mariane da Silva
+                                Emily Mariane da Silva
                             </h1>
 
                             Emily Mariane da Silva trouxe ao KaMusic sua expertise em Ciência da Informação e
@@ -456,7 +456,17 @@
                                 Robson Octávio de Souza Oliveira
                             </h1>
 
-                           Robson Octávio de Souza Oliveira, diretor de escola em Belo Horizonte, sempre defendeu a premissa de que a educação e a cultura devem caminhar juntas para transformar realidades. Em 2023, ao conhecer o potencial do KaMusic, ele enxergou na plataforma uma ferramenta pedagógica e artística inovadora para conectar e inspirar os jovens. Movido por esse propósito, Robson decidiu investir no projeto e assumiu o papel de construir pontes institucionais essenciais, liderando a criação de parcerias estratégicas com escolas e universidades. Essa articulação abriu as portas para que o portal entrasse de forma legítima nos ambientes acadêmicos e comunitários, ganhando acessibilidade e um forte caráter educativo. Sua visão de futuro transformou o KaMusic em um verdadeiro espaço de formação artística e inclusão digital, consolidando Robson como o mentor institucional que uniu o poder do conhecimento e da música para gerar impacto social e transformar vidas.
+                            Robson Octávio de Souza Oliveira, diretor de escola em Belo Horizonte, sempre defendeu a
+                            premissa de que a educação e a cultura devem caminhar juntas para transformar realidades. Em
+                            2023, ao conhecer o potencial do KaMusic, ele enxergou na plataforma uma ferramenta
+                            pedagógica e artística inovadora para conectar e inspirar os jovens. Movido por esse
+                            propósito, Robson decidiu investir no projeto e assumiu o papel de construir pontes
+                            institucionais essenciais, liderando a criação de parcerias estratégicas com escolas e
+                            universidades. Essa articulação abriu as portas para que o portal entrasse de forma legítima
+                            nos ambientes acadêmicos e comunitários, ganhando acessibilidade e um forte caráter
+                            educativo. Sua visão de futuro transformou o KaMusic em um verdadeiro espaço de formação
+                            artística e inclusão digital, consolidando Robson como o mentor institucional que uniu o
+                            poder do conhecimento e da música para gerar impacto social e transformar vidas.
 
                         </div>
 
@@ -601,8 +611,32 @@
     <!-- TEMA -->
 
     <script src="JS/Kamusic.js">
+
     </script>
-    <script src="JS/KamusicIndex.js">
+    <script src="JS/KamusicArtistas.js">
+        const artistas = document.querySelectorAll(
+            '#BB, #BB1, #BB2, #BB3'
+        );
+
+        artistas.forEach(function (artista) {
+
+            artista.addEventListener('change', function () {
+
+                if (this.checked) {
+
+                    artistas.forEach(function (outroArtista) {
+
+                        if (outroArtista !== artista) {
+                            outroArtista.checked = false;
+                        }
+
+                    });
+
+                }
+
+            });
+
+        });
     </script>
 
 </body>

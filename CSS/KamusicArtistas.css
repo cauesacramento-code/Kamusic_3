@@ -1,64 +1,27 @@
-/* Esconde o checkbox padrão */
-
 .gatilho {
     display: none;
 }
 
-
-/* Esconde o ChilledCow por padrão */
-
-#Opencard, #Opencard1, #Opencard2, #Opencard3 {
+#Opencard,
+#Opencard1,
+#Opencard2,
+#Opencard3 {
     display: none;
 }
 
-
-/* CONTEÚDO DO CHILLEDCOW */
-
-body:has(#BB:checked) #Opencard {
-    width: auto;
-    opacity: 1;
+#Opencard.aberto,
+#Opencard1.aberto,
+#Opencard2.aberto,
+#Opencard3.aberto {
     display: grid;
     grid-template-columns: 1fr 250px;
     align-items: center;
     gap: 30px;
 }
-
-body:has(#BB1:checked) #Opencard1 {
-    width: auto;
-    opacity: 1;
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    align-items: center;
-    gap: 30px;
-}
-
-body:has(#BB2:checked) #Opencard2 {
-    width: auto;
-    opacity: 1;
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    align-items: center;
-    gap: 30px;
-}
-
-body:has(#BB3:checked) #Opencard3 {
-    width: auto;
-    opacity: 1;
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    align-items: center;
-    gap: 30px;
-}
-
-
-/* TEXTO */
 
 .info .texto-chilledcow {
     grid-column: 1;
 }
-
-
-/* IMAGEM */
 
 .info img {
     grid-column: 2;
