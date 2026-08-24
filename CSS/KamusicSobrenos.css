@@ -1,0 +1,26 @@
+.obs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* CADA CONJUNTO DE TEXTO + IMAGEM */
+
+.conjunto-sobre {
+    background-color: rgb(28, 28, 40);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin: 0 !important;
+}
+
+
+/* IMAGENS */
+
+.conjunto-sobre img {
+    max-width: 100%;
+    height: auto;
+}
