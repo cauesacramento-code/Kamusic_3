@@ -10,7 +10,6 @@ document.getElementById("themeIconDesktop"),
 document.getElementById("themeIconMobile")
 ];
 
-
 function atualizarTema() {
 
 // Verifica a presença da classe '.light-theme', gatilho responsável por injetar as cores claras mapeadas no arquivo CSS.
