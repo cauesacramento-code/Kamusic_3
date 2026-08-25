@@ -1,3 +1,19 @@
+h1{
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+h2{
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+h3{
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+p{ font font-family: inter regular, sans-serif, arial;
+}
+
+
+
+
+
 .bloco-mais-acessados .bloco-mus-acessada {
     transition: 0.2s;
     color:rgb(157, 157, 157);
