@@ -83,7 +83,7 @@ function retanguloDesativar(){
 const retangulo = document.getElementById('grifar-nome-login');
 const nomeLogin = document.getElementById('nome-login')
 
-retangulo.style.width = '150px';
+retangulo.style.width = '200px';
 nomeLogin.style.opacity = '1';
 
 if (retangulo) {
