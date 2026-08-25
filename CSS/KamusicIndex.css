@@ -1,52 +1,146 @@
-h1{
-    font font-family: montserrat semi-bold, sans-serif, arial;
+/* =========================
+BLOCO ITENS MAIS ACESSADOS
+============================ */
+
+/*.bloco-mais-acessados {
+    max-width: 900px;
 }
-h2{
-    font font-family: montserrat semi-bold, sans-serif, arial;
-}
-h3{
-    font font-family: montserrat semi-bold, sans-serif, arial;
-}
-p{ font font-family: inter regular, sans-serif, arial;
+*/
+
+h1 {
+    font-family: montserrat semi-bold, sans-serif, arial;
 }
 
+h2 {
+    font-family: montserrat semi-bold, sans-serif, arial;
+}
 
+h3 {
+    font-family: montserrat semi-bold, sans-serif, arial;
+}
 
-
+p {
+    font-family: inter regular, sans-serif, arial;
+}
 
 .bloco-mais-acessados .bloco-mus-acessada {
     transition: 0.2s;
-    color:rgb(157, 157, 157);
+    color: rgb(157, 157, 157);
+    width: 300px;
 }
 
 .bloco-mais-acessados .bloco-mus-acessada:hover {
     cursor: pointer;
     background-color: rgb(75, 74, 74);
     box-shadow: 0 4px 10px rgba(228, 227, 227, 0.212);
-    color:white;
+    color: white;
 
     transform: translateY(-5px);
 }
 
-/* TEMA CLARO */
-body.light-theme .bloco-mais-acessados .bloco-mus-acessada {
-    box-shadow: 0 4px 6px rgba(78, 78, 78, 0.164)
-}
-
-.numero-mus{
+.numero-mus {
     font-size: 25px;
-    transition:0.2s;
+    transition: 0.2s;
 }
 
-.bloco-mus-acessada:hover .numero-mus{
-    color:rgb(250, 168, 250);
+.bloco-mus-acessada:hover .numero-mus {
+    color: rgb(250, 168, 250);
 }
 
-.titulo-mus{
+.titulo-mus {
     font-size: 17px;
-    color:rgb(250, 168, 250);
+    color: rgb(184, 124, 184);
 }
 
-.artista-mus{
+.bloco-mus-acessada:hover .titulo-mus {
+    color: rgb(250, 168, 250);
+}
+
+.artista-mus {
     font-size: 14px;
+}
+
+.imagem-artista img {
+    width: 60px;
+}
+
+.numero-art {
+    background-color: rgb(184, 139, 225);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+.bloco-mus-acessada:hover .numero-art {
+    background-color: blueviolet;
+}
+
+.artista-art {
+    font-size: 22px;
+}
+
+/* TEMA CLARO */
+
+body.light-theme .bloco-mais-acessados .bloco-mus-acessada:hover {
+    background-color: rgb(226, 225, 225);
+    box-shadow: 0 4px 10px rgba(138, 138, 138, 0.692);
+    color: rgb(54, 54, 54);
+}
+
+body.light-theme .bloco-mus-acessada:hover .titulo-mus {
+    color: rgb(159, 39, 159);
+}
+
+body.light-theme .bloco-mus-acessada:hover .numero-mus {
+    color: rgb(150, 2, 150);
+}
+
+/* RESPONSIVIDADE MAIS ACESSADOS */
+
+@media (max-width: 1300px) {
+    .bloco-mus-acessada {
+        max-width: 170px;
+    }
+
+    .numero-art {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .artista-art {
+        font-size: 18px;
+    }
+
+    .bloco-mus-acessada {
+        max-width: 170px;
+    }
+
+    .numero-art {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .artista-art {
+        font-size: 18px;
+    }
+
+    .imagem-artista img {
+        width: 50px;
+    }
+
+    #colunaC {
+        margin-top: 30px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+
+    #colunaC:last-child {
+        justify-self: start;
+    }
 }

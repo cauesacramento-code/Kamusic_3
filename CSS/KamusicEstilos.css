@@ -566,13 +566,13 @@ body:has(#btn-menu:checked) .menu-fechado {
 /* MODO CLARO */
 
 body.light-theme {
-    background-color: #cac9c9;
+    background-color: #c9c7c7;
     color: #212529;
 }
 
 
 body.light-theme .content {
-    background-color: #f5f5f5;
+    background-color: #eeeded;
     color: #212529;
 }
 
@@ -634,6 +634,11 @@ body.light-theme .search-bar i {
     color: #212529;
 }
 
+/* FOOTER MODO CLARO */
+
+body.light-theme .icones-footer{
+    color: #212529 !important;
+}
 
 /* BOTÕES */
 
