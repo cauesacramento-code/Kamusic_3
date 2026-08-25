@@ -1,6 +1,36 @@
+/* Grifar o texto */
+
+.estilo {
+    display:flex;
+    align-items: center;
+    /* Largura inicial */
+    width: 20px;
+
+    /* Altura */
+    height: 50px;
+
+    /* Faz animações suaves */
+    transition: 0.5s;
+
+    background-color: rgb(221, 0, 255);
+}
+
+.estilo:hover{
+    width:450px;
+    cursor:pointer;
+}
+
+body.light-theme .estilo {
+    background-color: rgb(230, 159, 241);
+}
+
+.titulo-secao{
+    text-wrap: nowrap;
+}
+
 /* =========================
 BLOCO ITENS MAIS ACESSADOS
-============================ */
+======================rgb(237, 177, 246)
 
 /*.bloco-mais-acessados {
     max-width: 900px;
