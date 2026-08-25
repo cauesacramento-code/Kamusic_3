@@ -6,6 +6,22 @@ BLOCO ITENS MAIS ACESSADOS
     /*max-width: 900px;*/
 }
 
+h1 {
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+h2 {
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+h3 {
+    font font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+p {
+    font font-family: inter regular, sans-serif, arial;
+}
+
 .bloco-mais-acessados .bloco-mus-acessada {
     transition: 0.2s;
     color: rgb(157, 157, 157);
@@ -97,6 +113,7 @@ body.light-theme .bloco-mus-acessada:hover .numero-mus {
     .artista-art {
         font-size: 18px;
     }
+
     .bloco-mus-acessada {
         max-width: 170px;
     }
@@ -115,14 +132,14 @@ body.light-theme .bloco-mus-acessada:hover .numero-mus {
         width: 50px;
     }
 
-    #colunaC{
-        margin-top:30px;
-        display:flex !important;
+    #colunaC {
+        margin-top: 30px;
+        display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap;
     }
 
-    #colunaC:last-child{
+    #colunaC:last-child {
         justify-self: start;
     }
 }
