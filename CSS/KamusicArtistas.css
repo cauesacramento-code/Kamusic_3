@@ -48,11 +48,13 @@
 }
 
 .imagem-containerin {
+    max-height: 300px;
     width: 100%;
-    height: 300px;
 }
 
 .imagem-containerin img {
+    width: 100%;
+    height: 300px;
     object-fit: cover;
     display: block;
 }
