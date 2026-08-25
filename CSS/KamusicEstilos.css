@@ -4,6 +4,44 @@
     box-sizing: border-box;
 }
 
+/* Organização dos retangulos grifados */
+.estiloB{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    /* Largura inicial */
+    width: 20px;
+
+    /* Altura */
+    height: 50px;
+
+    /* Faz animações suaves */
+    transition: 0.5s;
+
+    background-color: rgb(221, 0, 255);
+}
+
+.estiloB:hover{
+    width: 500px;
+}
+
+.estilo {
+    width:400px;
+    display:flex;
+    align-self: center;
+}
+
+.estilo:hover {
+    width: 450px;
+    cursor: pointer;
+}
+
+body.light-theme .estiloB {
+    background-color: rgb(219, 146, 230);
+}
+
+/* Cores dos botões */
+
 .btn-roxo{
     background-color: rgb(129, 28, 129);
     color: white;
