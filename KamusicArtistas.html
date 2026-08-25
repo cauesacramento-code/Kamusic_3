@@ -1,3 +1,233 @@
+hoje 15:38
+o que vc acha do site?
+
+hoje 20:55
+            <div class="container text-center"> 
+                <div class="row gap-3"> 
+                    <div class="col cor card-simples rounded shadow-sm"> 
+                        <div class="imagem-container overflow-hidden rounded mb-3"> 
+ 
+                            <img src="IMG/Drake.png" class="w-100 h-100" alt="Drake"> 
+ 
+                        </div> 
+                        1 of 3 
+                    </div> 
+                    <div class="col cor card-simples rounded shadow-sm"> 
+                        <div class="imagem-container overflow-hidden rounded mb-3"> 
+ 
+                            <img src="IMG/Drake.png" class="w-100 h-100" alt="Drake"> 
+ 
+                        </div> 
+                        2 of 3 
+                    </div> 
+                    <div class="col cor card-simples rounded shadow-sm"> 
+                        <div class="imagem-container overflow-hidden rounded mb-3"> 
+ 
+                            <img src="IMG/Drake.png" class="w-100 h-100" alt="Drake"> 
+ 
+                        </div> 
+                        3 of 3 
+                    </div> 
+                </div> 
+            </div> 
+Faz esse codigo ficar assim na imagem
+
+Claro — para manter como show fictício no seu site:
+
+18 / 08
+
+DRAKE – AFTER HOURS LIVE
+
+Drake chega a São Paulo para uma apresentação especial, reunindo seus maiores sucessos em uma noite dedicada ao hip-hop e ao R&B.
+
+Local: Vibra São Paulo – São Paulo/SP
+Horário: 21h00
+Ingressos: a partir de R$ 180,00
+
+Observação: esse evento é fictício, criado apenas para o conteúdo do KaMusic.
+
+Código colado(5).html
+Arquivo
+
+o que tu acha de como ficou?
+
+Agora vendo o código completo, acho que ficou bem melhor do que a primeira versão. A estrutura está começando a ficar com cara de uma página real do KaMusic, principalmente porque você juntou artistas, informações e eventos no mesmo fluxo.
+
+O que ficou muito bom
+
+1. A sequência da página faz sentido
+
+Você tem:
+
+Pesquisa → banners → Artista do Mês → cards dos artistas → informações → shows → contato
+
+Isso cria uma hierarquia bem clara. O usuário vai descobrindo o conteúdo conforme desce a página.
+
+2. Os cards de artistas ficaram bem organizados
+
+Você usou:
+
+col-12 col-sm-6 col-lg-3
+
+Isso foi uma ótima escolha. Significa:
+
+📱 celular: 1 card
+📱 tablet: 2 cards
+🖥️ desktop: 4 cards
+
+E isso está aplicado aos quatro artistas.
+
+3. A parte de shows ficou bem mais interessante
+
+A estrutura que você colocou agora:
+
+IMAGEM
+06 / 09 |
+EMINENCE – LIVE EXPERIENCE
+Descrição
+COMPRAR INGRESSOS
+
+é muito mais interessante visualmente do que aquele "1 of 3" que você tinha antes.
+
+E o uso de:
+
+col-12 col-md-4
+
+faz os três eventos ficarem em uma linha no desktop e empilharem no celular.
+
+⚠️ Algumas coisas que eu corrigiria
+1. As datas dos shows estão estranhas
+
+Você tinha pedido shows para este mês, mas no código aparecem:
+
+06 / 09
+27 / 11
+18 / 10
+
+Ou seja, setembro, novembro e outubro.
+
+Se a intenção é representar agosto de 2026, eu colocaria, por exemplo:
+
+06 / 08
+20 / 08
+27 / 08
+
+Isso vai deixar a seção muito mais coerente.
+
+2. Os alt das imagens dos shows estão errados
+
+Por exemplo:
+
+<img src="IMG/AlbumEminem4.png" class="w-100 h-100" alt="Drake">
+
+Essa imagem é usada no evento do Eminem, mas o alt diz Drake.
+
+O ideal seria:
+
+alt="Eminence – Live Experience"
+
+E no segundo:
+
+alt="KaMusic Summer Sessions"
+
+No terceiro:
+
+alt="Drake – After Hours Live"
+
+É um detalhe pequeno visualmente, mas melhora bastante a qualidade do HTML.
+
+3. Eu mudaria o nome de imagem-containerin
+
+Você tem:
+
+<div class="imagem-containerin overflow-hidden">
+
+nos três cards.
+
+Se foi intencional, beleza. Mas parece que você provavelmente queria:
+
+imagem-container
+
+igual aos cards de artistas.
+
+Se o seu CSS estiver usando .imagem-containerin, então não mexe. Mas se não houver motivo específico, eu padronizaria.
+
+4. O título dos eventos pode ficar grande demais
+
+Você colocou:
+
+<h2 class="titulo-evento">
+    EMINENCE – LIVE EXPERIENCE
+</h2>
+
+e títulos semelhantes.
+
+Isso fica legal no desktop, mas dependendo da largura do card, títulos maiores podem quebrar em 3 linhas.
+
+Eu faria o CSS garantir uma altura parecida para o título. Assim:
+
+.titulo-evento {
+    min-height: 72px;
+}
+
+Dessa forma os três cards ficam mais alinhados.
+
+⭐ E uma coisa que eu mudaria no design
+
+Na sua imagem anterior, o botão era mais discreto:
+
+COMPRAR INGRESSOS
+
+com borda.
+
+Agora você colocou:
+
+class="btn btn-danger w-100 rounded-pill"
+
+Isso deixa o botão vermelho sólido.
+
+Eu acho que depende do restante do seu CSS, mas para o KaMusic eu provavelmente faria o botão roxo/gradiente ou transparente com borda, porque vermelho pode começar a introduzir uma cor que não conversa tanto com a identidade visual que você já construiu.
+
+Seu site tem uma identidade bem mais voltada para preto + branco + roxo, então eu manteria isso também nos eventos.
+
+E no geral?
+
+Eu diria que você está entrando naquela fase em que o site já está pronto estruturalmente e agora vale mais a pena fazer acabamento do que ficar adicionando coisas.
+
+Eu focaria agora em:
+
+1. Padronizar alturas dos cards
+2. Ajustar espaçamentos
+3. Melhorar tipografia dos eventos
+4. Fazer o mobile ficar perfeito
+5. Padronizar cores dos botões
+6. Corrigir pequenos detalhes do HTML
+
+A estrutura principal eu não mudaria muito.
+
+E gostei especialmente de você ter colocado os eventos depois das informações dos artistas. Dá uma sensação de que o KaMusic não é apenas um catálogo de artistas, mas também um portal que oferece experiências relacionadas à música.
+
+Código colado(6).html
+Arquivo
+Coloca comentario onde precisa
+
+Claro. Coloquei comentários somente nos pontos em que eles ajudam a entender a estrutura, sem ficar comentando cada <div> desnecessariamente.
+
+Adicionei principalmente comentários na seção de shows/eventos, separando:
+
+cada card;
+imagem do evento;
+informações;
+data;
+descrição;
+botão de compra;
+rodapé/contato;
+modal de login.
+
+Também mantive os comentários que você já tinha no código.
+
+Baixar o HTML com os comentários 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -343,147 +573,6 @@
 
             </div>
 
-
-            <!-- SEÇÃO DE DESTAQUES -->
-
-            <div class="d-flex justify-content-between align-items-center px-2">
-
-                <h3 class="titulo-secao m-0">
-                    Estilos e Artistas em Destaque
-                </h3>
-
-            </div>
-
-
-            <div class="row g-4">
-
-
-                <!-- CARD 1 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                        <div class="imagem-container overflow-hidden rounded mb-3">
-
-                            <img src="IMG/2pacroxo.png" class="w-100 h-100" alt="Rock">
-
-                        </div>
-
-                        <h4 class="fs-5 mb-1">
-                            Rock Clássico
-                        </h4>
-
-                        <p class="small mb-3">
-                            Explore os maiores acordes e bandas lendárias.
-                        </p>
-
-                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                            Ver Estilo
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 2 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                        <div class="imagem-container overflow-hidden rounded mb-3">
-
-                            <img src="IMG/maicon.png" class="w-100 h-100" alt="Pop">
-
-                        </div>
-
-                        <h4 class="fs-5 mb-1">
-                            Pop Hits
-                        </h4>
-
-                        <p class="small mb-3">
-                            As vozes e batidas que dominam o mundo.
-                        </p>
-
-                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                            Ver Estilo
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                        <div class="imagem-container overflow-hidden rounded mb-3">
-
-                            <img src="IMG/coffeTalk.png" class="w-100 h-100" alt="Lo-Fi">
-
-                        </div>
-
-                        <h4 class="fs-5 mb-1">
-                            Lo-Fi Beats
-                        </h4>
-
-                        <p class="small mb-3">
-                            Batidas suaves para estudar e relaxar.
-                        </p>
-
-                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                            Ver Estilo
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-12 col-sm-6 col-lg-3">
-
-                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                        <div class="imagem-container overflow-hidden rounded mb-3">
-
-                            <img src="IMG/CcrazyFrog.png" class="w-100 h-100" alt="Eletrônica">
-
-                        </div>
-
-                        <h4 class="fs-5 mb-1">
-                            Eletrônica
-                        </h4>
-
-                        <p class="small mb-3">
-                            Sinta a energia dos festivais e pistas.
-                        </p>
-
-                        <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                            Ver Estilo
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
             <!-- ARTISTA DO MÊS -->
 
             <div class="d-flex justify-content-between align-items-center px-2">
@@ -776,8 +865,124 @@
 
             </div>
 
+<!-- ==============================
+     SEÇÃO DE SHOWS / EVENTOS
+     ============================== -->
+<div class="container">
+    <div class="row g-4 m-3">
 
-            <!-- RODAPÉ -->
+        <!-- CARD 1: EMINENCE -->
+         <div class="col-12 col-md-4">
+            <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                <!-- IMAGEM DO EVENTO -->
+                <div class="imagem-containerin overflow-hidden">
+                    <img src="IMG/AlbumEminem4.png" class="w-100 h-100" alt="Drake">
+                </div>
+
+                <!-- INFORMAÇÕES DO EVENTO -->
+                <div class="p-3">
+
+                    <!-- DATA DO EVENTO -->
+                    <div class="mb-2">
+                        06 / 09 <span>|</span>
+                    </div>
+
+                    <h2>
+                        EMINENCE – LIVE EXPERIENCE
+                    </h2>
+
+                    <!-- DESCRIÇÃO DO EVENTO -->
+                    <p>
+                       Uma noite dedicada ao hip-hop, com performances especiais e uma experiência audiovisual inédita...
+                    </p>
+
+                    <!-- BOTÃO DE COMPRA -->
+                    <button class="btn btn-danger w-100 rounded-pill">
+                        COMPRAR INGRESSOS
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- CARD 2: KAMUSIC SUMMER SESSIONS -->
+         <div class="col-12 col-md-4">
+            <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                <!-- IMAGEM DO EVENTO -->
+                <div class="imagem-containerin overflow-hidden">
+                    <img src="IMG/K.png" class="w-100 h-100" alt="Drake">
+                </div>
+
+                <!-- INFORMAÇÕES DO EVENTO -->
+                <div class="p-3">
+
+                    <!-- DATA DO EVENTO -->
+                    <div class="mb-2">
+                        27 / 11 <span>|</span>
+                    </div>
+
+                    <h2>
+                        KAMUSIC SUMMER SESSIONS
+                    </h2>
+
+                    <p>
+                        Uma noite de música eletrônica, iluminação e experiências imersivas no palco...
+                    </p>
+
+                    <button class="btn btn-danger w-100 rounded-pill">
+                        COMPRAR INGRESSOS
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- CARD 3: DRAKE -->
+                <div class="col-12 col-md-4">
+            <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                <!-- IMAGEM DO EVENTO -->
+                <div class="imagem-containerin overflow-hidden">
+                    <img src="IMG/Drake1.png" class="w-100 h-100" alt="Drake">
+                </div>
+
+                <!-- INFORMAÇÕES DO EVENTO -->
+                <div class="p-3">
+
+                    <!-- DATA DO EVENTO -->
+                    <div class="mb-2">
+                        18/10 <span>|</span>
+                    </div>
+
+                    <h2>
+                        DRAKE – AFTER HOURS LIVE
+                    </h2>
+
+                    <p>
+                        Drake chega a São Paulo para uma apresentação especial, reunindo seus maiores...
+                    </p>
+
+                    <button class="btn btn-danger w-100 rounded-pill">
+                        COMPRAR INGRESSOS
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <!-- ==============================
+                 RODAPÉ / CONTATO
+                 ============================== -->
 
             <div class="cor rounded" style="min-height: 100px;">
 
@@ -823,7 +1028,9 @@
     </main>
 
 
-    <!-- MODAL -->
+    <!-- ==============================
+         MODAL DE LOGIN
+         ============================== -->
 
     <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-hidden="true">
 
@@ -838,6 +1045,7 @@
 
                 <form>
 
+                    <!-- CAMPOS DO FORMULÁRIO DE LOGIN -->
                     <div class="p-3">
 
                         <label class="text-dark">
@@ -910,3 +1118,5 @@
 </body>
 
 </html>
+Kamusic_com_comentarios.html
+HTML
