@@ -32,5 +32,3 @@ formulario.addEventListener('submit', function (event) {
     nomeUsuario.textContent = 'Olá, ' + inputEmail.value + '!';
 
 });
-
-/* PARA CELULAR */
