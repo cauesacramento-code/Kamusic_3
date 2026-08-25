@@ -7,22 +7,6 @@ BLOCO ITENS MAIS ACESSADOS
 }
 */
 
-h1 {
-    font-family: montserrat semi-bold, sans-serif, arial;
-}
-
-h2 {
-    font-family: montserrat semi-bold, sans-serif, arial;
-}
-
-h3 {
-    font-family: montserrat semi-bold, sans-serif, arial;
-}
-
-p {
-    font-family: inter regular, sans-serif, arial;
-}
-
 .bloco-mais-acessados .bloco-mus-acessada {
     transition: 0.2s;
     color: rgb(157, 157, 157);
@@ -100,7 +84,7 @@ body.light-theme .bloco-mus-acessada:hover .numero-mus {
 
 /* RESPONSIVIDADE MAIS ACESSADOS */
 
-@media (max-width: 1300px) {
+@media (min-width:430px) and (max-width: 1300px) {
     .bloco-mus-acessada {
         max-width: 170px;
     }
@@ -142,5 +126,47 @@ body.light-theme .bloco-mus-acessada:hover .numero-mus {
 
     #colunaC:last-child {
         justify-self: start;
+    }
+}
+
+
+@media (min-width: 400px ) and (max-width: 430px) {
+
+    .numero-art {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .artista-art {
+        font-size: 18px;
+    }
+
+    .bloco-mus-acessada {
+        max-width: 170px;
+    }
+
+    .numero-art {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .artista-art {
+        font-size: 25px;
+    }
+
+    .imagem-artista img {
+        width: 50px;
+    }
+
+    #colunaC{
+        margin-top:40px;
+    }
+
+    #colunaC .bloco-mus-acessada{
+        min-width: 300px;
+        display:flex;
+        justify-self: flex-start !important;
     }
 }
