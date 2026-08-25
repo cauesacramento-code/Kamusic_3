@@ -65,3 +65,27 @@
     line-height: 1.3;
     margin-bottom: 10px;
 }
+
+.card-simples {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-simples .btn {
+    margin-top: auto;
+}
+
+.imagem-container {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
