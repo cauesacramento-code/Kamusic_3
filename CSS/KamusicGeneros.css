@@ -1,0 +1,183 @@
+.gatilho {
+    display: none;
+}
+
+
+/* =========================
+   CONTEÚDOS FECHADOS
+   ========================= */
+
+#Opencard,
+#Opencard1,
+#Opencard2,
+#Opencard3 {
+    display: none;
+}
+
+
+/* =========================
+   CONTEÚDOS ABERTOS
+   ========================= */
+
+#Opencard.aberto,
+#Opencard1.aberto,
+#Opencard2.aberto,
+#Opencard3.aberto {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 250px;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================
+   TEXTO
+   ========================= */
+
+.info .texto-chilledcow {
+    grid-column: 1;
+}
+
+
+/* =========================
+   IMAGEM
+   ========================= */
+
+.info img {
+
+    grid-column: 2;
+
+    width: 100%;
+    max-width: 250px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 570px) {
+
+    #Opencard.aberto,
+    #Opencard1.aberto,
+    #Opencard2.aberto,
+    #Opencard3.aberto {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .info .texto-chilledcow {
+        grid-column: 1;
+    }
+
+    .info img {
+
+        grid-column: 1;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 250px;
+
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================
+   IMAGENS DOS CARDS
+   ========================= */
+
+.imagem-container {
+
+    height: 250px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.imagem-container img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card-simples {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.card-simples .btn {
+
+    margin-top: auto;
+}
+
+
+/* =========================
+   OUTROS ELEMENTOS
+   ========================= */
+
+.imagem-containerin {
+
+    max-height: 300px;
+
+    width: 100%;
+}
+
+
+.imagem-containerin img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.titulo-evento {
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+}
