@@ -59,7 +59,6 @@ botao.addEventListener("click", () => {
 // Alterna a classe global no corpo do documento, fazendo com que o CSS aplique a transição suave de 0.3s configurada nas propriedades de background e color.
 document.body.classList.toggle("light-theme");
 
-
 const claro =
 document.body.classList.contains("light-theme");
 

@@ -31,3 +31,37 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 570px) {
+    #Opencard.aberto,
+    #Opencard1.aberto,
+    #Opencard2.aberto,
+    #Opencard3.aberto {
+        grid-template-columns: 1fr;
+    }
+
+    .info img {
+        grid-column: 1;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.imagem-containerin {
+    max-height: 300px;
+    width: 100%;
+}
+
+.imagem-containerin img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.titulo-evento {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
