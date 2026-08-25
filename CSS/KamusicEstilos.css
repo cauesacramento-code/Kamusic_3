@@ -634,6 +634,11 @@ body.light-theme .search-bar i {
     color: #212529;
 }
 
+/* FOOTER MODO CLARO */
+
+body.light-theme .icones-footer{
+    color: #212529 !important;
+}
 
 /* BOTÕES */
 
