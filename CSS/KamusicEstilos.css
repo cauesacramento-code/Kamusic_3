@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+/* DEFINIÇÃO DAS FONTES */
+h1 {
+    font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+h2 {
+    font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+h3 {
+    font-family: montserrat semi-bold, sans-serif, arial;
+}
+
+p {
+    font-family: inter regular, sans-serif, arial;
+}
+
 html {
     width: 100%;
     min-height: 100%;
