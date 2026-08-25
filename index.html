@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="CSS/KamusicEstilos.css">
     <link rel="stylesheet" href="CSS/KamusicIndex.css">
+    <link rel="stylesheet" href="CSS/KamusicArtistas.css">
 </head>
 
 <body>
@@ -267,7 +268,8 @@
 
 
             <!-- BANNERS (CAROUSEL BOOTSTRAP) -->
-            <div id="carouselA" class="carousel slide" data-bs-ride="carousel">
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="7000">
                         <img src="IMG/BannerK.png" class="d-block w-100" alt="...">
@@ -282,341 +284,554 @@
                         <img src="IMG/BannerK4.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselA" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselA" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
 
-            <!-- SEÇÃO DE DESTAQUES (PADRÃO GÊNEROS E ARTISTAS) - MAIS ACESSADAS -->
+            <!-- MAIS ACESSADOS -->
 
-            <div class="d-flex justify-content-between align-items-center py-2">
+            <div class="d-flex align-items-center px-2">
 
-                <h3 class="titulo-secao m-0">
+                <div class="estilo mt-4 p-1">
+                    <h3 class="titulo-secao m-0">
 
-                    Mais acessadas
+                        Músicas e artistas mais acessados
 
-                </h3>
+                    </h3>
+                </div>
 
             </div>
 
-            <!--  CAROUSEL MAIS ACESSADAS (PARA PC) -->
+            <div class="bloco-mais-acessados cor rounded d-flex flex-wrap column-gap-5 p-3">
+                <div class="col mx-2">
 
-            <div id="carouselB" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
+                    <!-- PRIMEIRA COLUNA -->
 
-                            <!-- Card 1: Gênero / Artista -->
-
-                            <div class="col-12 col-sm-6 col-lg-6">
-
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                        <img src="IMG/2pac.jpg" class="w-100 h-100" alt="Rock">
-
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Rock Clássico
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        Explore os maiores acordes e bandas lendárias.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">1</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">In The End</div>
+                                    <div class="artista-mus">Linkin' Park</div>
                                 </div>
-
-                            </div>
-
-
-                            <!-- Card 2: Gênero / Artista -->
-
-                            <div class="col-12 col-sm-6 col-lg-6 d-none d-md-block">
-
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                        <img src="IMG/artista2.jpg" class="w-100 h-100" alt="Pop">
-
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Pop Hits
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        As vozes e batidas que dominam o mundo.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
-                                </div>
-
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Card 3: Gênero / Artista -->
-
-                            <div class="col-12 col-sm-6 col-lg-6">
-
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                        <img src="IMG/artista3.jpg" class="w-100 h-100" alt="Lo-Fi">
-
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Lo-Fi Beats
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        Batidas suaves para estudar e relaxar.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus numero-mus d-flex align-items-center">2</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Not Afraid</div>
+                                    <div class="artista-mus">Eminem</div>
                                 </div>
-
                             </div>
-
-
-                            <!-- Card 4: Gênero / Artista -->
-
-                            <div class="col-12 col-sm-6 col-lg-6">
-
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                        <img src="IMG/artista4.jpg" class="w-100 h-100" alt="Eletrônica">
-
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Eletrônica
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        Sinta a energia dos festivais e pistas.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">3</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Sing For The Moment</div>
+                                    <div class="artista-mus">Eminem</div>
                                 </div>
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">4</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Somewhere I belong</div>
+                                    <div class="artista-mus">Linkin' Park</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">5</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Lose Yourself</div>
+                                    <div class="artista-mus">Eminem</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselB" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true" style="margin-left:-100px"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselB" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true" style="margin-right:-100px"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="col">
+
+                    <!-- SEGUNDA COLUNA -->
+
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">6</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">The Wicker Man</div>
+                                    <div class="artista-mus">Iron Maiden</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">7</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Amiga da minha mulher</div>
+                                    <div class="artista-mus">Seu Jorge</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">8</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Back in Black</div>
+                                    <div class="artista-mus">AC/DC</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">9</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">Na Moral Cansei</div>
+                                    <div class="artista-mus">Tavin</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bloco-mus-acessada col p-3 rounded">
+                            <div class="d-flex flex-row align-items-center column-gap-4">
+                                <p class="numero-mus d-flex align-items-center">10</p>
+                                <div class="d-flex flex-column">
+                                    <div class="titulo-mus">As Flores e o Louco</div>
+                                    <div class="artista-mus">Fábio Brazza</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TERCEIRA COLUNA -->
+
+                <div class="col d-flex flex-column align-items-xl-center align-items-lg-start justify-content-center gap-4"
+                    id="colunaC">
+                    <div class="bloco-mus-acessada p-3 rounded">
+                        <div class="bloco-art-acessado container row align-items-center column-gap-4 row-gap-3">
+                            <div class="col-sm-3 imagem-artista d-flex align-items-center"><img src="IMG/Eminem.png"
+                                    class="rounded"></div>
+                            <div class="col-sm-7 d-flex justify-content-start flex-row gap-3">
+                                <div class="col-1 d-flex numero-art align-self-center justify-content-center">1</div>
+                                <div class="col-5 artista-art align-self-center">Eminem</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloco-mus-acessada p-3 rounded">
+                        <div class="bloco-art-acessado container row align-items-center column-gap-4 row-gap-3">
+                            <div class="col-sm-3 imagem-artista d-flex align-items-center"><img src="IMG/LinkinPark.png"
+                                    class="rounded"></div>
+                            <div class="col-sm-7 d-flex justify-content-start flex-row gap-3">
+                                <div class="col-1 d-flex numero-art align-self-center justify-content-center">2</div>
+                                <div class="col-5 artista-art align-self-center">Linkin' Park</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloco-mus-acessada p-3 rounded">
+                        <div class="bloco-art-acessado container row align-items-center column-gap-4 row-gap-3">
+                            <div class="col-sm-3 imagem-artista d-flex align-items-center"><img src="IMG/ACDC.png"
+                                    class="rounded"></div>
+                            <div class="col-sm-7 d-flex justify-content-start flex-row gap-3">
+                                <div class="col-1 d-flex numero-art align-self-center justify-content-center">3</div>
+                                <div class="col-5 artista-art align-self-center">AC/DC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO DE DESTAQUES (PADRÃO GÊNEROS E ARTISTAS) -->
+
+            <div class="d-flex align-items-center px-2">
+
+                <div class="estilo mt-4 p-1">
+                    <h3 class="titulo-secao m-0">
+
+                        Estilos e Artistas em Destaque
+
+                    </h3>
+                </div>
+
             </div>
 
 
-            <!--  MAIS ACESSADAS (PARA CELULAR) -->
+            <div class="row g-4">
 
-            <div id="carouselC" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        
-                        <!-- Card 1: Gênero / Artista -->
 
-                        <div class="row g-4">
+                <!-- CHILLEDCOW -->
 
-                            <div class="col-12 col-sm-6 col-lg-6">
+                <div class="col-12 col-sm-6 col-lg-3">
 
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
 
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
+                        <div class="imagem-container overflow-hidden rounded mb-3">
 
-                                        <img src="IMG/2pac.jpg" class="w-100 h-100" alt="Rock">
+                            <img src="IMG/ChilledCow.png" class="w-100 h-100" alt="ChilledCow">
 
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Rock Clássico
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        Explore os maiores acordes e bandas lendárias.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
-                                </div>
-
-                            </div>
                         </div>
+
+                        <h4 class="fs-5 mb-1">
+                            ChilledCow
+                        </h4>
+
+                        <p class="small mb-3">
+                            Um homem que acalmou corações.
+                        </p>
+
+                        <input type="checkbox" id="BB" class="gatilho">
+
+                        <a href="KamusicArtistas.html" for="BB3" class="btn btn-outline-primary btn-sm w-100">
+                            Descubra mais...
+                        </a>
+
                     </div>
 
-                    <!-- Card 2: Gênero / Artista -->
+                </div>
 
-                    <div class="carousel-item">
 
-                        <div class="col-12 col-sm-6 col-lg-6 d-none d-md-block">
+                <!-- EMINEM -->
 
-                            <div class="cor card-simples p-3 text-center rounded shadow-sm">
+                <div class="col-12 col-sm-6 col-lg-3">
 
-                                <div class="imagem-container overflow-hidden rounded mb-3">
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
 
-                                    <img src="IMG/artista2.jpg" class="w-100 h-100" alt="Pop">
+                        <div class="imagem-container overflow-hidden rounded mb-3">
 
+                            <img src="IMG/EminemRoxo.png" class="w-100 h-100" alt="Eminem">
+
+                        </div>
+
+                        <h4 class="fs-5 mb-1">
+                            Eminem
+                        </h4>
+
+                        <p class="small mb-3">
+                            As vozes internas não param.
+                        </p>
+
+                        <input type="checkbox" id="BB1" class="gatilho">
+
+                        <a href="KamusicArtistas.html" for="BB3" class="btn btn-outline-primary btn-sm w-100">
+                            Descubra mais...
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MICHAEL JACKSON -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/maiconRoxo.png" class="w-100 h-100" alt="Michael Jackson">
+
+                        </div>
+
+                        <h4 class="fs-5 mb-1">
+                            Michael Jackson
+                        </h4>
+
+                        <p class="small mb-3">
+                            Do cansaço ao estrelato, o Rei do Pop.
+                        </p>
+
+                        <input type="checkbox" id="BB2" class="gatilho">
+
+                        <a href="KamusicArtistas.html" for="BB3" class="btn btn-outline-primary btn-sm w-100">
+                            Descubra mais...
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DRAKE -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <div class="cor card-simples p-3 text-center rounded shadow-sm">
+
+                        <div class="imagem-container overflow-hidden rounded mb-3">
+
+                            <img src="IMG/Drake.png" class="w-100 h-100" alt="Drake">
+
+                        </div>
+
+                        <h4 class="fs-5 mb-1">
+                            Drake
+                        </h4>
+
+                        <p class="small mb-3">
+                            Sinta a energia dos festivais e pistas.
+                        </p>
+
+                        <input type="checkbox" id="BB3" class="gatilho">
+
+                        <a href="KamusicArtistas.html" for="BB3" class="btn btn-outline-primary btn-sm w-100">
+                            Descubra mais...
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EVENTOS KA -->
+
+            <div class="d-flex align-items-center px-2">
+
+                <div class="estilo mt-4 p-1">
+                    <h3 class="titulo-secao m-0">
+
+                        Eventos Ka
+
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="container-fluid gap-3">
+                <div class="row">
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/AlbumEminem4.png" class="w-100 h-100" alt="Drake">
+                            </div>
+
+                            <div class="p-3">
+
+                                <div class="mb-2">
+                                    06 / 09 <span>|</span>
                                 </div>
 
-                                <h4 class="fs-5 mb-1">
+                                <h2>
+                                    EMINENCE – LIVE EXPERIENCE
+                                </h2>
 
-                                    Pop Hits
-
-                                </h4>
-
-                                <p class="small mb-3">
-
-                                    As vozes e batidas que dominam o mundo.
-
+                                <p>
+                                    Uma noite dedicada ao hip-hop, com performances especiais e uma experiência
+                                    audiovisual inédita...
                                 </p>
 
-                                <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                    Ver Estilo
-
-                                </a>
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    COMPRAR INGRESSOS
+                                </button>
 
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- Card 3: Gênero / Artista -->
 
-                    <div class="carousel-item">
-                        <div class="row g-4">
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
 
-                            <div class="col-12 col-sm-6 col-lg-6">
-
-                                <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                    <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                        <img src="IMG/artista3.jpg" class="w-100 h-100" alt="Lo-Fi">
-
-                                    </div>
-
-                                    <h4 class="fs-5 mb-1">
-
-                                        Lo-Fi Beats
-
-                                    </h4>
-
-                                    <p class="small mb-3">
-
-                                        Batidas suaves para estudar e relaxar.
-
-                                    </p>
-
-                                    <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
-
-                                        Ver Estilo
-
-                                    </a>
-
-                                </div>
-
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/K.png" class="w-100 h-100" alt="Drake">
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Card 4: Gênero / Artista -->
+                            <div class="p-3">
 
-                    <div class="carousel-item">
-
-                        <div class="col-12 col-sm-6 col-lg-6">
-
-                            <div class="cor card-simples p-3 text-center rounded shadow-sm">
-
-                                <div class="imagem-container overflow-hidden rounded mb-3">
-
-                                    <img src="IMG/artista4.jpg" class="w-100 h-100" alt="Eletrônica">
-
+                                <div class="mb-2">
+                                    27 / 11 <span>|</span>
                                 </div>
 
-                                <h4 class="fs-5 mb-1">
+                                <h2>
+                                    KAMUSIC SUMMER SESSIONS
+                                </h2>
 
-                                    Eletrônica
-
-                                </h4>
-
-                                <p class="small mb-3">
-
-                                    Sinta a energia dos festivais e pistas.
-
+                                <p>
+                                    Uma noite de música eletrônica, iluminação e experiências imersivas no palco...
                                 </p>
 
-                                <a href="KamusicGeneros.html" class="btn btn-outline-primary btn-sm w-100">
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    COMPRAR INGRESSOS
+                                </button>
 
-                                    Ver Estilo
+                            </div>
 
-                                </a>
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/AlbumDrDre.jpg" class="w-100 h-100" alt="Drake" style=>
+                            </div>
+
+                            <div class="p-3">
+
+                                <div class="mb-2">
+                                    18/10 <span>|</span>
+                                </div>
+
+                                <h2>
+                                    DREIK – AFTER HOURS LIVE
+                                </h2>
+
+                                <p>
+                                    Dreik chega a São Paulo para uma apresentação especial, reunindo seus maiores...
+                                </p>
+
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    COMPRAR INGRESSOS
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EVENTOS 2 -->
+
+            <div class="d-flex align-items-center px-2">
+
+                <div class="estilo mt-4 p-1">
+                    <h3 class="titulo-secao m-0">
+
+                        MusiKast
+
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="container-fluid gap-3">
+                <div class="row g-4 m-3">
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/AlbumEminem4.png" class="w-100 h-100" alt="Drake">
+                            </div>
+
+                            <div class="p-3">
+
+                                <div class="mb-2">
+                                    07 / 11 / 26
+                                </div>
+
+                                <h2>
+                                    PRIMEIRA LIVE DO MUSIKAST!
+                                </h2>
+
+                                <p>
+                                    O que será que vai rolar na primeira live do Musikast? Fique ligado e não perca!
+                                </p>
+
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    ACESSE NO YOUTUBE
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/K.png" class="w-100 h-100" alt="Drake">
+                            </div>
+
+                            <div class="p-3">
+
+                                <div class="mb-2">
+                                    20 / 12 / 26
+                                </div>
+
+                                <h2>
+                                    KAMUSIC SUMMER SESSIONS
+                                </h2>
+
+                                <p>
+                                    Quais são os artistas preferidos do grupo KAMUSIC? Descubra na live do Musikast!
+                                </p>
+
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    ACESSE NO YOUTUBE
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="cor card-simples rounded shadow-sm overflow-hidden">
+
+                            <div class="imagem-containerin overflow-hidden">
+                                <img src="IMG/ConvidadoSurpresa.png" class="w-100 h-100" alt="Drake">
+                            </div>
+
+                            <div class="p-3">
+
+                                <div class="mb-2">
+                                    10 / 01 / 27
+                                </div>
+
+                                <h2>
+                                    MUSIKAST APRESENTA
+                                </h2>
+
+                                <p>
+                                    Para comemorar o início de 2027, teremos uma live especial com um convidado surpresa! Mais informações em breve!
+                                </p>
+
+                                <button class="btn btn-danger w-100 rounded-pill">
+                                    ACESSE NO YOUTUBE
+                                </button>
 
                             </div>
 
@@ -624,31 +839,22 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselC" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="margin-left:-100px"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselC" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="margin-right:-100px"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
         </div>
 
         <!-- RODAPÉ -->
 
-        <div class="cor rounded" style="min-height: 100px;">
-            <div class="cor card-simples p-4 text-center mt-3">
+        <div class="rounded" style="min-height: 70px;">
+            <div class="card-footer cor rounded p-4 text-center mt-3">
                 <h3 class="mb-3">Fale Conosco</h3>
                 <p class="mb-3">Tem alguma dúvida ou sugestão sobre o projeto KaMusic? Entre em
                     contato conosco através dos canais educacionais.</p>
                 <div class="d-flex justify-content-center gap-3 fs-4">
-                    <a href="#" class="text-light"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-light"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" class="icones-footer text-light"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icones-footer text-light"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="icones-footer text-light"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
+        </div>
         </div>
 
     </main>
@@ -724,12 +930,8 @@
 
     <!-- BOOTSTRAP -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
     <!-- TEMA -->
